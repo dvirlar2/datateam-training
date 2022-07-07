@@ -1,0 +1,33 @@
+
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "NCEAS Data Team Training"
+  author: "Jesse Goldstein, Dominic Mullen, Jeanette Clark, Irene Steves, Mitchell Maier, Bryce Mecum, Peter Slaughter, Emily O'Dean, Jasmine Lai, Daphne Virlar-Knight"
+  css: datateam-training/styles.css
+  date: "`r Sys.Date()`"
+  site-url: https://nceas.github.io/datateam-training/training/
+  repo-url: https://github.com/NCEAS/datateam-training
+  repo-branch: main
+  search: true
+  page-navigation: true
+  navbar:
+    search: true
+  chapters:
+    - index.qmd
+    - 01_introduction.qmd
+    - 02_creating_a_data_package.qmd
+    - 03_exploring_eml.qmd
+    - 04_editing_eml.qmd
+    - 05_updating_a_data_package.qmd
+    - 06_editing_sysmeta.qmd
+    - 07_building_provenance.qmd
+    - 08_using_git.qmd
+    - 09_first_ticket.qmd
+    - 10_advanced.qmd
+
+format:
+  html:
+    theme: cosmo

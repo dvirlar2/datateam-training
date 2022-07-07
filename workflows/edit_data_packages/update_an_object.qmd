@@ -1,0 +1,36 @@
+## Update a data object
+
+To update a data file associated with a data package, you need to do three things:
+
+1)  update the object itself, 
+2)  update the resource map (which affiliates the object with the metadata), and
+3)  update the metadata that describes that object
+
+The `datapack::replaceMember` function takes care of the first two of these tasks. First you need to get the pid of the file you want to replace by using `datapack::selectMember`
+```{r, eval = F}
+metadataId <- selectMember(dp, name="sysmeta@formatId", value="https://eml.ecoinformatics.org/eml-2.2.0")
+```
+
+Then use `replaceMember`:
+```{r, eval = F}
+dp <- replaceMember(dp, metadataId, replacement=file_path)
+```
+
+
+If you want to remove some files from the data package we can use `datapack::removeMember`. If we wanted to remove all the zip files associated with this data package, we can use `datapack::removeMember`:
+
+```{r, eval = F}
+zipId <- selectMember(dp, name="sysmeta@formatId", value="application/vnd.shp+zip")
+removeMember(dp, zipId, removeRelationships = T)
+```
+
+
+:::{.callout-note}
+You will need to be explicit about your `format_id` here based on the file type. A list of format IDs can be found <a href = 'https://cn.dataone.org/cn/v2/formats' target='_blank'>here</a> on the DataONE website.
+Use line 2 (Id:) exactly, character for character.
+:::
+
+
+To accomplish the second task, you will need to update the metadata using the EML package. This is covered in <a href = 'https://nceas.github.io/datateam-training/training/editing-eml.html' target='_blank'>Chapter 4</a>. After you update a file, you will always need to update the metadata because parts of the `physical` section (such as the file size, checksum) will be different, and it may also require different attribute information.
+
+Once you have updated your metadata and saved it, you can update the package itself.

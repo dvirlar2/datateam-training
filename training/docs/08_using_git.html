@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.248">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>NCEAS Data Team Training - 8&nbsp; Using Git</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<link href="./09_first_ticket.html" rel="next">
+<link href="./07_building_provenance.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">NCEAS Data Team Training</span>
+  </a>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Using Git</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Welcome to NCEAS!</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_introduction.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to open science</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_creating_a_data_package.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Creating a data package</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_exploring_eml.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Exploring EML</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_editing_eml.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Editing EML</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_updating_a_data_package.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Updating a data package</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_editing_sysmeta.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Editing system metadata</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_building_provenance.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Building provenance</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08_using_git.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Using Git</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09_first_ticket.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">First Ticket</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_advanced.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Beyond your first ticket</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#usage-in-the-datateam" id="toc-usage-in-the-datateam" class="nav-link active" data-scroll-target="#usage-in-the-datateam"> <span class="header-section-number">8.1</span> Usage in the datateam</a></li>
+  <li><a href="#what-is-git" id="toc-what-is-git" class="nav-link" data-scroll-target="#what-is-git"> <span class="header-section-number">8.2</span> What is Git?</a>
+  <ul class="collapse">
+  <li><a href="#so-why-do-i-need-to-use-this-again" id="toc-so-why-do-i-need-to-use-this-again" class="nav-link" data-scroll-target="#so-why-do-i-need-to-use-this-again"> <span class="header-section-number">8.2.1</span> So why do I need to use this again?</a></li>
+  </ul></li>
+  <li><a href="#setting-up-git" id="toc-setting-up-git" class="nav-link" data-scroll-target="#setting-up-git"> <span class="header-section-number">8.3</span> Setting up Git</a></li>
+  <li><a href="#github-authentication" id="toc-github-authentication" class="nav-link" data-scroll-target="#github-authentication"> <span class="header-section-number">8.4</span> GitHub Authentication</a>
+  <ul class="collapse">
+  <li><a href="#cloning-the-arctic-data-repo" id="toc-cloning-the-arctic-data-repo" class="nav-link" data-scroll-target="#cloning-the-arctic-data-repo"> <span class="header-section-number">8.4.1</span> Cloning the arctic-data repo</a></li>
+  </ul></li>
+  <li><a href="#working-with-the-repository" id="toc-working-with-the-repository" class="nav-link" data-scroll-target="#working-with-the-repository"> <span class="header-section-number">8.5</span> Working with the repository</a>
+  <ul class="collapse">
+  <li><a href="#adding-a-new-script" id="toc-adding-a-new-script" class="nav-link" data-scroll-target="#adding-a-new-script"> <span class="header-section-number">8.5.1</span> Adding a new script</a></li>
+  <li><a href="#editing-a-script" id="toc-editing-a-script" class="nav-link" data-scroll-target="#editing-a-script"> <span class="header-section-number">8.5.2</span> Editing a script</a></li>
+  <li><a href="#where-do-i-commit" id="toc-where-do-i-commit" class="nav-link" data-scroll-target="#where-do-i-commit"> <span class="header-section-number">8.5.3</span> Where do I commit?</a></li>
+  </ul></li>
+  <li><a href="#my-git-tab-disappeared" id="toc-my-git-tab-disappeared" class="nav-link" data-scroll-target="#my-git-tab-disappeared"> <span class="header-section-number">8.6</span> My Git tab disappeared</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Using Git</span></h1>
+</div>
+
+
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="usage-in-the-datateam" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="usage-in-the-datateam"><span class="header-section-number">8.1</span> Usage in the datateam</h2>
+<p>We use git and Github to manage our packages (ie datamgmt, arcticdatautils) and even this document!</p>
+</section>
+<section id="what-is-git" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="what-is-git"><span class="header-section-number">8.2</span> What is Git?</h2>
+<p><a href="https://git-scm.com/" target="_blank">Git</a> is a distributed version control system.</p>
+<p>Important! If you have never used Git before, or only used it a little, or have no idea what it is, check out this <a href="https://github.com/eco-data-science/github-intro-2/blob/master/index.pdf" target="_blank">intro to Git</a> put together by the ecodatascience group at UCSB. Don’t worry too much about the forking and branching sections, as we will primarily be using the basic commit-pull-push commands. After you have read through that presentation, come back to this chapter.</p>
+<section id="so-why-do-i-need-to-use-this-again" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="so-why-do-i-need-to-use-this-again"><span class="header-section-number">8.2.1</span> So why do I need to use this again?</h3>
+<p>There are several reasons why using the arctic-data GitHub repository is helpful, both for you and for the rest of the data team. Here are a few:</p>
+<ul>
+<li><strong>Versioning</strong>: Did you accidentally make a change to your code and can’t figure out why it broke? Do you wish you could go back to the version that worked? If you add your code to the GitHub repo you can do this!</li>
+<li><strong>Reproducibility</strong>: Being able to reproduce how you accomplished something is incredibly important. We should be able to tell anyone exactly how data have been reformatted, how metadata have been altered, and how packages have been created. As a data center, this is especially important for us with data team members that stay for 6-12 months because we may need to go back and figure out how something was done after the intern or fellow who wrote the code left the team.</li>
+<li><strong>Troubleshooting</strong>: If you are building a particularly complicated EML, or doing some other advanced task, it is much easier for others to help you troubleshoot your code if it is on the GitHub repo. We can view, troubleshoot, and fix bugs very easily when code is on the GitHub repo, with the added bonus of being able to go back a version if something should break.</li>
+<li><strong>Solve future problems</strong>: Some of the issues we see in ADC submissions come up over and over again. When all of our code is on GitHub, we can easily reference code built for other submissions, instead of trying to solve the same problems over and over again from scratch.</li>
+</ul>
+</section>
+</section>
+<section id="setting-up-git" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="setting-up-git"><span class="header-section-number">8.3</span> Setting up Git</h2>
+<p>Before using git, you need to tell it who you are. The only way to do this is through the command line. When you open RStudio, you should see a Terminal tab located to the right of the Console tab. If the Terminal tab is not visible, you can open it by selecting Tools -&gt; Terminal -&gt; New Terminal at the top of your RStudio window.</p>
+<p>To tell git who you are, you’re going to set the global options. This includes setting your name, email address, PAT (Personal Access Token), and caching the PAT. Make sure you run the following commands one at a time.</p>
+<p>Type the following command in the Terminal window, with your actual name, and press enter. If you do this correctly, it will look as though <strong>nothing</strong> happened.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>git config <span class="sc">--</span>global user.name <span class="st">"Your Name"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Next, enter the following line, with the email address associated with your GitHub account.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>git config <span class="sc">--</span>global user.email MyEmail<span class="sc">@</span>domain.com</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>After running these commands, the Terminal window should look like this: <img src="images/shell_config.jpeg" class="img-fluid" alt="global config"></p>
+<p>Next, we will tell Git to store your PAT. We must do this because of the way our server operating system handles credentials. If you don’t run the next line, your PAT will expire immediately on the server, even though we will set it up on GitHub to be valid for 90 days.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>git config <span class="sc">--</span>global credential.helper <span class="st">'cache -- timeout=10000000'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Finally, check to make sure everything looks correct by entering the following command, which will return the options that you have set.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>git config <span class="sc">--</span>global <span class="sc">--</span>list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="github-authentication" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="github-authentication"><span class="header-section-number">8.4</span> GitHub Authentication</h2>
+<p>GitHub recently deprecated password authentication for accessing repositories, so we need to set up a secure way to authenticate. That’s where the PAT comes in.</p>
+<p>In the tabs at the bottom of your RStudio window, make sure to switch from the <strong>Terminal</strong> to the <strong>Console</strong>. Now that, you’ve done that, follow these steps:</p>
+<ol type="1">
+<li>Run <code>usethis::create_github_token()</code></li>
+<li>In the browser window that pops up, log into GitHub</li>
+<li>In the “Expiration” drop down menu, select “90 days”</li>
+<li>Click “Generate token” in the green box at the bottom of the page</li>
+<li>On the next page, copy the token from the green box</li>
+<li>Back in RStudio, run <code>credentials::set_github_pat()</code></li>
+<li>Paste your token into the dialog box that pops up</li>
+</ol>
+<p>You’ve now successfully set your PAT in RStudio, and connected R, Git, and GitHub. Great job! Now, you’re going to clone the repository we work in so that you can version control your code.</p>
+<section id="cloning-the-arctic-data-repo" class="level3" data-number="8.4.1">
+<h3 data-number="8.4.1" class="anchored" data-anchor-id="cloning-the-arctic-data-repo"><span class="header-section-number">8.4.1</span> Cloning the arctic-data repo</h3>
+<p>To clone the arctic-data repository, navigate to the repository on GitHub: <a href="https://github.nceas.ucsb.edu/KNB/arctic-data/" class="uri">https://github.nceas.ucsb.edu/KNB/arctic-data/</a>.</p>
+<p>If you are not already logged on, this will be the enterprise account you use to log in when you go to RT. If you have trouble with this, send a message to Nick Outin (<span class="citation" data-cites="Nick">@Nick</span>) in the datateam slack channel.</p>
+<p>Once you are logged on and can view the above link, click on the green “Code” button, and copy the URL in the gray box.</p>
+<p>In your RStudio window, click File -&gt; New Project -&gt; Version Control -&gt; Git. Paste the URL you just copied into the “Repository URL” box, and press tab on your keyboard. This should autofill the “Project directory name.” If it does not, then type in <code>arctic-data</code>. Fill it out as shown in the image below to clone the arctic-data repository into the top level of your home directory. Click “Create Project,” and now you should have a directory called arctic-data in your RStudio files window.</p>
+<p>If you are prompted to save your workspace during this process, make sure all of your work is saved, and you don’t need anything in your environment, and then click ‘Don’t Save’.</p>
+<p><img src="images/clone_repo.jpeg" class="img-fluid"></p>
+</section>
+</section>
+<section id="working-with-the-repository" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="working-with-the-repository"><span class="header-section-number">8.5</span> Working with the repository</h2>
+<section id="adding-a-new-script" class="level3" data-number="8.5.1">
+<h3 data-number="8.5.1" class="anchored" data-anchor-id="adding-a-new-script"><span class="header-section-number">8.5.1</span> Adding a new script</h3>
+<p>If you have been working on a script that you want to put in the arctic-data GitHub repo, you first need to save it somewhere in the arctic-data folder you cloned to your account on the Datateam server. You can do this by either moving your script into the folder or using the save-as functionality. Note that Git will try and version anything that you save in this folder, so you should be careful about what you save here. For our purposes, things that probably shouldn’t be saved in this folder include:</p>
+<ul>
+<li><strong>Tokens</strong>: Any token file or script with a token in it should NOT be saved in the repository. Others could steal your login credentials if you put a token in GitHub.</li>
+<li><strong>Data files</strong>: Git does not version data files very well. You shouldn’t save any .csv files or any other data files (including metadata).</li>
+<li><strong>Workspaces/.RData</strong>: If you are in the habit of saving your R workspace, you shouldn’t save it in this directory.</li>
+<li><strong>Plots/Graphics</strong>: For the same reasons as data files.</li>
+</ul>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note: Do not EVER make a commit that you don’t understand. If something unexpected (like a file you have never worked on) shows up in your Git tab, ask for help before committing.</p>
+</div>
+</div>
+<p>After you save your script in the appropriate place within the arctic-data folder, it will show up in your Git tab looking like this: <img src="images/unstaged.jpeg" class="img-fluid"></p>
+<p>Before you commit your changes, you need to click the little box under “Staged”. Do not stage or commit any .Rproj file. After clicking the box for your file, click “Commit” to commit your changes. In the window that pops up (you may need to force the browser to allow pop-ups), write your commit message. <em>Always</em> include a commit message. Remember that the commit message should be a concise description of the changes that were made to a file. Your window should look like this: <img src="images/commit.jpeg" class="img-fluid"></p>
+<p>Push ‘Commit’, and your commit will be saved to your local repository (this will not push it to the remote repository, yet). Now you want to merge the commits you made with the master version of the remote repository. You do this by using the command “Push.” But before you push, you <em>always</em> need to pull first to avoid merge conflicts. Pulling will merge the current version of the remote repository with your local repository, on your local machine. Click “Pull” and type in your credentials. Then, assuming you don’t have a merge conflict, you can push your changes by clicking “Push”.</p>
+<p>Always remember, the order is <strong>commit-pull-push</strong>.</p>
+</section>
+<section id="editing-a-script" class="level3" data-number="8.5.2">
+<h3 data-number="8.5.2" class="anchored" data-anchor-id="editing-a-script"><span class="header-section-number">8.5.2</span> Editing a script</h3>
+<p>If you want to change a script, the workflow is the same. Just open the script that was saved in the arctic-data folder on your server account, make your changes, save the changes, stage them by clicking the box, commit, pull, then push to merge your version with the main version on the website. Do NOT edit scripts using the GitHub website. It is much easier to accidentally overwrite the history of a file this way.</p>
+<p>One thing you might be wondering as you are working on a script is, how often should I be committing my changes? It might not make sense to commit-pull-push after every single tiny change - if only because it would slow you way down. Personally, I commit every time I feel that a significant change has happened and that the chunk of code I was working on is “done”. Sometimes this is an entire script, other times it is just a few lines within a script. A good sign that you are committing too infrequently might be if many of your commit messages address a wide variety of coding tasks, such as: “wrote for loop to create referenced attribute lists for tables 1:20. also created nesting structure for this package with another package. also created attribute list for data table 40”.</p>
+<p>One final note, you can make multiple commits before you push to the repo. If you are making lots of changes to the script, you might want to make several commits before pull-push. You can see how many commits you are ahead of the “origin/master” branch (i.e.&nbsp;what you see on the website) by looking for text in your Git tab in RStudio that looks like this: <img src="images/multiple_commits.jpeg" class="img-fluid"></p>
+</section>
+<section id="where-do-i-commit" class="level3" data-number="8.5.3">
+<h3 data-number="8.5.3" class="anchored" data-anchor-id="where-do-i-commit"><span class="header-section-number">8.5.3</span> Where do I commit?</h3>
+<p>The default right now is to save data-processing scripts in the <code>arctic-data/datateam/data-processing/</code> directory, with sub-folders listed by project. Directories can be created as needed but please ask Dom or Jesse first so we can try and maintain some semblance of order in the file structure.</p>
+<p>The Github workflow diagram from <a href="https://www.reddit.com/r/git/comments/99ul9f/git_workflow_diagram_showcasing_the_role_of/" target="_blank">stamminator</a> shows each step and their functions explicitly.</p>
+<p><img src="images/github-workflow.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="my-git-tab-disappeared" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="my-git-tab-disappeared"><span class="header-section-number">8.6</span> My Git tab disappeared</h2>
+<p>Sometimes R will crash so hard it loses your project information, causing your Git tab to disappear. Most likely, RStudio has just closed your “project” and all you need to do is reopen it. If your Git tab has disappeared, in the top right of your RStudio session, you should see a little R logo with “Project: (None)” next to it. This means you do not currently have a project open. Clicking the arrow should give you a dropdown menu of recent projects, where you can select “arctic-data” or “sasap-data.” Once you have opened your project, the Git tab should reappear! This is also a convenient way to switch between projects if you are working in multiple repositories.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    setTimeout(function() {
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./07_building_provenance.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Building provenance</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./09_first_ticket.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">First Ticket</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,24 @@
+## Email templates
+
+This section covers new data packages submitted. For other inquiries see the PI FAQ templates
+
+Please think critically when using these canned replies rather than just blindly sending them. Typically, content should be adjusted/ customized for each response to be as relevant, complete, and precise as possible.  
+
+In your first few months, please run email drafts by the #datateam Slack and get approval before sending.
+
+Remember to consult the <a href = 'https://arcticdata.io/submit/' target='_blank'>submission guidelines</a> for details of what is expected.  
+
+Quick reference:
+
+- [Initial email template](https://nceas.github.io/datateam-training/reference/email-templates.html#initial-email-template)
+- [Final email templates](https://nceas.github.io/datateam-training/reference/email-templates.html#final-email-templates)
+- [Additional email template](https://nceas.github.io/datateam-training/reference/email-templates.html#additional-email-templates)
+
+```{r, echo = FALSE}
+chapter <- "email_templates/"
+sections <- dir(path = chapter, pattern = ".qmd$")
+children <- paste0(chapter, sections)
+```
+
+```{r, child = children}
+```

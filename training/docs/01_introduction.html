@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.248">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>NCEAS Data Team Training - 1&nbsp; Introduction to open science</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<link href="./02_creating_a_data_package.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">NCEAS Data Team Training</span>
+  </a>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to open science</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Welcome to NCEAS!</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_introduction.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to open science</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_creating_a_data_package.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Creating a data package</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_exploring_eml.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Exploring EML</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_editing_eml.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Editing EML</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_updating_a_data_package.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Updating a data package</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_editing_sysmeta.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Editing system metadata</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_building_provenance.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Building provenance</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08_using_git.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Using Git</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09_first_ticket.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">First Ticket</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_advanced.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Beyond your first ticket</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#background-reading" id="toc-background-reading" class="nav-link active" data-scroll-target="#background-reading"> <span class="header-section-number">1.1</span> Background reading</a></li>
+  <li><a href="#effective-data-management" id="toc-effective-data-management" class="nav-link" data-scroll-target="#effective-data-management"> <span class="header-section-number">1.2</span> Effective data management</a></li>
+  <li><a href="#using-dataone" id="toc-using-dataone" class="nav-link" data-scroll-target="#using-dataone"> <span class="header-section-number">1.3</span> Using DataONE</a></li>
+  <li><a href="#working-on-a-remote-server" id="toc-working-on-a-remote-server" class="nav-link" data-scroll-target="#working-on-a-remote-server"> <span class="header-section-number">1.4</span> Working on a remote server</a></li>
+  <li><a href="#a-note-on-paths" id="toc-a-note-on-paths" class="nav-link" data-scroll-target="#a-note-on-paths"> <span class="header-section-number">1.5</span> A note on paths</a></li>
+  <li><a href="#a-note-on-r" id="toc-a-note-on-r" class="nav-link" data-scroll-target="#a-note-on-r"> <span class="header-section-number">1.6</span> A note on R</a></li>
+  <li><a href="#a-note-on-effective-troubleshooting-in-r" id="toc-a-note-on-effective-troubleshooting-in-r" class="nav-link" data-scroll-target="#a-note-on-effective-troubleshooting-in-r"> <span class="header-section-number">1.7</span> A note on effective troubleshooting in R</a></li>
+  <li><a href="#a-note-on-exercises" id="toc-a-note-on-exercises" class="nav-link" data-scroll-target="#a-note-on-exercises"> <span class="header-section-number">1.8</span> A note on Exercises</a></li>
+  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1"> <span class="header-section-number">1.9</span> Exercise 1</a>
+  <ul class="collapse">
+  <li><a href="#part-1" id="toc-part-1" class="nav-link" data-scroll-target="#part-1"> <span class="header-section-number">1.9.1</span> Part 1</a></li>
+  <li><a href="#part-2" id="toc-part-2" class="nav-link" data-scroll-target="#part-2"> <span class="header-section-number">1.9.2</span> Part 2</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to open science</span></h1>
+</div>
+
+
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<p>These materials are meant to introduce you to the principles of open science, effective data management, and data archival with the DataONE data repository. It also provides an overview on the tools we will be using (remote servers, Rstudio, R, Troubleshooting, Exercises) throughout the training. This document is meant to take multiple days to complete depending on your previous knowledge on some of the topics.</p>
+<p>If you see anything that needs fixing, submit a issue in the <a href="https://github.com/NCEAS/datateam-training/issues" target="_blank"> github issues </a></p>
+<section id="background-reading" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="background-reading"><span class="header-section-number">1.1</span> Background reading</h2>
+<p>Read the content on the Arctic Data Center (ADC) webpage to learn more about data submission, preservation, and the history of the ADC. We encourage you to follow the links within these pages to gain a deeper understanding.</p>
+<ul>
+<li><a href="https://arcticdata.io/about/" target="_blank">about</a></li>
+<li><a href="https://arcticdata.io/submit/" target="_blank">submission</a></li>
+<li><a href="https://arcticdata.io/preservation/" target="_blank">preservation</a></li>
+<li><a href="https://arcticdata.io/history/" target="_blank">history</a></li>
+</ul>
+</section>
+<section id="effective-data-management" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="effective-data-management"><span class="header-section-number">1.2</span> Effective data management</h2>
+<p>Read Matt Jones et al.’s paper on <a href="https://esajournals.onlinelibrary.wiley.com/doi/epdf/10.1890/0012-9623-90.2.205" target="_blank">effective data management</a> to learn how we will be organizing datasets prior to archival.</p>
+<p>(Please note that while the tips outlined in this article are best practices, we often do not reformat data files submitted to our repositories unless necessary. It is best to be conservative and not alter other people’s data without good reason.)</p>
+<p>You may also want to explore the DataONE <a href="https://www.dataone.org/Education" target="_blank">education resources</a> related to data management.</p>
+</section>
+<section id="using-dataone" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="using-dataone"><span class="header-section-number">1.3</span> Using DataONE</h2>
+<p><strong>Data Observation Network for Earth</strong> (DataONE) is a community driven initiative that provides access to data across multiple member repositories, supporting enhanced search and discovery of Earth and environmental data.</p>
+<p>Read more about what DataONE is <a href="https://www.dataone.org/what-dataone" target="_blank">here</a> and about DataONE member node (MN) guidelines <a href="https://www.dataone.org/sites/all/documents/DataONE_MN_Partner_Guidelines_20170501.pdf" target="_blank">here</a>. Please feel free to ask Jeanette any questions you have about DataONE.</p>
+<p>We will be applying these concepts in the next chapter.</p>
+</section>
+<section id="working-on-a-remote-server" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="working-on-a-remote-server"><span class="header-section-number">1.4</span> Working on a remote server</h2>
+<p>All of the work that we do at NCEAS is done on our remote server, datateam.nceas.ucsb.edu. If you have never worked on a remote server before, you can think of it like working on a different computer via the internet.</p>
+<p>We access RStudio on our server through this <a href="https://datateam.nceas.ucsb.edu/rstudio/" target="_blank">link.</a> This is the same as your desktop version of RStudio with one main difference is that files are on the server. Please do all your work here. This way you can share your code with the rest of us.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you R session is frozen and unresponsive check out <a href="https://help.nceas.ucsb.edu/NCEAS/Computing/rstudio_server.html">the guide</a> on how to fix it.</p>
+</div>
+</div>
+</section>
+<section id="a-note-on-paths" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="a-note-on-paths"><span class="header-section-number">1.5</span> A note on paths</h2>
+<p>On the servers, paths to files in your folder always start with <code>/home/yourusername/...</code>.</p>
+<p><strong>Note</strong> - if you are a more advanced user, you may use the method you prefer as long as it is evident where your file is from.</p>
+<p>When you write scripts, try to avoid writing relative paths (which rely on what you have set your working directory to) as much as possible. Instead, write out the entire path as shown above, so that if another data team member needs to run your script, it is not dependent on a working directory.</p>
+</section>
+<section id="a-note-on-r" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="a-note-on-r"><span class="header-section-number">1.6</span> A note on R</h2>
+<p>This training assumes basic knowledge of R and RStudio. If you want a quick R refresher, walk through Jenny Bryan’s excellent materials <a href="http://stat545.com/block002_hello-r-workspace-wd-project.html">here</a>.</p>
+<p>Throughout this training we will occasionally use the namespace syntax <code>package_name::function_name()</code> when writing a function. This syntax denotes which package a function came from. For example <code>dataone::getSystemMetadata</code> selects the <code>getSystemMetadata</code> function from the <code>dataone</code> R package. More detailed information on namespaces can be found <a href="http://r-pkgs.had.co.nz/namespace.html">here</a>.</p>
+</section>
+<section id="a-note-on-effective-troubleshooting-in-r" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="a-note-on-effective-troubleshooting-in-r"><span class="header-section-number">1.7</span> A note on effective troubleshooting in R</h2>
+<p>We suggest using a combination of <strong>m</strong>inimal <strong>r</strong>eproducible <strong>e</strong>xamples (MRE) and the package <code>reprex</code> to create <strong>rep</strong>roducible <strong>ex</strong>amples. This will allow others to better help you if we can run the code on our own computers.</p>
+<p>A MRE is stripping down your code to only the parts that cause the bug.</p>
+<p>How to generate a reprex:</p>
+<ol type="1">
+<li>copy the code you want to ask about</li>
+<li>call <code>reprex()</code></li>
+<li>fix until everything runs smoothly</li>
+<li>copy the result to ask your question</li>
+</ol>
+<p>When copy and paste code slack message or github issues, use three backticks for code blocks and two backticks for a small piece of code will prevent issues with slack formats quotation.</p>
+<p>For more information and examples check out more of Jenny Bryan’s <a href="https://speakerdeck.com/jennybc/reprex-help-me-help-you">slides</a> or watch the <a href="https://vimeo.com/208749032">video</a> starting at about the 10 min mark.</p>
+<p><strong>Note for EML related MREs:</strong> - Generating a reprex for these situations (ie. tokens) might be complicated but you can should still follow the MRE principles even if the reprex won’t render fully - You can include a minimal EML to avoid some <code>get_package</code> issues:</p>
+<pre><code>me &lt;- list(individualName = list(givenName = "Jeanette", surName = "Clark"))
+
+attributes &lt;- data.frame(attributeName = 'length_1',
+                         attributeDefinition = 'def1',
+                         measurementScale = 'ratio',
+                         domain = 'numericDomain',
+                         unit = 'meter',
+                         numberType = 'real')
+
+att_list &lt;- set_attributes(attributes)
+
+
+doc_ex &lt;- list(packageId = "id", system = "system", 
+            dataset = list(title = "A Mimimal Valid EML Dataset",
+                           creator = me,
+                           contact = me,
+                           dataTable = list(entityName = "data table", attributeList = att_list))
+)</code></pre>
+</section>
+<section id="a-note-on-exercises" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="a-note-on-exercises"><span class="header-section-number">1.8</span> A note on Exercises</h2>
+<p>The rest of the training has a series of exercises. These are meant to take you through the process as someone submitting a dataset from scratch. This is slightly different than the usual workflow but important in understanding the underlying system behind the Arctic Data Center.</p>
+<p>Please note that you will be completing everything on the <a href="https://test.arcticdata.io" target="_blank"> site</a> for the training. In the future if you are unsure about doing anything with a dataset. The test site is a good place to try things out!</p>
+</section>
+<section id="exercise-1" class="level2 exercise" data-number="1.9">
+<h2 class="exercise anchored" data-number="1.9" data-anchor-id="exercise-1"><span class="header-section-number">1.9</span> Exercise 1</h2>
+<p>This part of the exercise walks you through submitting data through the web form on “<a href="https://test.arcticdata.io" target="_blank">test.arcticdata.io</a>”</p>
+<section id="part-1" class="level3" data-number="1.9.1">
+<h3 data-number="1.9.1" class="anchored" data-anchor-id="part-1"><span class="header-section-number">1.9.1</span> Part 1</h3>
+<ul>
+<li>Download the <a href="data/Loranty_2016_Environ._Res._Lett._11_095008.csv">csv</a> of Table 1 from <a href="http://iopscience.iop.org/article/10.1088/1748-9326/11/9/095008/meta" target="_blank">this paper.</a></li>
+<li>Reformat the table to meet the guidelines outlined in the journal article on effective data management (this might be easier to do in an interactive environment like Excel).</li>
+<li>Note - we usually don’t edit the content in data submissions so don’t stress over this part too much</li>
+</ul>
+</section>
+<section id="part-2" class="level3" data-number="1.9.2">
+<h3 data-number="1.9.2" class="anchored" data-anchor-id="part-2"><span class="header-section-number">1.9.2</span> Part 2</h3>
+<ul>
+<li>Go to “<a href="https://test.arcticdata.io/#data" target="_blank">test.arcticdata.io</a>” and submit your reformatted file with appropriate metadata that you derive from the text of the paper:
+<ul>
+<li>list yourself as the first ‘Creator’ so your test submission can easily be found,</li>
+<li>for the purposes of this training exercise, not every single author needs to be listed with full contact details, listing the first two authors is fine,</li>
+<li>directly copying and pasting sections from the paper (abstract, methods, etc.) is also fine,</li>
+<li>attributes (column names) should be defined, including correct units and missing value codes.</li>
+<li>submit the dataset</li>
+</ul></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    setTimeout(function() {
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Welcome to NCEAS!</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./02_creating_a_data_package.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Creating a data package</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

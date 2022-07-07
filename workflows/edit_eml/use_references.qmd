@@ -1,0 +1,89 @@
+## Use references
+
+References are a way to avoid repeating the same information multiple times in the same EML record. There are a few benefits to doing this, including:
+    
+-   Making it clear that two things are the same (e.g., the creator is the same person as the contact, two entities have the exact same attributes)
+-   Reducing the size on disk of EML records with highly redundant information
+-   Faster read/write/validate with the R EML package
+
+You may want to use EML references if you have the following scenarios (not exhaustive):
+    
+-   One person has multiple roles in the dataset (creator, contact, etc)
+-   One or more entities shares all or some attributes
+
+### Example with parties
+
+:::{.callout-note}
+Do not use references for creators as it is used for the citation information. The creators will not show up on the top of the dataset if it is a reference. Until this issue is resolved  in NCEAS/metacat#926 we will need to keep this in account.
+:::
+
+It's very common to see the contact and creator referring to the same person with XML like this:
+    
+```
+<eml packageId="my_test_doc" system="my_system" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 eml.xsd">
+  <dataset>
+    <creator>
+      <individualName>
+        <givenName>Bryce</givenName>
+        <surName>Mecum</surName>
+      </individualName>
+    </creator>
+    <contact>
+      <individualName>
+        <givenName>Bryce</givenName>
+        <surName>Mecum</surName>
+      </individualName>
+    </contact>
+  </dataset>
+</eml>
+```
+
+So you see those two times Bryce Mecum is referenced there? If you mean to state that Bryce Mecum is the creator and contact for the dataset, this is a good start. But with just a name, there's some ambiguity as to whether the creator and contact are truly the same person. Using references, we can remove all doubt.
+
+``` {r eval = F}
+doc$dataset$creator[[1]]$id  <- "reference_id"
+doc$dataset$contact <- list(references = "reference_id") 
+print(doc)
+```
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.1" packageId="id" system="system" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1/ eml.xsd">
+  <dataset>
+    <title>A Minimal Valid EML Dataset</title>
+    <creator id="reference_id">
+      <individualName>
+        <givenName>Bryce</givenName>
+        <surName>Mecum</surName>
+      </individualName>
+    </creator>
+    <contact>
+      <references>reference_id</references>
+    </contact>
+  </dataset>
+</eml:eml>
+```
+
+
+:::{.callout-note}
+The reference `id` needs to be unique within the EML record but doesn't need to have meaning outside of that.
+:::
+
+### Example with attributes
+
+To use references with attributes:
+
+1. Add an attribute list to a data table
+2. Add a reference id for that attribute list
+3. Use references to add that information into the `attributeList`s of the other data tables
+
+For example, if all the data tables in our data package have the same attributes, we can set the attribute list for the first one, and use references for the rest:
+
+``` {r eval = FALSE}
+doc$dataset$dataTable[[1]]$attributeList <- attribute_list
+doc$dataset$dataTable[[1]]$attributeList$id <- "shared_attributes" # use any unique name for your id
+
+for (i in 2:length(doc$dataset$dataTable)) {
+  doc$dataset$dataTable[[i]]$attributeList <- list(references = "shared_attributes") # use the id you set above
+}
+```

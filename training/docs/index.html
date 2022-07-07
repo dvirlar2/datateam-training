@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.248">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jesse Goldstein, Dominic Mullen, Jeanette Clark, Irene Steves, Mitchell Maier, Bryce Mecum, Peter Slaughter, Emily O’Dean, Jasmine Lai, Daphne Virlar-Knight">
+
+<title>NCEAS Data Team Training</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<link href="./01_introduction.html" rel="next">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">NCEAS Data Team Training</span>
+  </a>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">NCEAS Data Team Training</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">Welcome to NCEAS!</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_introduction.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to open science</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_creating_a_data_package.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Creating a data package</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_exploring_eml.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Exploring EML</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_editing_eml.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Editing EML</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_updating_a_data_package.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Updating a data package</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_editing_sysmeta.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Editing system metadata</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_building_provenance.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Building provenance</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08_using_git.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Using Git</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09_first_ticket.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">First Ticket</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_advanced.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Beyond your first ticket</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#welcome-to-nceas" id="toc-welcome-to-nceas" class="nav-link active" data-scroll-target="#welcome-to-nceas">Welcome to NCEAS!</a>
+  <ul class="collapse">
+  <li><a href="#first-day-to-dos" id="toc-first-day-to-dos" class="nav-link" data-scroll-target="#first-day-to-dos">First day to-dos</a></li>
+  <li><a href="#account-information" id="toc-account-information" class="nav-link" data-scroll-target="#account-information">Account information</a></li>
+  <li><a href="#nceas-events" id="toc-nceas-events" class="nav-link" data-scroll-target="#nceas-events">NCEAS events</a></li>
+  <li><a href="#nceas-community-meetings-groups" id="toc-nceas-community-meetings-groups" class="nav-link" data-scroll-target="#nceas-community-meetings-groups">NCEAS Community Meetings/ Groups</a></li>
+  <li><a href="#internship-expectations" id="toc-internship-expectations" class="nav-link" data-scroll-target="#internship-expectations">Internship Expectations</a></li>
+  <li><a href="#code-of-conduct" id="toc-code-of-conduct" class="nav-link" data-scroll-target="#code-of-conduct">Code of Conduct</a></li>
+  <li><a href="#citation-information" id="toc-citation-information" class="nav-link" data-scroll-target="#citation-information">Citation Information</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">NCEAS Data Team Training</h1>
+</div>
+
+
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jesse Goldstein, Dominic Mullen, Jeanette Clark, Irene Steves, Mitchell Maier, Bryce Mecum, Peter Slaughter, Emily O’Dean, Jasmine Lai, Daphne Virlar-Knight </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date"><code>r Sys.Date()</code></p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<section id="welcome-to-nceas" class="level1 unnumbered">
+<h1 class="unnumbered">Welcome to NCEAS!</h1>
+<section id="first-day-to-dos" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="first-day-to-dos">First day to-dos</h2>
+<ul>
+<li>Get a tour of the office from Ginger</li>
+<li>Fill out required paperwork from Ana (room 325)</li>
+<li>Schedule a headshot with Alex (room 326)</li>
+<li>Set up the remainder of your accounts</li>
+</ul>
+</section>
+<section id="account-information" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="account-information">Account information</h2>
+<ul>
+<li><a href="https://identity.nceas.ucsb.edu/identity/cgi-bin/ldapweb.cgi?cfg=account" target="_blank">LDAP</a> - this should be set up prior to your start date in order to help get other accounts set. This account and password control your access to:
+<ul>
+<li>arcticdata <a href="https://support.nceas.ucsb.edu/rt/" target="_blank">RT queue</a></li>
+<li>GitHub Enterprise - <a href="https://github.nceas.ucsb.edu/KNB/arctic-data/" target="_blank">arctic-data</a></li>
+</ul></li>
+<li>Datateam server - follow instructions in email from Nick at NCEAS to reset your datateam password in the terminal</li>
+<li><a href="https://orcid.org/register" target="_blank">ORCiD</a> - create an account
+<ul>
+<li>Login to <a href="https://test.arcticdata.io" target="_blank">test.arcticdata.io</a> with your ORCID iD</li>
+</ul></li>
+<li><a href="http://nceas.slack.com" target="_blank">NCEAS Slack</a> - get an invite from <a href="http://slack.nceas.ucsb.edu" target="_blank">slack.nceas.ucsb.edu</a>
+<ul>
+<li>Channels to join: #arctica, #arcticbot, #computing, #datateam, #devteam, #social</li>
+<li>Introduce yourself in #datateam and then use that channel to ask Jeanette to make you an administrator on test.arcticdata.io</li>
+</ul></li>
+<li>Arctic Data Center Team - after creation of ORCiD and sign-in to both arcticdata.io and test.arcticdata.io, request addition to the admin group from Jeanette in Slack</li>
+<li>GitHub - if you do not have a public GitHub account already, please register for one <a href="https://github.com/join?source=header-home" target="_blank">here</a></li>
+<li>If you are an intern, fill out anticipated quarterly schedule on the intern google calendar shared with you.</li>
+<li><a href="https://timekeeping.ucsb.edu/" target="_blank">Electronic Timekeeping</a> - make sure you can log on to electronic timekeeping via your UCSBNetID and password (may not be accessible on the first day, if you continue to have issues please let Ana know). If you are an hourly employee, log your hours for your first day! Under today’s date select ‘Hours Worked’ under the Pay Code column, enter the amount of hours under the Amount column, and finally click the ‘Save’ button in the top right. At the end of every two-week pay period you will also need to click the ‘Approve Timecard’ button in order to submit your timecard.<br>
+<a href="https://timekeeping.ucsb.edu/sites/default/files/employee_hours_worked_0.pdf" target="_blank">Detailed Instructions</a></li>
+<li>Let Jeanette or Daphne know what email you would like to use for general NCEAS updates from all@nceas.ucsb.edu</li>
+</ul>
+</section>
+<section id="nceas-events" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="nceas-events">NCEAS events</h2>
+<p>NCEAS hosts a number of events that you are encouraged to attend. Keep an eye on your email but the recurring events are:</p>
+<ul>
+<li>Roundtable
+<ul>
+<li>weekly presentation and discussion of research by a visiting or local scientist</li>
+<li>Wednesdays at 12:15 in the lounge</li>
+</ul></li>
+<li>Coffee Klatch
+<ul>
+<li>coffee, socializing, and news updates for NCEAS</li>
+<li>Tuesdays at 10:30 in the lounge</li>
+</ul></li>
+</ul>
+</section>
+<section id="nceas-community-meetings-groups" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="nceas-community-meetings-groups">NCEAS Community Meetings/ Groups</h2>
+<p>Check out their individual calendar entries and channels for more information</p>
+<ul>
+<li>Early Career Researcher Community Forum - #ecr_community</li>
+<li>Hacky Hours - #hackyhour</li>
+<li>Data Science Chats - #data-science-chats</li>
+<li>NCEAS Diversity Team</li>
+<li>NCEAS Book Club - #bookclub</li>
+</ul>
+</section>
+<section id="internship-expectations" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="internship-expectations">Internship Expectations</h2>
+<p>As an intern with the data team, there are a few expectations that the Project Coordinators have of you. Overall, we expect you to be communicative and proactive. We want you to learn and grow in this position, but we don’t want you spinning your wheels going nowhere fast! If you’ve spent 10-15 minutes on an issue and you’re not making any progress, reach out to us and your peers for help in the #datateam slack channel. The #datateam slack channel is the main form of communication, and we expect all interns to become comfortable communicating in this space.</p>
+<p>Additionally, we expect interns to work within the standard business hours of 8am - 5pm (pacific time). We ask that you mark your expected work hours on the shared “Intern” Google Calendar. This is so that the Project Coordinators are aware of who’s working day-to-day and can plan their days accordingly. We also use this to verify time sheets when they are submitted. Ideally, interns would input their proposed hours on the calendar at least one week in advance. During exams and other unusually busy weeks at school, we understand you may need to shift your hours or reduce your workload. When this occurs, please make sure to email either Daphne or Jeanette so that we know not to expect you during your usual schedule.</p>
+</section>
+<section id="code-of-conduct" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="code-of-conduct">Code of Conduct</h2>
+<p>Take a moment to review the <a href="https://www.nceas.ucsb.edu/diversity-inclusion">diversity and inclusion page</a> and <a href="https://live-ncea-ucsb-edu-v01.pantheonsite.io/sites/default/files/2020-02/NCEAS_Code-of-Conduct_2019.pdf">code of conduct</a> at NCEAS so that we can foster an environment that is safe, welcoming and inclusive for everyone.</p>
+</section>
+<section id="citation-information" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="citation-information">Citation Information</h2>
+<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+<p>Clark, Jeanette, Jesse Goldstein, Dominic Mullen, Irene Steves, Mitchell Maier, Stephanie Freund, Sharis Ochs, Bryce Mecum, Peter Slaughter, Emily O’Dean, Jasmine Lai, Daphne Virlar-Knight. 2022 <em>Training Materials for the Arctic Data Center Curation Team</em>. Arctic Data Center. doi:10.18739/A20G3GX8W.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    setTimeout(function() {
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./01_introduction.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to open science</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
