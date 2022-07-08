@@ -6,6 +6,6 @@ Do you see something that looks like `43134, 43135, 43136` even though the colum
 janitor::excel_numeric_to_date(c(43134, 43135, 43136))
 ```
 
-```{block, type="warning"}
+:::{.callout-warning}
 Make sure you check that the dates make sense!
-```
+:::

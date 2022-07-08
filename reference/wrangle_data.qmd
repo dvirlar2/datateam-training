@@ -1,0 +1,12 @@
+---
+title: "Wrangle Data"
+format: html
+---
+
+
+```{r, child = '../workflows/wrangle_data/clean_column_names.qmd'}
+```
+
+
+```{r, child = '../workflows/wrangle_data/fix_excel_dates.qmd'}
+```

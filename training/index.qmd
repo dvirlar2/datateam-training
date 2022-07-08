@@ -1,4 +1,6 @@
-
+---
+date: "`r Sys.Date()`"
+---
 # Welcome to NCEAS! {-}
 
 ## First day to-dos {-}

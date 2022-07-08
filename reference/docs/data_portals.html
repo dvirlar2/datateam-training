@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.248">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>NCEAS Data Team Reference Guide - 10&nbsp; Data Portals</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<link href="./data_packages_arcticdatautils.html" rel="next">
+<link href="./adc_web_submissions.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">NCEAS Data Team Reference Guide</span>
+  </a>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Data Portals</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">About</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./miscellaneous.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Miscellaneous</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./edit_data_packages.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Edit Data Packages</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./explore_eml.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Explore EML</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./edit_eml.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Edit EML</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pi_correspondence.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">PI Correspondence</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./misc_file_types.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Miscellaneous file types</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./wrangle_data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Wrangle Data</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./solr_queries.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Solr Queries</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./adc_web_submissions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ADC Web Submissions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data_portals.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Data Portals</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data_packages_arcticdatautils.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Using arcticdatautils</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./nesting_data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Nesting Data</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#customizing-data-portals" id="toc-customizing-data-portals" class="nav-link active" data-scroll-target="#customizing-data-portals"> <span class="header-section-number">10.1</span> Customizing Data Portals</a>
+  <ul class="collapse">
+  <li><a href="#my-portals" id="toc-my-portals" class="nav-link" data-scroll-target="#my-portals"> <span class="header-section-number">10.1.1</span> My portals</a></li>
+  <li><a href="#creating-data-filters" id="toc-creating-data-filters" class="nav-link" data-scroll-target="#creating-data-filters"> <span class="header-section-number">10.1.2</span> Creating Data Filters</a></li>
+  <li><a href="#advanced-portal-customizations" id="toc-advanced-portal-customizations" class="nav-link" data-scroll-target="#advanced-portal-customizations"> <span class="header-section-number">10.1.3</span> Advanced portal customizations</a></li>
+  <li><a href="#updating-portals" id="toc-updating-portals" class="nav-link" data-scroll-target="#updating-portals"> <span class="header-section-number">10.1.4</span> Updating portals</a></li>
+  </ul></li>
+  <li><a href="#distributed-biological-observatory-dbo-submissions" id="toc-distributed-biological-observatory-dbo-submissions" class="nav-link" data-scroll-target="#distributed-biological-observatory-dbo-submissions"> <span class="header-section-number">10.2</span> Distributed Biological Observatory (DBO) submissions</a></li>
+  <li><a href="#mosaic" id="toc-mosaic" class="nav-link" data-scroll-target="#mosaic"> <span class="header-section-number">10.3</span> MOSAiC</a>
+  <ul class="collapse">
+  <li><a href="#dataset-level-annotations" id="toc-dataset-level-annotations" class="nav-link" data-scroll-target="#dataset-level-annotations"> <span class="header-section-number">10.3.1</span> Dataset Level Annotations</a></li>
+  <li><a href="#portal-updates" id="toc-portal-updates" class="nav-link" data-scroll-target="#portal-updates"> <span class="header-section-number">10.3.2</span> Portal updates</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Data Portals</span></h1>
+</div>
+
+
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="customizing-data-portals" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="customizing-data-portals"><span class="header-section-number">10.1</span> Customizing Data Portals</h2>
+<blockquote class="blockquote">
+<p>Create a custom, branded portal for your research topic or lab group that spans datasets in the Arctic Data Center – available for all users. Branded portals provide a convenient, readily customized way to communicate your science, your team, your data, and related data from within the Arctic Data Center. The portals feature makes highlighting and sharing related datasets easy for researchers.</p>
+</blockquote>
+<p>General information on data portals can be found on the main page: <a href="https://arcticdata.io/data-portals/" target="_blank">https://arcticdata.io/data-portals/</a></p>
+<section id="my-portals" class="level3" data-number="10.1.1">
+<h3 data-number="10.1.1" class="anchored" data-anchor-id="my-portals"><span class="header-section-number">10.1.1</span> My portals</h3>
+<p>My portals allows members of the Arctic Data Center Team to view all the portals currently created. This can be found in <code>Settings</code> under the <code>My Portals</code> section.</p>
+</section>
+<section id="creating-data-filters" class="level3" data-number="10.1.2">
+<h3 data-number="10.1.2" class="anchored" data-anchor-id="creating-data-filters"><span class="header-section-number">10.1.2</span> Creating Data Filters</h3>
+<p>Useful search terms to use:</p>
+<ul>
+<li>NSF award number</li>
+<li>Geographic Region</li>
+<li>Keywords</li>
+<li>Access permissions</li>
+</ul>
+<p>### Set Access Permissions For some portals such as PerCS portal, will need to be added by running <code>set_access()</code>. Please see the specific portal for the exact arguments to pass.</p>
+</section>
+<section id="advanced-portal-customizations" class="level3" data-number="10.1.3">
+<h3 data-number="10.1.3" class="anchored" data-anchor-id="advanced-portal-customizations"><span class="header-section-number">10.1.3</span> Advanced portal customizations</h3>
+<p>These requires the manual update of the portal document for features that are not available on the website yet. Please ask Jeanette for more assistance. For an example of a portal with all the features, see the <a href="https://search.dataone.org/portals/SASAP/Data">SASAP Portal</a>.</p>
+<section id="custom-filters" class="level4" data-number="10.1.3.1">
+<h4 data-number="10.1.3.1" class="anchored" data-anchor-id="custom-filters"><span class="header-section-number">10.1.3.1</span> Custom Filters</h4>
+<ul>
+<li>Most os the time copy and pasting desired from the SASAP portal is a good place to start</li>
+<li><strong>Tips</strong> - try to collapse the specific section and copy that to make sure you copy everything is needed</li>
+</ul>
+<p><strong>Filter Groups</strong></p>
+<p>Grouping multiple filters under one tab</p>
+<ul>
+<li><a href="https://fontawesome.com/v3.2/cheatsheet/">Possible fontawesome icons</a></li>
+</ul>
+<pre><code>&lt;filterGroup&gt;
+  &lt;label&gt;MOSAiC Terms&lt;/label&gt;
+  &lt;description&gt;Terms in the MOSAiC ontology&lt;/description&gt;
+  &lt;icon&gt;book&lt;/icon&gt;
+  &lt;choiceFilter&gt;...&lt;/choiceFilter&gt;
+&lt;/filterGroup&gt;</code></pre>
+<p><strong>Individual Filters</strong></p>
+<pre><code>&lt;choiceFilter&gt;
+  &lt;label&gt;Campaign&lt;/label&gt;
+  &lt;!-- ====== equivalent to the fields available in the solr query ====== --&gt;
+  &lt;field&gt;text&lt;/field&gt; 
+  &lt;operator&gt;OR&lt;/operator&gt;
+  &lt;filterOptions&gt;
+      &lt;placeholder&gt;Choose a campaign&lt;/placeholder&gt;&lt;icon&gt;sitemap&lt;/icon&gt;
+      &lt;description&gt;The campaign number&lt;/description&gt;
+  &lt;/filterOptions&gt;
+  &lt;!-- ====== change these for different options ====== --&gt;
+      &lt;choice&gt;&lt;label&gt;AF-MOSAiC-1&lt;/label&gt;&lt;value&gt;https://purl.dataone.org/odo/MOSAIC_00000020&lt;/value&gt;&lt;/choice&gt; 
+      &lt;choice&gt;&lt;label&gt;AT-MOSAiC-1&lt;/label&gt;&lt;value&gt;https://purl.dataone.org/odo/MOSAIC_00011201&lt;/value&gt;&lt;/choice&gt;
+      &lt;chooseMultiple&gt;true&lt;/chooseMultiple&gt;
+&lt;/choiceFilter&gt;</code></pre>
+</section>
+<section id="custom-colour-schemes" class="level4" data-number="10.1.3.2">
+<h4 data-number="10.1.3.2" class="anchored" data-anchor-id="custom-colour-schemes"><span class="header-section-number">10.1.3.2</span> Custom Colour schemes</h4>
+<p>Look for this section in the xml and replace the hex codes:</p>
+<pre><code> &lt;option&gt;
+        &lt;optionName&gt;primaryColor&lt;/optionName&gt;
+        &lt;optionValue&gt;#3774b9&lt;/optionValue&gt;
+    &lt;/option&gt;
+    &lt;option&gt;
+        &lt;optionName&gt;secondaryColor&lt;/optionName&gt;
+        &lt;optionValue&gt;#82cdf5&lt;/optionValue&gt;
+    &lt;/option&gt;
+    &lt;option&gt;
+        &lt;optionName&gt;accentColor&lt;/optionName&gt;
+        &lt;optionValue&gt;#EB5638&lt;/optionValue&gt;
+    &lt;/option&gt;</code></pre>
+</section>
+<section id="people-page" class="level4" data-number="10.1.3.3">
+<h4 data-number="10.1.3.3" class="anchored" data-anchor-id="people-page"><span class="header-section-number">10.1.3.3</span> People page</h4>
+<ul>
+<li>also a formatted page - see the SASAP portal for details</li>
+</ul>
+</section>
+</section>
+<section id="updating-portals" class="level3" data-number="10.1.4">
+<h3 data-number="10.1.4" class="anchored" data-anchor-id="updating-portals"><span class="header-section-number">10.1.4</span> Updating portals</h3>
+<p>For portals on DataOne - use the ucsb node. Portals made on the ADC use the same node as the datasets. ::: {.cell}</p>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dataone)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(EML)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>cn <span class="ot">&lt;-</span> <span class="fu">CNode</span>(<span class="st">"PROD"</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>ucsb <span class="ot">&lt;-</span> <span class="fu">getMNode</span>(cn, <span class="st">"urn:node:mnUCSB1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>:::</p>
+<p>Look for portals using <code>query()</code>so you can get the appropriate seriesID ::: {.cell}</p>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">query</span>(ucsb, <span class="fu">list</span>(<span class="at">q =</span><span class="st">"formatId:*purl.dataone.org/portals-1.0.0 AND (*:* NOT obsoletedBy:*)"</span>,</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                       <span class="at">rows =</span> <span class="st">"300"</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                       <span class="at">fl =</span> <span class="st">"identifier,dateUploaded,formatId,obsoletedBy,origin,formatType,title, seriesId"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                       <span class="at">sort =</span> <span class="st">'dateUploaded+desc'</span>),</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">as =</span> <span class="st">"data.frame"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>:::</p>
+<p>Download the file and open to edit and add the filters and other options. ::: {.cell}</p>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>id <span class="ot">&lt;-</span> df[df<span class="sc">$</span>title <span class="sc">==</span> <span class="st">"Multidisciplinary drifting Observatory for the Study of Arctic Climate expedition"</span>, <span class="dv">2</span>] <span class="co">#series ID</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">writeBin</span>(<span class="fu">getObject</span>(ucsb, id), <span class="st">"file_mosaic.xml"</span>) <span class="co">#download</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>:::</p>
+<p>Make whatever edits you need and upload the file. The identifier should be updated if successful but if there is an issue with the xml document go back and fix the issue before re-uploading again. ::: {.cell}</p>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>sys <span class="ot">&lt;-</span> <span class="fu">getSystemMetadata</span>(ucsb,  id)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>arcticdatautils<span class="sc">::</span><span class="fu">update_object</span>(ucsb, sys<span class="sc">@</span>identifier, <span class="at">path =</span> <span class="st">"file_mosaic.xml"</span>, <span class="at">format_id =</span> sys<span class="sc">@</span>formatId, <span class="at">sid =</span> sys<span class="sc">@</span>seriesId)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>:::</p>
+</section>
+</section>
+<section id="distributed-biological-observatory-dbo-submissions" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="distributed-biological-observatory-dbo-submissions"><span class="header-section-number">10.2</span> Distributed Biological Observatory (DBO) submissions</h2>
+<p>DBO packages are organized under a project page (viewable <a href="https://arcticdata.io/catalog/projects/DBO" target="_blank">here</a>). In order to make sure that DBO datasets appear in the special DBO data search correctly, there are a few additional metadata requirements.</p>
+<ul>
+<li>give <code>read</code> and <code>write</code> access to the entire data package (using <code>set_access</code>) to the group: <code>"CN=DBO,DC=dataone,DC=org"</code>
+<ul>
+<li>eg: `set_access(mn, pkg, “CN=DBO,DC=dataone,DC=org”, permissions = c(“read”, “write”, “changePermission”))</li>
+</ul></li>
+<li>ensure that the name of the ship the data was collected from appears in the metadata record. This will likely be one of the following ship names. If the ship name is not in that list, let Jeanette or Dominic know
+<ul>
+<li>Annika Marie</li>
+<li>Fairweather</li>
+<li>Healy</li>
+<li>Kromov</li>
+<li>Mirai</li>
+<li>Oscar Dyson</li>
+<li>Oshoro-Maru</li>
+<li>Sir Wilfrid Laurier</li>
+<li>Westward Wind</li>
+<li>Xue Long</li>
+</ul></li>
+<li>the geographic coverage should be one coverage per DBO transect sampled. The geographicDescription and bounding coordinates should be from the controlled vocabulary given in the code snippet below, which will create a data.frame with these values in your R environment</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>geo_locs <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">tribble</span>(<span class="sc">~</span>siteNew, <span class="sc">~</span>westBoundingCoordinate, <span class="sc">~</span>eastBoundingCoordinate, <span class="sc">~</span>northBoundingCoordinate,<span class="sc">~</span> southBoundingCoordinate,</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="st">"DBO 1 - South of St. Lawrence Island, Bering Sea"</span>, <span class="sc">-</span><span class="fl">176.147</span>,   <span class="sc">-</span><span class="fl">172.187</span>,   <span class="fl">63.769</span>, <span class="fl">61.847</span>,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="st">"DBO 2 - Chirikov Basin, Northern Bering Sea"</span>,  <span class="sc">-</span><span class="fl">170.492</span>,   <span class="sc">-</span><span class="fl">167.86</span>,    <span class="fl">65.111</span>, <span class="fl">64.482</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="st">"DBO 3 - Southern Chukchi Sea"</span>, <span class="sc">-</span><span class="fl">171.419</span>,   <span class="sc">-</span><span class="fl">166.481</span>,   <span class="fl">68.609</span>, <span class="fl">66.752</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="st">"DBO 4 - Northeast Chukchi Sea"</span>,    <span class="sc">-</span><span class="fl">164.553</span>,   <span class="sc">-</span><span class="fl">160.507</span>,   <span class="fl">71.867</span>, <span class="fl">70.682</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="st">"DBO 5 - Barrow Canyon, Chukchi Sea"</span>,   <span class="sc">-</span><span class="fl">158.848</span>,   <span class="sc">-</span><span class="fl">155.931</span>,   <span class="fl">71.808</span>, <span class="fl">71.111</span>,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="st">"DBO 6 - Beaufort Sea - 152 W"</span>, <span class="sc">-</span><span class="fl">153.865</span>,   <span class="sc">-</span><span class="fl">150.976</span>,   <span class="fl">72.119</span>, <span class="fl">70.89</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>one of the following key phrases referencing the data type should exist in the dataset. If the dataset doesn’t seem to fit in one of these categories, ask Jeanette or Dominic
+<ul>
+<li>ADCP</li>
+<li>benthic macroinfaunal</li>
+<li>chlorophyll</li>
+<li>CTD</li>
+<li>CPUE (referencing fish catch per unit effort)</li>
+<li>marine mammal</li>
+<li>nutrient</li>
+<li>sediment</li>
+<li>zooplankton</li>
+</ul></li>
+</ul>
+<p>After you have updated your dataset, navigate to <a href="https://arcticdata.io/catalog/projects/DBO/data" target="_blank">https://arcticdata.io/catalog/projects/DBO/data</a> and make sure that the different filters work as expected. Your dataset should be discoverable in some way through all of the filters.</p>
+</section>
+<section id="mosaic" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="mosaic"><span class="header-section-number">10.3</span> MOSAiC</h2>
+<p>Look out for datasets that are part of the MOSAiC expedition from 2019 -2020. There are a couple of special steps for datasets from this project.</p>
+<p><strong>When working on MOSAiC datasets:</strong></p>
+<ol type="1">
+<li>Find out the <code>EventId</code> from the researcher to annotate (<code>Campaign</code> can be derived from the <code>eventLabel</code>). Ask for it in your email:</li>
+</ol>
+<blockquote class="blockquote">
+<p>We would like to ask for the event label associated with this dataset (see https://www.pangaea.de/expeditions/events/PS122%2F4).</p>
+</blockquote>
+<ol start="2" type="1">
+<li>Find the appropriate dataset and attribute level annotations</li>
+</ol>
+<ul>
+<li>There are functions in <code>arcticdatautils</code> to help with annotating: <code>mosaic_annotate_dataset</code> and <code>mosaic_annotate_attribute</code></li>
+<li>The custom ontology for the datasets are currently in the <a href="https://github.com/DataONEorg/sem-prov-ontologies/blob/main/MOSAiC/MOSAiC.owl">sem-prov-ontologies</a> repository but you won’t need to use it directly if the function works.</li>
+<li>Use <code>EML::shiny_attributes</code> only when no annotations have been added. The function does not work well with multiple annotations</li>
+<li>Please continue to annotate the measurement types using <code>containst measurements of type</code> for all other attributes</li>
+</ul>
+<ol start="3" type="1">
+<li>The <a href="https://search.dataone.org/portals/mosaic/Data">portal</a> is on DataONE. Make sure the dataset(s) show up in the portal after you add the annotations.</li>
+</ol>
+<p><strong>Here are two fully annotated datasets for reference:</strong></p>
+<ol type="1">
+<li><a href="https://doi.org/10.18739/A27S7HT3B">Simple example</a></li>
+<li><a href="https://doi.org/10.18739/A2M03XZ32">Example with MOSAiC and ECSO annotations</a></li>
+<li><a href="https://arcticdata.io/catalog/view/urn%3Auuid%3A679b719b-2feb-4b61-a975-282149995b51">Example with non-polarstern vessels</a></li>
+</ol>
+<p>The following shows how to add the annotations using <code>arcticdatautils</code> and manually in the case the functions fail to work:</p>
+<section id="dataset-level-annotations" class="level3" data-number="10.3.1">
+<h3 data-number="10.3.1" class="anchored" data-anchor-id="dataset-level-annotations"><span class="header-section-number">10.3.1</span> Dataset Level Annotations</h3>
+<p>There are 5 main campaigns in the MOSAiC expedition. The main campaigns follow the pattern <code>PS122/#</code>. For the full campaign list it is easiest to see on the <a href="https://www.pangaea.de/expeditions/byproject/MOSAiC">PANGAEA website</a></p>
+<p><strong>arcticdatautils</strong> ::: {.cell}</p>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>doc<span class="sc">$</span>dataset<span class="sc">$</span>id <span class="ot">&lt;-</span> <span class="st">"your id here"</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>doc<span class="sc">$</span>dataset<span class="sc">$</span>annotation <span class="ot">&lt;-</span> <span class="cn">NULL</span> <span class="co">#make sure it is empty</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>doc<span class="sc">$</span>dataset<span class="sc">$</span>annotation <span class="ot">&lt;-</span> <span class="fu">mosaic_annotate_dataset</span>(<span class="fu">c</span>(<span class="st">"PS122/1"</span>, <span class="st">"PS122/2"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>:::</p>
+<p><strong>Manual</strong></p>
+<p>Majority of the annotations will be the same across all of the datasets. Pay attention to what needs to be changed for the <code>hasBasis</code> and <code>isPartOfCampaign</code> valueURIs.</p>
+<p>More than one <code>Campaign</code> and <code>Basis</code> might be needed in rare cases.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>doc<span class="sc">$</span>dataset<span class="sc">$</span>id <span class="ot">&lt;-</span> <span class="st">"your id here"</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>doc<span class="sc">$</span>dataset<span class="sc">$</span>annotation <span class="ot">&lt;-</span> <span class="cn">NULL</span> <span class="co">#make sure it is empty here</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>doc<span class="sc">$</span>dataset<span class="sc">$</span>annotation <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Basis</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">propertyURI =</span> <span class="fu">list</span>(<span class="at">label =</span> <span class="st">"hasBasis"</span>,</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>                       <span class="at">propertyURI =</span> <span class="st">"https://purl.dataone.org/odo/MOSAIC_00000034"</span>),</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">valueURI =</span> <span class="fu">list</span>(<span class="at">label =</span> <span class="st">"Polarstern"</span>, <span class="co"># this depends on your event ID, most of them should be Polarstern</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>                    <span class="at">valueURI =</span> <span class="st">"https://purl.dataone.org/odo/MOSAIC_00000030"</span>)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Project</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">propertyURI =</span> <span class="fu">list</span>(<span class="at">label =</span> <span class="st">"hasProjectLabel"</span>,</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>                       <span class="at">propertyURI =</span> <span class="st">"https://purl.dataone.org/odo/MOSAIC_00000025"</span>),</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">valueURI =</span> <span class="fu">list</span>(<span class="at">label =</span> <span class="st">"MOSAiC20192020"</span>,</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>                    <span class="at">valueURI =</span> <span class="st">"https://purl.dataone.org/odo/MOSAIC_00000023"</span>)</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Campaign</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">propertyURI =</span> <span class="fu">list</span>(<span class="at">label =</span> <span class="st">"isPartOfCampaign"</span>,</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>                       <span class="at">propertyURI =</span> <span class="st">"https://purl.dataone.org/odo/MOSAIC_00000032"</span>),</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">valueURI =</span> <span class="fu">list</span>(<span class="at">label =</span> <span class="st">"PS122/2"</span>, <span class="co">#*** this changes depending on the campaign</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>                    <span class="at">valueURI =</span> <span class="st">"https://purl.dataone.org/odo/MOSAIC_00000018"</span>)</span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>  ) <span class="co">#*** this changes depending on the campaign</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="attribute-level-annotations" class="level4" data-number="10.3.1.1">
+<h4 data-number="10.3.1.1" class="anchored" data-anchor-id="attribute-level-annotations"><span class="header-section-number">10.3.1.1</span> Attribute Level Annotations</h4>
+<p>Apply these to the attribute level of the dataset. Event IDs should have already be identified earlier on in the dataset review. Check the ticket overview for details.</p>
+<p><strong>arcticdatautils</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>doc<span class="sc">$</span>dataset<span class="sc">$</span>dataTable[[<span class="dv">1</span>]]<span class="sc">$</span>attributeList<span class="sc">$</span>attribute[[<span class="dv">1</span>]]<span class="sc">$</span>id <span class="ot">&lt;-</span> <span class="st">"some id here"</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>doc<span class="sc">$</span>dataset<span class="sc">$</span>dataTable[[<span class="dv">1</span>]]<span class="sc">$</span>attributeList<span class="sc">$</span>attribute[[<span class="dv">1</span>]]<span class="sc">$</span>annotation <span class="ot">&lt;-</span> <span class="fu">mosaic_annotate_attribute</span>(<span class="st">"PS122/2_14-270"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Manual</strong> ::: {.cell}</p>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>event_annotation <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="co">#Event Label</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">propertyURI =</span> <span class="fu">list</span>(<span class="at">label =</span> <span class="st">"wasGeneratedBy"</span>,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>                       <span class="at">propertyURI =</span> <span class="st">"http://www.w3.org/ns/prov#wasGeneratedBy"</span>),</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">valueURI =</span> <span class="fu">list</span>(<span class="at">label =</span> <span class="st">"PS122/2_14-270"</span>,</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>                    <span class="at">valueURI =</span> <span class="st">"https://purl.dataone.org/odo/MOSAIC_00004550"</span>)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Method/Device - Use the long name!</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">propertyURI =</span> <span class="fu">list</span>(<span class="at">label =</span> <span class="st">"deployedSystem"</span>,</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>                       <span class="at">propertyURI =</span> <span class="st">"https://purl.dataone.org/odo/MOSAIC_00002201"</span>),</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">valueURI =</span> <span class="fu">list</span>(<span class="at">label =</span> <span class="st">"Ultra-Wideband Software-defined Microwave Radiometer (0.5-2GHZ)"</span>,</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>                    <span class="at">valueURI =</span> <span class="st">"https://purl.dataone.org/odo/MOSAIC_00001163"</span>)</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>doc<span class="sc">$</span>dataset<span class="sc">$</span>dataTable<span class="sc">$</span>attributeList<span class="sc">$</span>attribute[[<span class="dv">1</span>]]<span class="sc">$</span>id <span class="ot">&lt;-</span> <span class="st">"eventId"</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>doc<span class="sc">$</span>dataset<span class="sc">$</span>dataTable<span class="sc">$</span>attributeList<span class="sc">$</span>attribute[[<span class="dv">1</span>]]<span class="sc">$</span>annotation <span class="ot">&lt;-</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>  event_annotate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>:::</p>
+<p><strong>Adding annotations</strong></p>
+<p>If there are already annotations applied (ie. using ECSO), the MOSAiC annotations can be added as so:</p>
+<ol type="1">
+<li>get the index of all of the attributes we want to add this annotation ::: {.cell}</li>
+</ol>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">which</span>(stringr<span class="sc">::</span><span class="fu">str_detect</span>(<span class="fu">eml_get_simple</span>(doc<span class="sc">$</span>dataset<span class="sc">$</span>dataTable<span class="sc">$</span>attributeList, <span class="st">"attributeName"</span>),<span class="st">"Brightness"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>:::</p>
+<ol start="2" type="1">
+<li>loop through and add the annotation(s) ::: {.cell}</li>
+</ol>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> n) {</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  doc<span class="sc">$</span>dataset<span class="sc">$</span>dataTable<span class="sc">$</span>attributeList<span class="sc">$</span>attribute[[i]]<span class="sc">$</span>annotation <span class="ot">&lt;-</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">append</span>(</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">list</span>(</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>        doc<span class="sc">$</span>dataset<span class="sc">$</span>dataTable<span class="sc">$</span>attributeList<span class="sc">$</span>attribute[[i]]<span class="sc">$</span>annotation</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>      ),</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>      event_annotation</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>:::</p>
+</section>
+</section>
+<section id="portal-updates" class="level3" data-number="10.3.2">
+<h3 data-number="10.3.2" class="anchored" data-anchor-id="portal-updates"><span class="header-section-number">10.3.2</span> Portal updates</h3>
+<p>The filters are based on the MOSAiC ontology. The <code>Campaign</code> and <code>Basis</code> filters should remain relatively the same. However there are over 500 Method and Devices. So the decision was made to only show the ones we have annotated.</p>
+<p>We can query for all of them and output them formatted as a choice:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mosaic_portal_filter</span>(<span class="st">"Method/Device"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then update the portal document using the steps outlines in the <a href="https://nceas.github.io/datateam-training/reference/data-portals-1.html">advanced data portal customizations</a></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    setTimeout(function() {
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./adc_web_submissions.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ADC Web Submissions</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./data_packages_arcticdatautils.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Using arcticdatautils</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

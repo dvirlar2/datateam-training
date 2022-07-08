@@ -7,7 +7,6 @@ book:
   title: "NCEAS Data Team Training"
   author: "Jesse Goldstein, Dominic Mullen, Jeanette Clark, Irene Steves, Mitchell Maier, Bryce Mecum, Peter Slaughter, Emily O'Dean, Jasmine Lai, Daphne Virlar-Knight"
   css: datateam-training/styles.css
-  date: "`r Sys.Date()`"
   site-url: https://nceas.github.io/datateam-training/training/
   repo-url: https://github.com/NCEAS/datateam-training
   repo-branch: main
@@ -30,7 +29,6 @@ book:
   appendices: 
     - ../reference/_quarto.yml
     - ../reference/index.qmd
-    - ../reference/reference.qmd
 
 format:
   html:

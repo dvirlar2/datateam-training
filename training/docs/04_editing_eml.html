@@ -208,6 +208,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="./10_advanced.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Beyond your first ticket</span></a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Appendices</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./../reference/index.html" class="sidebar-item-text sidebar-link">About</a>
+  </div>
+</li>
+    </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -854,7 +869,7 @@ doc$dataset$dataTable$attributeList &lt;- set_attributes(...)
 <p>After adding more metadata, we want to publish the dataset onto <code>test.arcticdata.io</code>. Before we publish updates we need to do a couple checks before doing so.</p>
 <ul>
 <li>Validate your metadata using <code>eml_validate</code>.</li>
-<li>Use the <a href="#final-checklist">checklist</a> to review your submission.</li>
+<li>Use the <a href="09_first_ticket.html#final-checklist">checklist</a> to review your submission.</li>
 <li>Make edits where necessary</li>
 </ul>
 <p>Once <code>eml_validate</code> returns <code>TRUE</code> go ahead and run <code>write_eml</code>, <code>replaceMember</code>, and <code>uploadDataPackage</code>. There might be a small lag for your changes to appear on the website. This part of the workflow will look roughly like this:</p>

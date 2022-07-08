@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nceas.github.io/datateam-training/training/index.html</loc>
-    <lastmod>2022-07-07T23:20:33.276Z</lastmod>
+    <lastmod>2022-07-08T00:44:44.149Z</lastmod>
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/01_introduction.html</loc>
-    <lastmod>2022-07-07T17:48:34.089Z</lastmod>
+    <lastmod>2022-07-08T00:44:59.813Z</lastmod>
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/08_using_git.html</loc>
@@ -22,6 +22,22 @@
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/03_exploring_eml.html</loc>
-    <lastmod>2022-07-07T17:58:22.258Z</lastmod>
+    <lastmod>2022-07-08T00:44:54.320Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/../reference/index.html</loc>
+    <lastmod>2022-07-08T00:49:55.589Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/02_creating_a_data_package.html</loc>
+    <lastmod>2022-07-08T00:44:50.439Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/05_updating_a_data_package.html</loc>
+    <lastmod>2022-07-08T00:44:56.569Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/04_editing_eml.html</loc>
+    <lastmod>2022-07-08T00:49:57.602Z</lastmod>
   </url>
 </urlset>

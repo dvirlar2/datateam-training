@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.248">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>NCEAS Data Team Reference Guide - 4&nbsp; Resources for R</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+<script src="../../reference/site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../reference/site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../reference/site_libs/clipboard/clipboard.min.js"></script>
+<meta name="quarto:offset" content="../../reference/">
+<script src="../../reference/site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../reference/site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../reference/site_libs/quarto-search/quarto-search.js"></script>
+<link href="../../reference/../workflows/miscellaneous" rel="next">
+<link href="../../reference/../workflows/miscellaneous/metacat_version.html" rel="prev">
+<script src="../../reference/site_libs/quarto-html/quarto.js"></script>
+<script src="../../reference/site_libs/quarto-html/popper.min.js"></script>
+<script src="../../reference/site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../reference/site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../reference/site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="../../reference/site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="../../reference/site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../reference/site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../reference/site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../reference/index.html">
+    <span class="navbar-title">NCEAS Data Team Reference Guide</span>
+  </a>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Resources for R</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../reference/index.html" class="sidebar-item-text sidebar-link">About</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Miscellaneous</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../reference/../workflows/miscellaneous/code_snippets.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Code Snippets</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../reference/../workflows/miscellaneous/file_paths.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">File paths</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../reference/../workflows/miscellaneous/metacat_version.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Metacat version</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../reference/../workflows/miscellaneous/resources_for_r.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Resources for R</span></a>
+  </div>
+</li>
+    </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#learning" id="toc-learning" class="nav-link active" data-scroll-target="#learning"> <span class="header-section-number">4.0.1</span> Learning</a></li>
+  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages"> <span class="header-section-number">4.0.2</span> Packages</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Resources for R</span></h1>
+</div>
+
+
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="learning" class="level3" data-number="4.0.1">
+<h3 data-number="4.0.1" class="anchored" data-anchor-id="learning"><span class="header-section-number">4.0.1</span> Learning</h3>
+<p>The following online books are useful for expanding your R knowledge and skills:</p>
+<ul>
+<li><a href="http://training.arcticdata.io/" target="_blank">the most recent ADC training materials</a>
+<ul>
+<li>The cleaning and data manipulation section is useful for working with attribute tables</li>
+</ul></li>
+<li><a href="https://csgillespie.github.io/efficientR/" target="_blank">Efficient R Programming</a>
+<ul>
+<li>In particular Chapter 3 Efficient Programming</li>
+</ul></li>
+<li><a href="https://r4ds.had.co.nz/" target="_blank">R for Data Science</a>
+<ul>
+<li>Section on Strings</li>
+</ul></li>
+<li><a href="http://r-pkgs.had.co.nz/" target="_blank">R Packages</a>
+<ul>
+<li>contributing to <code>arcticdatatutils</code>, <code>datamgmt</code> and <code>EML</code></li>
+</ul></li>
+<li><a href="http://adv-r.had.co.nz/" target="_blank">Advanced R</a>
+<ul>
+<li>Object-oriented programming in R for S4 to understand how <code>datapack</code> and <code>dataone</code> packages are written</li>
+</ul></li>
+<li><a href="https://bookdown.org/yihui/bookdown/" target="_blank">bookdown: Authoring Books and Technical Documents with R Markdown</a></li>
+<li>formatting, troubleshooting and updating the training document</li>
+</ul>
+<p><strong>Others</strong></p>
+<ul>
+<li><a href="https://rstudio-education.github.io/hopr/" target="_blank">Hands-On Programming with R</a></li>
+<li><a href="https://bookdown.org/rdpeng/rprogdatascience/" target="_blank">R Programming for Data Science</a></li>
+<li><a href="https://bookdown.org/rdpeng/exdata/" target="_blank">Exploratory Data Analysis with R</a></li>
+<li><a href="https://bookdown.org/rdpeng/RProgDA/" target="_blank">Mastering Software Development in R</a></li>
+<li><a href="https://geocompr.robinlovelace.net/" target="_blank">Geocomputation with R</a></li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/" target="_blank">R Markdown: The Definitive Guide</a></li>
+<li><a href="https://style.tidyverse.org/" target="_blank">The Tidyverse Style Guide</a></li>
+</ul>
+<p>The RStudio <a href="https://www.rstudio.com/resources/cheatsheets/" target="_blank">cheatsheets</a> are also useful references for functions in <a href="https://www.tidyverse.org/" target="_blank">tidyverse</a> and other packages.</p>
+</section>
+<section id="packages" class="level3" data-number="4.0.2">
+<h3 data-number="4.0.2" class="anchored" data-anchor-id="packages"><span class="header-section-number">4.0.2</span> Packages</h3>
+<p>The data team uses and develops a number of R packages. Here is a listing and description of the main packages:</p>
+<ul>
+<li>dataone
+<ul>
+<li>reading and writing data at DataONE member nodes</li>
+<li><a href="http://doi.org/10.5063/F1M61H5X" target="_blank">http://doi.org/10.5063/F1M61H5X</a></li>
+</ul></li>
+<li>datapack
+<ul>
+<li>creating and managing data packages</li>
+<li><a href="https://github.com/ropensci/datapack" target="_blank">https://github.com/ropensci/datapack</a></li>
+</ul></li>
+<li>EML
+<ul>
+<li>creating and editing EML metadata documents</li>
+<li><a href="https://ropensci.github.io/EML" target="_blank">https://ropensci.github.io/EML</a></li>
+</ul></li>
+<li>arcticdatautils
+<ul>
+<li>utility functions for processing data for the Arctic Data Center</li>
+<li><a href="https://nceas.github.io/arcticdatautils/" target="_blank">https://nceas.github.io/arcticdatautils/</a></li>
+</ul></li>
+<li>datamgmt
+<ul>
+<li>data management utilities for curating, documenting, and publishing data (sandbox package)</li>
+<li><a href="https://nceas.github.io/datamgmt/" target="_blank">https://nceas.github.io/datamgmt/</a></li>
+</ul></li>
+<li>metadig
+<ul>
+<li>authoring MetaDIG quality checks</li>
+<li><a href="https://github.com/NCEAS/metadig-r" target="_blank">https://github.com/NCEAS/metadig-r</a></li>
+</ul></li>
+<li>metajam
+<ul>
+<li>downloading and reading data and metadata from DataONE member nodes</li>
+<li><a href="https://nceas.github.io/metajam/" target="_blank">https://nceas.github.io/metajam/</a></li>
+</ul></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    setTimeout(function() {
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../reference/../workflows/miscellaneous/metacat_version.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Metacat version</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../reference/../workflows/miscellaneous" class="pagination-link">
+        <span class="nav-page-text"></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

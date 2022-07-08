@@ -2,7 +2,9 @@
 
 For additional examples and explanations, check out the Apache Lucene <a href = 'https://lucene.apache.org/core/2_9_4/queryparsersyntax.html' target='_blank'>Query Parser Syntax</a> page.
 
-```{r echo = FALSE, warning = FALSE, message = FALSE}
+```{r echo = FALSE, warning = FALSE, message = FALSE, eval = FALSE}
+# This code chunk was here (with no eval=F argument) before I edited becuase it was used in the code chunk in the "query for files uploaded during a specific time" section. I don't like that it shows the output, so I'll leave this code here, set eval=F, and set eval=F for the related code chunk as well. That way it still shows how to query, but doens't include all the output taking up space. 
+
 library(magrittr)
 
 cn <- CNode('PROD')
@@ -19,7 +21,7 @@ format_query_result <- function(query_result) {
 
 ### Find everything
 
-```{r}
+```{r, eval = FALSE}
 result <- query(adc, list(q="*:*",
                                fl="*",
                                rows="20"),
@@ -36,7 +38,7 @@ result <- query(adc, list(q="id:arctic-data.6*",
 ```
 
 ### Query multiple fields 
-
+Multiple fields can be queried at once by using either the `AND` or `OR` arguments. 
 ```{r eval = FALSE}
 result <- query(adc, list(q="title:soil*+AND+origin:Ludwig",
                                rows="5000"),
@@ -51,23 +53,26 @@ result <- query(adc, list(q="title:soil* OR origin:Ludwig",
 
 :::{.callout-note}
 You can use either spaces or `+` to separate query parameters. When typing queries in R, it's often easier to read if you use spaces. However, when using the browser, you may want to use `+` to keep the query clean. (The browser will replace spaces with `%20`.)
-:::
-
+::: 
+ 
 ### Query by formatType
-Objects are queryable via their `formatType` which is one of DATA, METADATA, or RESOURCE.  
-```{r, eval=FALSE}
+Objects are queryable via their `formatType` which is one of DATA, METADATA, or RESOURCE. 
+
+```{r, eval = FALSE}
 result <- query(adc, list(q = 'formatType:RESOURCE AND submitter:"http://orcid.org/0000-0002-2561-5840"',
                           fl = 'identifier,submitter,fileName',
                           sort = 'dateUploaded+desc',
                           rows='10'),
                 as = "data.frame")
+```
 
+```{r, eval = FALSE}
 result <- query(adc, list(q = 'formatType:METADATA AND title:*Toolik*',
                           fl = 'identifier,submitter,fileName',
                           sort = 'dateUploaded+desc',
                           rows='10'),
                 as = "data.frame")
-```
+``` 
 
 ### Query pids by a specific submitter
 
@@ -143,7 +148,7 @@ query(adc, list(q = paste0("documents:*f551460b-ce36-4dd3-aaa6-3a6c6e338ec9"),
 ```
 
 ### Query for files uploaded during a specific time
-```{r}
+```{r, eval = FALSE}
 query(adc, list(q="dateUploaded:[2020-05-06T00:00:00Z TO NOW]",
                 fl="title,identifier,resourceMap,dateUploaded,dateModified",
                 sort = "dateUploaded+desc",
@@ -155,6 +160,6 @@ query(adc, list(q="dateUploaded:[2020-05-06T00:00:00Z TO NOW]",
 
 All resource maps with > 100 data objects that are _not_ on the Arctic Data Center:
 
-```
+```{r, eval = FALSE}
 https://cn.dataone.org/cn/v2/query/solr/?q=resourceMap:*+AND+-datasource:*ARCTIC*&rows=0&facet=true&facet.field=resourceMap&facet.mincount=100
 ```

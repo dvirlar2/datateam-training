@@ -1,0 +1,16 @@
+---
+title: "Explore EML"
+format: html
+---
+
+```{r, child = '../workflows/explore_eml/access_specific_elements.qmd'}
+```
+
+
+```{r, child = '../workflows/explore_eml/navigate_through_eml.qmd'}
+```
+
+
+```{r, child = '../workflows/explore_eml/understand_eml_schema.qmd'}
+```
+

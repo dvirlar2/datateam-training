@@ -1,0 +1,45 @@
+---
+title: "Solr Queries"
+format: html
+---
+
+Solr is what's known as an index, which helps us keep track of the data, metadata, and resource map objects stored in our metadata catalog, <a href = 'https://www.dataone.org/software-tools/metacat' target='_blank'>Metacat</a>.
+
+Solr allows you to quickly search through any coordinating or member node. Some more common use-cases include:
+
+- **Recovering lost PIDs** - if you publish new data objects (<a href = 'https://nceas.github.io/datateam-training/reference/update-a-data-object.html' target='_blank'>`publish_object`</a>) but forget to save the `PID`s, you can recover them with a query. For example, you can search for all data objects that are _not_ associated with a resource map _and_ are published using your ORCiD (`q=-resourceMap:*+AND+submitter:*XXXX-YYYY-ZZZZ-WWWW`)
+- **Working with groups of packages** - if you want to find all data, metadata, and resource maps associated with a PI, you can use their last name (`q=origin:*SURNAME*`) or perhaps their ORCiD (`q=rightsHolder:*XXXX-YYYY-ZZZZ-WWWW`) or both (`q=origin:*SURNAME*+OR+rightsHolder:*XXXX-YYYY-ZZZZ-WWWW`) to retrieve information about packages associated with them
+
+Once you understand the logic of queries, it becomes a flexible and useful tool that you can integrate into your R workflow. You can use queries to answer a variety of interesting questions, for example: 
+
+- What are the most recently updated data sets?
+- What metadata and data objects are in a given data package?
+- What is the total size (in terms of disk space) of all objects stored in Metacat?
+
+Querying Solr is possible by <a href = 'https://nceas.github.io/datateam-training/reference/query-solr-via-a-browser.html' target='_blank'>adding a query onto the end of a base URL</a> or through the <a href = 'https://nceas.github.io/datateam-training/reference/query-solr-via-r.html' target='_blank'>`dataone::query()` function in R</a>. For now, we'll just cover the basics of Solr queries in R. 
+
+```{r, child = '../workflows/solr_queries/construct_a_query.qmd'}
+```
+
+
+```{r, child = '../workflows/solr_queries/query_solr_via_browser.qmd'}
+```
+
+
+```{r, child = '../workflows/solr_queries/query_solr_via_R.qmd'}
+```
+
+
+```{r, child = '../workflows/solr_queries/use_facets.qmd'}
+```
+
+```{r, child = '../workflows/solr_queries/use_stats.qmd'}
+```
+
+
+```{r, child = '../workflows/solr_queries/y_example_solr_queries.qmd'}
+```
+
+
+```{r, child = '../workflows/solr_queries/z_solr_resources.qmd'}
+```

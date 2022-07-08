@@ -1,0 +1,17 @@
+# Miscellaneous
+
+
+```{r, child = '../workflows/miscellaneous/code_snippets.qmd'}
+```
+
+
+```{r, child = '../workflows/miscellaneous/file_paths.qmd'}
+```
+
+
+```{r, child = '../workflows/miscellaneous/metacat_version.qmd'}
+```
+
+
+```{r, child = '../workflows/miscellaneous/resources_for_r.qmd'}
+```

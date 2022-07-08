@@ -1,7 +1,33 @@
-book_filename: "datateam-training"
-language:
-  ui:
-    chapter_name: "Chapter "
-delete_merged_file: true
-output_dir: "../docs/reference"
-new_session: no
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "NCEAS Data Team Reference Guide"
+  author: "Jesse Goldstein, Dominic Mullen, Jeanette Clark, Irene Steves, Mitchell Maier, Bryce Mecum, Peter Slaughter, Emily O'Dean, Jasmine Lai, Daphne Virlar-Knight"
+  css: datateam-training/styles.css
+  site-url: https://nceas.github.io/datateam-training/reference/
+  repo-url: https://github.com/NCEAS/datateam-training
+  repo-branch: main
+  search: true
+  page-navigation: true
+  navbar:
+    search: true
+  chapters:
+    - index.qmd
+    - miscellaneous.qmd
+    - edit_data_packages.qmd
+    - explore_eml.qmd
+    - edit_eml.qmd
+    - pi_correspondence.qmd
+    - misc_file_types.qmd
+    - wrangle_data.qmd
+    - solr_queries.qmd
+    - adc_web_submissions.qmd
+    - data_portals.qmd
+    - data_packages_arcticdatautils.qmd
+    - nesting_data.qmd
+
+format:
+  html:
+    theme: cosmo

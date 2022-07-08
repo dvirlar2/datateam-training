@@ -1,0 +1,21 @@
+---
+title: "ADC Web Submissions"
+format: html
+---
+
+
+```{r, child = '../workflows/adc_web_submissions/add_physicals_to_submissions.qmd'}
+```
+
+
+```{r, child = '../workflows/adc_web_submissions/assess_attributes.qmd'}
+```
+
+
+```{r, child = '../workflows/adc_web_submissions/list_submissions_to_adc.qmd'}
+```
+
+
+```{r, child = '../workflows/adc_web_submissions/recover_failed_submission.qmd'}
+```
+

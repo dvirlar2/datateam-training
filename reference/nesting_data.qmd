@@ -1,0 +1,8 @@
+---
+title: "Nesting Data"
+format: html
+---
+
+
+```{r, child = '../workflows/nesting_data/nesting_a_data_package.qmd'}
+```

@@ -1,0 +1,16 @@
+---
+title: "Data Portals"
+format: html
+---
+
+
+```{r, child = '../workflows/data_portals/data_portals.qmd'}
+```
+
+
+```{r, child = '../workflows/data_portals/dbo_packages.qmd'}
+```
+
+
+```{r, child = '../workflows/data_portals/mosaic.qmd'}
+```
