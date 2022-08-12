@@ -1,4 +1,6 @@
-# Creating a data package
+---
+title: "Creating a data package"
+---
 
 This chapter will teach you how to create and submit a data package to a DataONE MN via R. But first, please read [this paper](data/eml-principles.pdf) on the value of structured metadata, namely the Ecological Metadata Language (EML).
 
@@ -80,11 +82,13 @@ library(datamgmt)
 ```
 
 :::{.callout-note}
-When you are usually working with data packages you will only need the following:
-library(dataone)
+When you are usually working with data packages, you will only need the following: 
+```{r, eval = F}
+library(dataone) 
 library(datapack)
 library(EML)
 library(arcticdatautils)
+```
 :::
 
 For this training, we will be working exclusively on the Arctic test site, or "node." In many of the functions you will use this will be the first argument. It is often referred to in documentation as `mn`, short for member node. More information on the other nodes can be found in the reference section under Set DataONE nodes [Set DataONE nodes](https://nceas.github.io/datateam-training/reference/set-dataone-nodes.html)
@@ -101,15 +105,14 @@ If you are curious how everything magically works, here is a handy diagram:
 
 ![From the DataOne Community Meeting (Session 7)](images/data-submission-workflow1.png)
 
-```{r, child = '../workflows/edit_data_packages/01_datapack_background.qmd'}
-```
+{{< include ../workflows/edit_data_packages/01_datapack_background.qmd >}}
 
 ## Exercise 2a {.exercise}
 
 Select a dataset from the [catalog](http://arcticdata.io/catalog) on the Arctic Data Center. Observe the number of data files in the dataset. Try to find identifiers for the metadata file and resource map on the landing page for the dataset based on the screenshot shown above.
 
-```{r, child = '../workflows/edit_data_packages/02_create_package_data_pack.qmd'}
-```
+{{< include ../workflows/edit_data_packages/02_create_package_data_pack.qmd >}}
+
 
 ## Exercise 2b {.exercise}
 This exercise will take you through how to do the submission process through R instead of the webform (exercise 1).

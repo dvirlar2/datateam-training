@@ -1,4 +1,6 @@
-# Using Git
+---
+title: "Using Git"
+---
 
 ## Usage in the datateam
 

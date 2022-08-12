@@ -1,4 +1,6 @@
-# Editing EML
+---
+title: "Editing EML"
+---
 
 This chapter is a practical tutorial for using R to read, edit, write, and validate EML documents. Much of the information here can also be found in the vignettes for the R packages used in this section (e.g. the <a href = 'https://github.com/ropensci/EML/blob/master/vignettes/creating-EML.qmd' target='_blank'>EML package</a>). 
 
