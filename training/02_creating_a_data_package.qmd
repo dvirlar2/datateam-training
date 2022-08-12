@@ -99,9 +99,7 @@ For example, if we are using the test site, set the node to the test Arctic node
 d1c_test <- dataone::D1Client("STAGING", "urn:node:mnTestARCTIC")
 ```
 
-Once all set up you can first publish an object (data)
-
-If you are curious how everything magically works, here is a handy diagram:
+Once all set up you can first publish an object (data). If you are curious how everything magically works, here is a handy diagram:
 
 ![From the DataOne Community Meeting (Session 7)](images/data-submission-workflow1.png)
 
@@ -134,7 +132,6 @@ Now we want to publish the metadata and data files we downloaded again to `test.
 ```{r, eval = FALSE, class.source = 'exercise'}
 #set the node
 d1c_test <- dataone::D1Client("STAGING", "urn:node:mnTestARCTIC")
-
 dp <- new("DataPackage")
 
 #add your metadata
