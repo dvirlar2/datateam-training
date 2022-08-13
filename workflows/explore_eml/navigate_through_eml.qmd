@@ -12,7 +12,8 @@ library(EML)
 # Need to be in this member node to explore file
 d1c_test <- dataone::D1Client("STAGING", "urn:node:mnTestARCTIC")
 
-doc <- read_eml(getObject(d1c_test@mn, "urn:uuid:558eabf1-1e91-4881-8ba3-ef8684d8f6a1"))
+doc <- read_eml(getObject(d1c_test@mn, 
+                          "urn:uuid:558eabf1-1e91-4881-8ba3-ef8684d8f6a1"))
 ```
 
 ```{r, eval = FALSE}
