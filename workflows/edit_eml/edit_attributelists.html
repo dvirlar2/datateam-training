@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>edit_attributelists</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="edit_attributelists_files/libs/clipboard/clipboard.min.js"></script>
+<script src="edit_attributelists_files/libs/quarto-html/quarto.js"></script>
+<script src="edit_attributelists_files/libs/quarto-html/popper.min.js"></script>
+<script src="edit_attributelists_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="edit_attributelists_files/libs/quarto-html/anchor.min.js"></script>
+<link href="edit_attributelists_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="edit_attributelists_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="edit_attributelists_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="edit_attributelists_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="edit_attributelists_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="edit-attributelists" class="level2">
+<h2 class="anchored" data-anchor-id="edit-attributelists">Edit attributeLists</h2>
+<p>Attributes are descriptions of variables, typically columns or column names in tabular data. Attributes are stored in an <a href="https://eml.ecoinformatics.org/images/eml-attribute.png" target="_blank">attributeList</a>. When editing attributes in R, you need to create one to three objects:</p>
+<ol type="1">
+<li>A data.frame of attributes</li>
+<li>A data.frame of custom units (if applicable)</li>
+</ol>
+<p>The <code>attributeList</code> is an element within one of 4 different types of entity objects. An entity corresponds to a file, typically. Multiple entities (files) can exist within a dataset. The 4 different entity types are <code>dataTable</code> (most common for us), <code>spatialVector</code>, <code>spatialRaster</code>, and <code>otherEntity</code></p>
+<p>Please note that submitting attribute information through the website will store them in an <code>otherEntity</code> object by default. We prefer to store them in a <code>dataTable</code> object for tabular data or a <code>spatialVector</code> object for spatial data.</p>
+<p>To edit or examine an existing attribute table already in an EML file, you can use the following commands, where <code>i</code> represents the index of the series element you are interested in. Note that if there is only one item in the series (ie there is only one <code>dataTable</code>), you should just call <code>doc$dataset$dataTable</code>, as in this case <code>doc$dataset$dataTable[[1]]</code> will return the first sub-element of the <code>dataTable</code> (the <code>entityName</code>)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># If they are stored in an otherEntity (submitted from the website by default)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>attributeList <span class="ot">&lt;-</span> EML<span class="sc">::</span><span class="fu">get_attributes</span>(doc<span class="sc">$</span>dataset<span class="sc">$</span>otherEntity[[i]]<span class="sc">$</span>attributeList)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Or if they are stored in a dataTable (usually created by a datateam member)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>attributeList <span class="ot">&lt;-</span> EML<span class="sc">::</span><span class="fu">get_attributes</span>(doc<span class="sc">$</span>dataset<span class="sc">$</span>dataTable[[i]]<span class="sc">$</span>attributeList)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Or if they are stored in a spatialVector (usually created by a datateam member)</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>attributeList <span class="ot">&lt;-</span> EML<span class="sc">::</span><span class="fu">get_attributes</span>(doc<span class="sc">$</span>dataset<span class="sc">$</span>spatialVector[[i]]<span class="sc">$</span>attributeList)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>attributes <span class="ot">&lt;-</span> attributeList<span class="sc">$</span>attributes</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(attributes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="edit-attributes" class="level3">
+<h3 class="anchored" data-anchor-id="edit-attributes">Edit attributes</h3>
+<p>Attribute information should be stored in a <code>data.frame</code> with the following columns:</p>
+<ul>
+<li><strong>attributeName</strong>: The name of the attribute as listed in the csv. Required. e.g.: “c_temp”</li>
+<li><strong>attributeLabel</strong>: A descriptive label that can be used to display the name of an attribute. It is not constrained by system limitations on length or special characters. Optional. e.g.: “Temperature (Celsius)”</li>
+<li><strong>attributeDefinition</strong>: Longer description of the attribute, including the required context for interpreting the <code>attributeName</code>. Required. e.g.: “The near shore water temperature in the upper inter-tidal zone, measured in degrees Celsius.”</li>
+<li><strong>measurementScale</strong>: One of: nominal, ordinal, dateTime, ratio, interval. Required.
+<ul>
+<li><em>nominal</em>: unordered categories or text. e.g.: (Male, Female) or (Yukon River, Kuskokwim River)</li>
+<li><em>ordinal</em>: ordered categories. e.g.: Low, Medium, High</li>
+<li><em>dateTime</em>: date or time values from the Gregorian calendar. e.g.: 01-01-2001</li>
+<li><em>ratio</em>: measurement scale with a meaningful zero point in nature. Ratios are proportional to the measured variable. e.g.: 0 Kelvin represents a complete absence of heat. 200 Kelvin is half as hot as 400 Kelvin. 1.2 meters per second is twice as fast as 0.6 meters per second.</li>
+<li><em>interval</em>: values from a scale with equidistant points, where the zero point is arbitrary. This is usually reserved for degrees Celsius or Fahrenheit, or latitude and longitude coordinates, or any other human-constructed scale. e.g.: there is still heat at 0° Celsius; 12° Celsius is NOT half as hot as 24° Celsius.</li>
+</ul></li>
+<li><strong>domain</strong>: One of: <code>textDomain</code>, <code>enumeratedDomain</code>, <code>numericDomain</code>, <code>dateTime</code>. Required.
+<ul>
+<li><em>textDomain</em>: text that is free-form, or matches a pattern</li>
+<li><em>enumeratedDomain</em>: text that belongs to a defined list of codes and definitions. e.g.: CASC = Cascade Lake, HEAR = Heart Lake</li>
+<li><em>dateTimeDomain</em>: <code>dateTime</code> attributes</li>
+<li><em>numericDomain</em>: attributes that are numbers (either <code>ratio</code> or <code>interval</code>)</li>
+</ul></li>
+<li><strong>formatString</strong>: Required for <code>dateTime</code>, NA otherwise. Format string for dates, e.g.&nbsp;“DD/MM/YYYY”.</li>
+<li><strong>definition</strong>: Required for <code>textDomain</code>, NA otherwise. Definition for attributes that are a character string, matches attribute definition in most cases.</li>
+<li><strong>unit</strong>: Required for <code>numericDomain</code>, NA otherwise. Unit string. If the unit is not a standard unit, a warning will appear when you create the attribute list, saying that it has been forced into a custom unit. Use caution here to make sure the unit really needs to be a custom unit. A list of standard units can be found using: <code>standardUnits &lt;- EML::get_unitList()</code> then running <code>View(standardUnits$units)</code>.</li>
+<li><strong>numberType</strong>: Required for <code>numericDomain</code>, NA otherwise. Options are <code>real</code>, <code>natural</code>, <code>whole</code>, and <code>integer</code>.
+<ul>
+<li><em>real</em>: positive and negative fractions and integers (…-1,-0.25,0,0.25,1…)</li>
+<li><em>natural</em>: non-zero positive integers (1,2,3…)</li>
+<li><em>whole</em>: positive integers and zero (0,1,2,3…)</li>
+<li><em>integer</em>: positive and negative integers and zero (…-2,-1,0,1,2…)</li>
+</ul></li>
+<li><strong>missingValueCode</strong>: Code for missing values (e.g.: ‘-999’, ‘NA’, ‘NaN’). NA otherwise. Note that an NA missing value code should be a string, ‘NA’, and numbers should also be strings, ‘-999.’</li>
+<li><strong>missingValueCodeExplanation</strong>: Explanation for missing values, NA if no missing value code exists.</li>
+</ul>
+<p>You can create attributes manually by typing them out in R following a workflow similar to the one below:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>attributes <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">attributeName =</span> <span class="fu">c</span>(<span class="st">'Date'</span>, <span class="st">'Location'</span>, <span class="st">'Region'</span>,<span class="st">'Sample_No'</span>, <span class="st">'Sample_vol'</span>, </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                      <span class="st">'Salinity'</span>, <span class="st">'Temperature'</span>, <span class="st">'sampling_comments'</span>),</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">attributeDefinition =</span> <span class="fu">c</span>(<span class="st">'Date sample was taken on'</span>, </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'Location code representing location where sample was taken'</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'Region where sample was taken'</span>, <span class="st">'Sample number'</span>, <span class="st">'Sample volume'</span>, </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'Salinity of sample in PSU'</span>, <span class="st">'Temperature of sample'</span>, </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>                            <span class="st">'comments about sampling process'</span>),</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">measurementScale =</span> <span class="fu">c</span>(<span class="st">'dateTime'</span>, <span class="st">'nominal'</span>,<span class="st">'nominal'</span>, <span class="st">'nominal'</span>, <span class="st">'ratio'</span>, </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>                         <span class="st">'ratio'</span>, <span class="st">'interval'</span>, <span class="st">'nominal'</span>),</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">domain =</span> <span class="fu">c</span>(<span class="st">'dateTimeDomain'</span>, <span class="st">'enumeratedDomain'</span>,<span class="st">'enumeratedDomain'</span>, </span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>               <span class="st">'textDomain'</span>, <span class="st">'numericDomain'</span>, <span class="st">'numericDomain'</span>, </span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>               <span class="st">'numericDomain'</span>, <span class="st">'textDomain'</span>),</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">formatString =</span> <span class="fu">c</span>(<span class="st">'MM-DD-YYYY'</span>, <span class="cn">NA</span>,<span class="cn">NA</span>,<span class="cn">NA</span>,<span class="cn">NA</span>,<span class="cn">NA</span>,<span class="cn">NA</span>,<span class="cn">NA</span>),</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">definition =</span> <span class="fu">c</span>(<span class="cn">NA</span>,<span class="cn">NA</span>,<span class="cn">NA</span>,<span class="st">'Sample number'</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, </span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>                   <span class="st">'comments about sampling process'</span>),</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">unit =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>,<span class="st">'milliliter'</span>, <span class="st">'dimensionless'</span>, <span class="st">'celsius'</span>, <span class="cn">NA</span>),</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">numberType =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>,<span class="cn">NA</span>, <span class="st">'real'</span>, <span class="st">'real'</span>, <span class="st">'real'</span>, <span class="cn">NA</span>),</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">missingValueCode =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>,<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="st">'NA'</span>),</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">missingValueCodeExplanation =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>,<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, </span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">'no sampling comments'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>However, typing this out in R can be a major pain. Luckily, there’s a Shiny app that you can use to build attribute information. You can use the app to build attributes from a data file loaded into R (recommended as the app will auto-fill some fields for you) to edit an existing attribute table, or to create attributes from scratch. Use the following commands to create or modify attributes (these commands will launch a Shiny app in your web browser):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#first download the CSV in your data package from Exercise #2</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>data_pid <span class="ot">&lt;-</span> <span class="fu">selectMember</span>(dp, <span class="at">name =</span> <span class="st">"sysmeta@fileName"</span>, <span class="at">value =</span> <span class="st">".csv"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">text=</span><span class="fu">rawToChar</span>(<span class="fu">getObject</span>(d1c_test<span class="sc">@</span>mn, data_pid)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># From data (recommended)</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>EML<span class="sc">::</span><span class="fu">shiny_attributes</span>(<span class="at">data =</span> data)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># From an existing attribute table</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>attributeList <span class="ot">&lt;-</span> <span class="fu">get_attributes</span>(doc<span class="sc">$</span>dataset<span class="sc">$</span>dataTable[[i]]<span class="sc">$</span>attributeList)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>EML<span class="sc">::</span><span class="fu">shiny_attributes</span>(<span class="at">data =</span> <span class="cn">NULL</span>, <span class="at">attributes =</span> attributeList<span class="sc">$</span>attributes)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># From scratch</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>atts <span class="ot">&lt;-</span> EML<span class="sc">::</span><span class="fu">shiny_attributes</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Once you are done editing a table in the app, quit the app and the tables will be assigned to the <code>atts</code> variable as a list of data frames (one for attributes, factors, and units). Alternatively, each table can be to exported to a csv file by clicking the <code>Download</code> button.</p>
+<p>If you downloaded the table, read the table back into your R session and assign it to a variable in your script (e.g.&nbsp;<code>attributes &lt;- data.frame(...)</code>), or just use the variable that <code>shiny_attributes</code> returned.</p>
+<p>For simple attribute corrections, <code>datamgmt::edit_attribute()</code> allows you to edit the slots of a single attribute within an attribute list. To use this function, pass an attribute through <code>datamgmt::edit_attribute()</code> and fill out the parameters you wish to edit/update. An example is provided below where we are changing <code>attributeName</code>, <code>domain</code>, and <code>measurementScale</code> in the first attribute of a dataset. After completing the edits, insert the new version of the attribute back into the EML document.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>new_attribute <span class="ot">&lt;-</span> datamgmt<span class="sc">::</span><span class="fu">edit_attribute</span>(doc<span class="sc">$</span>dataset<span class="sc">$</span>dataTable[[<span class="dv">1</span>]]<span class="sc">$</span>attributeList<span class="sc">$</span>attribute[[<span class="dv">1</span>]], </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                                          <span class="at">attributeName =</span> <span class="st">'date_and_time'</span>, <span class="at">domain =</span> <span class="st">'dateTimeDomain'</span>, <span class="at">measurementScale =</span> <span class="st">'dateTime'</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>doc<span class="sc">$</span>dataset<span class="sc">$</span>dataTable[[<span class="dv">1</span>]]<span class="sc">$</span>attributeList<span class="sc">$</span>attribute[[<span class="dv">1</span>]] <span class="ot">&lt;-</span> new_attribute</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="edit-custom-units" class="level3">
+<h3 class="anchored" data-anchor-id="edit-custom-units">Edit custom units</h3>
+<p>EML has a set list of units that can be added to an EML file. These can be seen by using the following code:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>standardUnits <span class="ot">&lt;-</span> EML<span class="sc">::</span><span class="fu">get_unitList</span>()</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(standardUnits<span class="sc">$</span>units)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Search the units list for your unit before attempting to create a custom unit. You can search part of the unit you can look up part of the unit ie <code>meters</code> in the table to see if there are any matches.</p>
+<p>If you have units that are not in the standard EML unit list, you will need to build a custom unit list. A unit typically consists of the following fields:</p>
+<ul>
+<li><strong>id</strong>: The <code>unit id</code> (ids are camelCased)</li>
+<li><strong>unitType</strong>: The <code>unitType</code> (run <code>View(standardUnits$unitTypes)</code> to see standard <code>unitType</code>s)</li>
+<li><strong>parentSI</strong>: The <code>parentSI</code> unit (e.g.&nbsp;for kilometer <code>parentSI</code> = “meter”)</li>
+<li><strong>multiplierToSI</strong>: Multiplier to the <code>parentSI</code> unit (e.g.&nbsp;for kilometer <code>multiplierToSI</code> = 1000)</li>
+<li><strong>name</strong>: Unit abbreviation (e.g.&nbsp;for kilometer <code>name</code> = “km”)</li>
+<li><strong>description</strong>: Text defining the unit (e.g.&nbsp;for kilometer <code>description</code> = “1000 meters”)</li>
+</ul>
+<p>To manually generate the custom units list, create a dataframe with the fields mentioned above. An example is provided below that can be used as a template:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>custom_units <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="fu">c</span>(<span class="st">'siemensPerMeter'</span>, <span class="st">'decibar'</span>),</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">unitType =</span> <span class="fu">c</span>(<span class="st">'resistivity'</span>, <span class="st">'pressure'</span>),</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">parentSI =</span> <span class="fu">c</span>(<span class="st">'ohmMeter'</span>, <span class="st">'pascal'</span>),</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiplierToSI =</span> <span class="fu">c</span>(<span class="st">'1'</span>,<span class="st">'10000'</span>),</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">abbreviation =</span> <span class="fu">c</span>(<span class="st">'S/m'</span>,<span class="st">'decibar'</span>),</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">description =</span> <span class="fu">c</span>(<span class="st">'siemens per meter'</span>, <span class="st">'decibar'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Using <code>EML::get_unit_id</code> for custom units will also generate valid EML unit ids.</p>
+<p>Custom units are then added to <code>additionalMetadata</code> using the following command:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>unitlist <span class="ot">&lt;-</span> <span class="fu">set_unitList</span>(custom_units, <span class="at">as_metadata =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>doc<span class="sc">$</span>additionalMetadata <span class="ot">&lt;-</span>  <span class="fu">list</span>(<span class="at">metadata =</span> <span class="fu">list</span>(<span class="at">unitList =</span> unitlist))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="edit-factors" class="level3">
+<h3 class="anchored" data-anchor-id="edit-factors">Edit factors</h3>
+<p>For attributes that are <code>enumeratedDomains</code>, a table is needed with three columns: <code>attributeName</code>, <code>code</code>, and <code>definition</code>.</p>
+<ul>
+<li><strong>attributeName</strong> should be the same as the <code>attributeName</code> within the attribute table and repeated for all codes belonging to a common attribute.</li>
+<li><strong>code</strong> should contain all unique values of the given <code>attributeName</code> that exist within the actual data.</li>
+<li><strong>definition</strong> should contain a plain text definition that describes each code.</li>
+</ul>
+<p>To build factors by hand, you use the named character vectors and then convert them to a data.frame as shown in the example below. In this example, there are two enumerated domains in the attribute list - “Location” and “Region”.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Location <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">CASC =</span> <span class="st">'Cascade Lake'</span>, <span class="at">CHIK =</span> <span class="st">'Chikumunik Lake'</span>, </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">HEAR =</span> <span class="st">'Heart Lake'</span>, <span class="at">NISH =</span> <span class="st">'Nishlik Lake'</span> )</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>Region <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">W_MTN =</span> <span class="st">'West region, locations West of Eagle Mountain'</span>, </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">E_MTN =</span> <span class="st">'East region, locations East of Eagle Mountain'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The definitions are then written into a data.frame using the names of the named character vectors and their definitions.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>factors <span class="ot">&lt;-</span> <span class="fu">rbind</span>(<span class="fu">data.frame</span>(<span class="at">attributeName =</span> <span class="st">'Location'</span>, </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>                            <span class="at">code =</span> <span class="fu">names</span>(Location), </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>                            <span class="at">definition =</span> <span class="fu">unname</span>(Location)),</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">data.frame</span>(<span class="at">attributeName =</span> <span class="st">'Region'</span>, <span class="at">code =</span> <span class="fu">names</span>(Region), </span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>                             <span class="at">definition =</span> <span class="fu">unname</span>(Region)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="finalize-attributelist" class="level3">
+<h3 class="anchored" data-anchor-id="finalize-attributelist">Finalize attributeList</h3>
+<p>Once you have built your attributes, factors, and custom units, you can add them to EML objects. Attributes and factors are combined to form an <code>attributeList</code> using the following command:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>attributeList <span class="ot">&lt;-</span> EML<span class="sc">::</span><span class="fu">set_attributes</span>(<span class="at">attributes =</span> attributes,</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">factors =</span> factors) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This <code>attributeList</code> must then be <a href="#edit-datatables">added to a <code>dataTable</code></a>.</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

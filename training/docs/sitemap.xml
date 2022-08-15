@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nceas.github.io/datateam-training/training/index.html</loc>
-    <lastmod>2022-08-12T23:16:45.340Z</lastmod>
+    <lastmod>2022-08-15T22:38:13.258Z</lastmod>
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/01_introduction.html</loc>
@@ -34,11 +34,11 @@
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/05_updating_a_data_package.html</loc>
-    <lastmod>2022-08-11T09:40:28.934Z</lastmod>
+    <lastmod>2022-08-15T23:14:45.282Z</lastmod>
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/04_editing_eml.html</loc>
-    <lastmod>2022-08-13T00:24:15.683Z</lastmod>
+    <lastmod>2022-08-15T23:14:32.225Z</lastmod>
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/06_editing_sysmeta.html</loc>

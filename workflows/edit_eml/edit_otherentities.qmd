@@ -24,7 +24,7 @@ otherEntity <- arcticdatautils::pid_to_eml_entity(mn, "your_data_pid", entityTyp
 
 The `otherEntity` must then be set to the EML, like so: 
 
-``` {r, eval = FALSE}
+```{r, eval = FALSE}
 doc$dataset$otherEntity <- otherEntity
 ```
 
@@ -34,11 +34,9 @@ If you have more than one `otherEntity` object in the EML already, you can add t
 doc$dataset$otherEntity[[i]] <- otherEntity
 ```
 
-Where `i` is set to the number of existing entities plus one.
+Where `i` is set to the number of existing entities plus one. Remember the warning from the last section, however. If you only have one `otherEntity`, and you are trying to add another, you have to run:
 
-Remember the warning from the last section, however. If you only have one `otherEntity`, and you are trying to add another, you have to run:
-
-``` {r, eval = FALSE}
+```{r, eval = FALSE}
 doc$dataset$otherEntity <- list(otherEntity, doc$dataset$otherEntity)
 ```
 

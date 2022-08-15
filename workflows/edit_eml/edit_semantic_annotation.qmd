@@ -17,11 +17,16 @@ On the datateam, we will only be adding annotations to attributes for now.
 
 This is a  <a href = 'https://arcticdata.io/catalog/view/doi%3A10.18739%2FA2KW57J9Q'>dataset</a> that has semantic annotations included.
 
-On the website you can see annotations in each of the attributes.
-![](../images/annotations_web.png)
+On the website you can see annotations in each of the attributes. 
 
-You can click on any one of them to search for more datasets with that same annotation.
-![](../images/annotations_web_use.png)
+![](../../images/annotations_web.png) 
+ 
+![](../../images/annotations_web.png) 
+
+You can click on any one of them to search for more datasets with that same annotation. 
+
+![](../../images/annotations_web_use.png) 
+
 
 #### Attribute-level annotations
 
@@ -131,7 +136,7 @@ You should see an ID on the Bioportal page that looks like a URL - this is the `
 
 ```{r, eval = F}
 doc$dataset$dataTable[[3]]$attributeList$attribute[[6]]$annotation$valueURI <- list(label = "Water Salinity",
-                                                                                       valueURI = "http://purl.dataone.org/odo/ECSO_00001164")
+     valueURI = "http://purl.dataone.org/odo/ECSO_00001164")
 ```
 
 #### Shiny Attributes

@@ -5,9 +5,9 @@ Then create a new `dataTable` using the `eml$dataTable()` helper function as bel
 
 ```{r, eval = FALSE}
 dataTable <- eml$dataTable(entityName = "A descriptive name for the data (does not need to be the same as the data file)",
-                 entityDescription = "A description of the data",
-                 physical = physical,
-                 attributeList = attributeList)
+                           entityDescription = "A description of the data",
+                           physical = physical,
+                           attributeList = attributeList)
 ```
 
 The `dataTable` must then be added to the EML. How exactly you do this will depend on whether there are `dataTable` elements in your EML, and how many there are. To replace whatever dataTable elements already exist, you could write:
@@ -45,14 +45,17 @@ for(i in seq_along(tables_you_need)){
 }
 ```
 
-After getting a list of `dataTables`, assign the resulting list to `dataTable` EML
+After getting a list of `dataTables`, assign the resulting list to `dataTable` EML. 
+
 ```{r, eval = FALSE}
 doc$dataset$dataTable <- dts
 ```
 
-By default, the online submission form adds all entities as `otherEntity`, even when most should probably be `dataTable`.  You can use `eml_otherEntity_to_dataTable` to easily move items in `otherEntity` over to `dataTable`. Most tabular data or data that contain variables should be listed as a `dataTable`. Data that do not contain variables (eg: plain text readme files, pdfs, jpegs) should be listed as `otherEntity`.
+
+By default, the online submission form adds all entities as `otherEntity`, even when most should probably be `dataTable`.  You can use `eml_otherEntity_to_dataTable` to easily move items in `otherEntity` over to `dataTable`. Most tabular data or data that contain variables should be listed as a `dataTable`. Data that do not contain variables (eg: plain text readme files, pdfs, jpegs) should be listed as `otherEntity`. 
+
 ```{r, eval = FALSE}
 eml_otherEntity_to_dataTable(doc, 
                              1, # which otherEntities you want to convert, for multiple use - 1:5
                              validate_eml = F) # set this to False if the physical or attributes are not added
-```
+``` 

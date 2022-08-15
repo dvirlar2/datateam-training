@@ -7,8 +7,10 @@ The word ‘physical’ derives from database systems, which distinguish the ‘
 :::
 
 ```{r, eval = FALSE}
-data_pid <- selectMember(dp, name = "sysmeta@fileName", value = "your_file_name.csv")
-physical <- arcticdatautils::pid_to_eml_physical(mn, data_pid)
+data_pid <- selectMember(dp, name = "sysmeta@fileName", 
+                         value = "your_file_name.csv")
+
+physical <- arcticdatautils::pid_to_eml_physical(d1c@mn, data_pid)
 ```
 
 The `physical` must then be assigned to the data object.
