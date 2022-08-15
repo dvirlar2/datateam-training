@@ -4,13 +4,13 @@ title: "Using Git"
 
 ## Usage in the datateam
 
-We use git and Github to manage our packages (ie datamgmt, arcticdatautils) and even this document!
+We use git and Github to manage our packages (i.e. datamgmt, arcticdatautils) and even this document!
 
 ## What is Git?
 
 <a href="https://git-scm.com/" target = "_blank">Git</a> is a distributed version control system.
 
-Important! If you have never used Git before, or only used it a little, or have no idea what it is, check out this <a href = 'https://github.com/eco-data-science/github-intro-2/blob/master/index.pdf' target='_blank'>intro to Git</a> put together by the ecodatascience group at UCSB. Don't worry too much about the forking and branching sections, as we will primarily be using the basic commit-pull-push commands. After you have read through that presentation, come back to this chapter.
+Important! If you have never used Git before, or only used it a little, or have no idea what it is, check out this <a href = 'https://github.com/eco-data-science/github-intro-2/blob/master/index.pdf' target='_blank'>Intro to Git</a> put together by the ecodatascience group at UCSB. Don't worry too much about the forking and branching sections, as we will primarily be using the basic commit-pull-push commands. After you have read through that presentation, come back to this chapter.
 
 ### So why do I need to use this again?
 
@@ -23,7 +23,7 @@ There are several reasons why using the arctic-data GitHub repository is helpful
 
 ## Setting up Git
 
-Before using git, you need to tell it who you are. The only way to do this is through the command line. When you open RStudio, you should see a Terminal tab located to the right of the Console tab. If the Terminal tab is not visible, you can open it by selecting Tools -\> Terminal -\> New Terminal at the top of your RStudio window.
+Before using git, you need to tell it who you are. The only way to do this is through the command line. When you open RStudio, you should see a Terminal tab located to the right of the Console tab. If the Terminal tab is not visible, you can open it by selecting Tools &rarr; Terminal &rarr; New Terminal at the top of your RStudio window.
 
 To tell git who you are, you're going to set the global options. This includes setting your name, email address, PAT (Personal Access Token), and caching the PAT. Make sure you run the following commands one at a time.
 
@@ -78,7 +78,7 @@ If you are not already logged on, this will be the enterprise account you use to
 
 Once you are logged on and can view the above link, click on the green "Code" button, and copy the URL in the gray box. 
 
-In your RStudio window, click File -\> New Project -\> Version Control -\> Git. Paste the URL you just copied into the "Repository URL" box, and press tab on your keyboard. This should autofill the "Project directory name." If it does not, then type in `arctic-data`. Fill it out as shown in the image below to clone the arctic-data repository into the top level of your home directory. Click "Create Project," and now you should have a directory called arctic-data in your RStudio files window.
+In your RStudio window, click File &rarr; New Project &rarr; Version Control &rarr; Git. Paste the URL you just copied into the "Repository URL" box, and press tab on your keyboard. This should autofill the "Project directory name." If it does not, then type in `arctic-data`. Fill it out as shown in the image below to clone the arctic-data repository into the top level of your home directory. Click "Create Project," and now you should have a directory called arctic-data in your RStudio files window.
 
 If you are prompted to save your workspace during this process, make sure all of your work is saved, and you don't need anything in your environment, and then click 'Don't Save'.
 
