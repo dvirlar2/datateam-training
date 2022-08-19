@@ -2,6 +2,8 @@
 project:
   type: book
   output-dir: docs
+  resources:
+    - "*.png"
 
 book:
   title: "NCEAS Data Team Training"
@@ -39,19 +41,42 @@ book:
     - 08_using_git.qmd
     - 09_first_ticket.qmd
     - 10_advanced.qmd
+    - text: "---"
+    #- text: <li><a href="https://nceas.github.io/datateam-training/reference" target="blank">Reference Guide</a></li>
+   # - <li><a href="https://nceas.github.io/datateam-training/reference" target="blank">Reference Guide</a></li>
+    # - {<a href="https://nceas.github.io/datateam-training/reference/">Testing Page</a>}
+    # website:
+      #  title: "Reference Manual"
+      #  site-url: "https://nceas.github.io/datateam-training/reference/"
+       # - text: "Reference Manual"
+
+  #contents:
+   # - 10_advanced.qmd
 
   appendices: 
-    - ../reference/_quarto.yml
+    # - ../reference/_quarto.yml
     - ../reference/index.qmd
 
 format:
   html:
     theme: 
-      light: cosmo
-      dark: superhero
+      light: 
+        - cosmo
+        - ../light-styles.css
+      dark: 
+        - superhero
+        - ../dark-styles.css
     code-copy: true
     code-overflow: wrap
     toc: true
+    split_by: chapter
+    config:
+      toc:
+        collapse: section
+        before: |
+          <li><a href="./">Data Team Training</a></li>
+        after: |
+          <li><a href="https://nceas.github.io/datateam-training/reference" target="blank">Reference Guide</a></li>
 
   pdf:
     documentclass: scrreprt

@@ -10,7 +10,7 @@ Most of the functions you will see in this chapter will use the `arcticdatautils
 This chapter will be longest of all the sections! This is a reminder to take frequent breaks when completing this section.
 :::
 
-{{< include ../workflows/edit_eml/edit_an_eml_element.qmd >}}
+{{< include /workflows/edit_eml/edit_an_eml_element.qmd >}}
 
 ## FAIR data practices
 
@@ -27,7 +27,7 @@ Add these function calls to all of your EML processing scripts.
   doc <- eml_add_entity_system(doc)
 ```
 
-{{< include ../workflows/edit_eml/edit_attributelists.qmd >}}
+{{< include /workflows/edit_eml/edit_attributelists.qmd >}}
 
 :::{.callout-note}
 Remember to use:
@@ -35,13 +35,13 @@ Remember to use:
 `d1c_test@mn` 
 :::
 
-{{< include ../workflows/edit_eml/set_physical.qmd >}}
+{{< include /workflows/edit_eml/set_physical.qmd >}}
 
-{{< include ../workflows/edit_eml/edit_datatables.qmd >}}
+{{< include /workflows/edit_eml/edit_datatables.qmd >}}
 
-{{< include ../workflows/edit_eml/edit_otherentities.qmd >}}
+{{< include /workflows/edit_eml/edit_otherentities.qmd >}}
 
-{{< include ../workflows/edit_eml/edit_semantic_annotation.qmd >}}
+{{< include /workflows/edit_eml/edit_semantic_annotation.qmd >}}
 
 ## Exercise 3a {.exercise}
 

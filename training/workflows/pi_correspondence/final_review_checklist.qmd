@@ -11,14 +11,16 @@ Please refer to the dedicated pages for instructions to handle these cases:
 - [DBO](https://nceas.github.io/datateam-training/reference/distributed-biological-observatory-dbo-submissions.html) 
 
 ### System Metadata
-the format ids are correct
+The format ids are correct
 
 ### General EML
 Included lines for FAIR:
-```{r eval=F}
+
+```{r, eval=F}
 doc <- eml_add_publisher(doc)
 doc <- eml_add_entity_system(doc)
 ```
+
 ### Title
 - No abbreviations, should include geographic and temporal coverage
 

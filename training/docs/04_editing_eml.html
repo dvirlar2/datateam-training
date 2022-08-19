@@ -324,6 +324,8 @@ Note
 <h3 data-number="4.1.2" class="anchored" data-anchor-id="edit-eml-with-the-eml-package"><span class="header-section-number">4.1.2</span> Edit EML with the “EML” package</h3>
 <p>To edit a section where you are not 100% sure of the sub-elements, using the <code>eml$elementName()</code> helper functions from the EML package will pre-populate the options for you if you utilize the RStudio autocomplete functionality. The arguments in these functions show the available slots for any given EML element. For example, typing <code>doc$dataset$abstract &lt;- eml$abstract()&lt;TAB&gt;</code> will show you that the <code>abstract</code> element can take either the <code>section</code> or <code>para</code> sub-elements.</p>
 <p><img src="../../images/eml_function_autocomplete.png" class="img-fluid"></p>
+<p><img src="images/eml_function_autocomplete.png" class="img-fluid"></p>
+<p><img src="./images/eml_function_autocomplete.png" class="img-fluid"></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>doc<span class="sc">$</span>dataset<span class="sc">$</span>abstract <span class="ot">&lt;-</span> eml<span class="sc">$</span><span class="fu">abstract</span>(<span class="at">para =</span> <span class="st">"A concise but thorough description of the who, what, where, when, why, and how of a dataset."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>

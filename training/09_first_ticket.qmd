@@ -4,13 +4,12 @@ title: "First Ticket"
 
 After completing the previous chapters, Daphne or Jeanette will assign a ticket from RT. Login using your LDAP credentials got get familiarized with RT.
 
-```{r, child = '../workflows/pi_correspondence/navigate_rt.qmd'}
-```
+{{< include /workflows/pi_correspondence/navigate_rt.qmd >}}
+
 
 Before opening a R script first look over the initial checklist first to identify what you will need to update in the metadata.
 
-```{r, child = '../workflows/pi_correspondence/initial_review_checklist.qmd'}
-```
+{{< include /workflows/pi_correspondence/initial_review_checklist.qmd >}}
 
 ## Processing templates
 
@@ -20,19 +19,18 @@ You can use this template where you can [fill in the blanks](data/dataset_proces
 
 Once you have updated the dataset to your satisfaction and reviewed the Final Checklist, post the link to the dataset on #datateam for peer review.
 
-```{r, child = '../workflows/pi_correspondence/final_review_checklist.qmd'}
-```
+{{< include /workflows/pi_correspondence/final_review_checklist.qmd >}}
 
 After all the revisions send the link to the PI in an email through RT. Send the draft of the email to Daphne or Jeanette on Slack.
-```{r, child = '../workflows/pi_correspondence/A_email_templates.qmd'}
-```
+
+{{< include /workflows/pi_correspondence/A_email_templates.qmd >}}
 
 Once the dataset is approved by the PI and there are no further changes, publish the dataset with a doi.
-```{r, eval=F}
+```{r, eval = F}
 doi <- dataone::generateIdentifier(d1c_test@mn, "DOI")
-dp <- replaceMember(dp, metadataId, replacement=eml_path, newId=doi)
+dp <- replaceMember(dp, metadataId, replacement = eml_path, newId = doi)
 
-newPackageId <- uploadDataPackage(d1c_test, dp, public=TRUE, quiet=FALSE)
+newPackageId <- uploadDataPackage(d1c_test, dp, public = TRUE, quiet = FALSE)
 ```
 
 ## Categorize datasets
@@ -43,7 +41,7 @@ We will categorize each dataset into one of the predefined themes (ie. biology, 
 
 Run the following line with your doi and themes as a list.
 
-```{r, eval=F}
+```{r, eval = F}
 datamgmt::categorize_dataset("your_doi", c("list", "of", "themes"), "your name")
 ```
 

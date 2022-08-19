@@ -103,13 +103,13 @@ Once all set up you can first publish an object (data). If you are curious how e
 
 ![From the DataOne Community Meeting (Session 7)](images/data-submission-workflow1.png)
 
-{{< include ../workflows/edit_data_packages/01_datapack_background.qmd >}}
+{{< include /workflows/edit_data_packages/01_datapack_background.qmd >}}
 
 ## Exercise 2a {.exercise}
 
 Select a dataset from the [catalog](http://arcticdata.io/catalog) on the Arctic Data Center. Observe the number of data files in the dataset. Try to find identifiers for the metadata file and resource map on the landing page for the dataset based on the screenshot shown above.
 
-{{< include ../workflows/edit_data_packages/02_create_package_data_pack.qmd >}}
+{{< include /workflows/edit_data_packages/02_create_package_data_pack.qmd >}}
 
 
 ## Exercise 2b {.exercise}

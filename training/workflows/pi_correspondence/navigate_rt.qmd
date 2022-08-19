@@ -10,7 +10,7 @@ three separate interfaces:
 
 ### Front page 
 
-![](../images/front_page_rt.png) 
+![](../images/front_page_rt.png)
 
 This is what you see first   
 

@@ -98,7 +98,7 @@ Open formats
 > We noticed that the submitted data files are in xlsx format. Please convert your files to a plain text/csv (or other open format); this helps ensure your data are usable in the long-term.
 
 > The data files can be replaced by going to the green Edit button > Click the black triangle by the Describe button for the data file > Select Replace (attached is also a screenshot on how to get there).
-![](~/datateam-training/images/replace_file.png)
+![](../../images/replace_file.png)
 
 Zip files
 

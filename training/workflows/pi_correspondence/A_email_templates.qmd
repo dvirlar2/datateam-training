@@ -14,8 +14,9 @@ Quick reference:
 - [Final email templates](https://nceas.github.io/datateam-training/reference/email-templates.html#final-email-templates)
 - [Additional email template](https://nceas.github.io/datateam-training/reference/email-templates.html#additional-email-templates)
 
+
 ```{r, echo = FALSE}
-chapter <- "email_templates/"
+chapter <- "workflows/pi_correspondence/email_templates/"
 sections <- dir(path = chapter, pattern = ".qmd$")
 children <- paste0(chapter, sections)
 ```

@@ -27,6 +27,10 @@ To edit a section where you are not 100% sure of the sub-elements, using the `em
 
 ![](../../images/eml_function_autocomplete.png) 
 
+![](images/eml_function_autocomplete.png) 
+
+![](/images/eml_function_autocomplete.png) 
+
 
 ```{r, eval = FALSE}
 doc$dataset$abstract <- eml$abstract(para = "A concise but thorough description of the who, what, where, when, why, and how of a dataset.")

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>navigate_rt</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="navigate_rt_files/libs/clipboard/clipboard.min.js"></script>
+<script src="navigate_rt_files/libs/quarto-html/quarto.js"></script>
+<script src="navigate_rt_files/libs/quarto-html/popper.min.js"></script>
+<script src="navigate_rt_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="navigate_rt_files/libs/quarto-html/anchor.min.js"></script>
+<link href="navigate_rt_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="navigate_rt_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="navigate_rt_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="navigate_rt_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="navigate_rt_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="navigate-rt" class="level2">
+<h2 class="anchored" data-anchor-id="navigate-rt">Navigate RT</h2>
+<p>The <a href="https://support.nceas.ucsb.edu/rt/" target="_blank">RT ticketing system</a> is how we communicate with folks interacting with the Arctic Data Center.<br>
+We use it for managing submissions, accessing issues, etc. It consists of three separate interfaces:<br>
+<a href="#front-page">Front Page</a><br>
+<a href="#all-tickets">All Tickets</a><br>
+<a href="#example-ticket">Ticket Page</a></p>
+<section id="front-page" class="level3">
+<h3 class="anchored" data-anchor-id="front-page">Front page</h3>
+<p><img src="../../images/front_page_rt.png" class="img-fluid"></p>
+<p><img src="../images/front_page_rt.png" class="img-fluid"></p>
+<p>This is what you see first</p>
+<ol type="1">
+<li>Home - brings you to this homepage<br>
+</li>
+<li>Tickets - to search for tickets (also see number 5)<br>
+</li>
+<li>Tools - not needed<br>
+</li>
+<li>New Ticket - create a new ticket<br>
+</li>
+<li>Search - Type in the ticket number to quickly navigate to a ticket<br>
+</li>
+<li>Queue - Lists all of the tickets currently in a particular queue (such as ‘arcticdata’) and their statuses<br>
+</li>
+</ol>
+<ul>
+<li>New = unopened tickets that require attention<br>
+</li>
+<li>Open = tickets currently open and under investigation and/or being processed by a support team member<br>
+</li>
+<li>Stalled = tickets awaiting responses from the PI/ <code>submitter</code><br>
+</li>
+</ul>
+<ol start="7" type="1">
+<li>Tickets I Own - These are the current open tickets that are claimed by me<br>
+</li>
+<li>Unowned Tickets - Newest tickets awaiting claim<br>
+</li>
+<li>Ticket Status - Status and how long ago it was created<br>
+</li>
+<li>Take - claim the ticket as yours</li>
+</ol>
+</section>
+<section id="all-tickets" class="level3">
+<h3 class="anchored" data-anchor-id="all-tickets">All tickets</h3>
+<p><img src="../images/all_tickets_rt.png" class="img-fluid"></p>
+<p>This is the queue interface from number 6 of the Front page<br>
+1. Ticket number and title<br>
+2. Ticket status<br>
+3. Owner - who has claimed the ticket</p>
+</section>
+<section id="example-ticket" class="level3">
+<h3 class="anchored" data-anchor-id="example-ticket">Example ticket</h3>
+<p><img src="../images/example_ticket_rt.png" class="img-fluid"></p>
+<ol type="1">
+<li>Title - Include the PI’s name for reference<br>
+</li>
+<li>Display - homepage of the ticket<br>
+</li>
+<li>History - Comment/Email history, see bottom of Display page<br>
+</li>
+<li>Basics - edit the title, status, and ownership here<br>
+</li>
+<li>People - option to add more people to the watch list for a given ticket conversation. Note that user/ PI/ <code>submitter</code> email addresses should be listed as “Requestors”. Requestors are only emailed on “Replys”, not “Comments”. Ensure your ticket has a Requestor before attempting to contact users/ PIs/ <code>submitter</code>s<br>
+</li>
+<li>Links - option to “Merge into” another ticket number if this is part of a larger conversation. Also option to add a reference to another ticket number</li>
+</ol>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Verify that this is indeed the two tickets you want to merge. It is non-reversible.</p>
+</div>
+</div>
+<ol start="7" type="1">
+<li>Actions<br>
+</li>
+</ol>
+<ul>
+<li>Reply - message the <code>submitter</code>/ PI/ all watchers<br>
+</li>
+<li>Comment - attach internal message (no <code>submitter</code>s, only Data Teamers)<br>
+</li>
+<li>Open It - Open the ticket<br>
+</li>
+<li>Stall - <code>submitter</code> has not responded in greater than 1 month<br>
+</li>
+<li>Resolve - ticket completed<br>
+</li>
+</ul>
+<ol start="8" type="1">
+<li>History - message history and option to reply (to <code>submitter</code> and beyond) or comment (internal message)</li>
+</ol>
+</section>
+<section id="new-data-submission" class="level3">
+<h3 class="anchored" data-anchor-id="new-data-submission">New data submission</h3>
+<p>When notified by Arcticbot about a new data submission, here are the typical steps:</p>
+<ol type="1">
+<li>Update the Requestor under the People section based on the email given in the submission (usually the user/ PI/ <code>submitter</code>). You may have to google for the e-mail address if the PI did not include it in the metadata record.</li>
+<li>Take the ticket (Actions &gt; Take)</li>
+<li>Review the submission based on the <a href="https://nceas.github.io/datateam-training/reference/initial-review-checklist.html" target="_blank">checklist</a></li>
+<li>Draft an email using the <a href="https://nceas.github.io/datateam-training/reference/email-templates.html" target="_blank">template</a> and let others review it via Slack</li>
+<li>Send your reply via Actions</li>
+</ol>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

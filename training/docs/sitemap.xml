@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nceas.github.io/datateam-training/training/index.html</loc>
-    <lastmod>2022-08-15T22:38:13.258Z</lastmod>
+    <lastmod>2022-08-18T23:09:25.663Z</lastmod>
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/01_introduction.html</loc>
-    <lastmod>2022-08-12T23:16:52.099Z</lastmod>
+    <lastmod>2022-08-17T00:07:54.234Z</lastmod>
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/08_using_git.html</loc>
@@ -14,15 +14,15 @@
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/09_first_ticket.html</loc>
-    <lastmod>2022-08-11T07:18:22.986Z</lastmod>
+    <lastmod>2022-08-16T05:25:04.261Z</lastmod>
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/10_advanced.html</loc>
-    <lastmod>2022-08-11T07:18:22.993Z</lastmod>
+    <lastmod>2022-08-16T05:14:12.586Z</lastmod>
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/03_exploring_eml.html</loc>
-    <lastmod>2022-08-13T00:23:32.167Z</lastmod>
+    <lastmod>2022-08-16T23:34:47.128Z</lastmod>
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/../reference/index.html</loc>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/02_creating_a_data_package.html</loc>
-    <lastmod>2022-08-12T23:17:02.323Z</lastmod>
+    <lastmod>2022-08-18T23:09:46.864Z</lastmod>
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/05_updating_a_data_package.html</loc>
@@ -38,14 +38,14 @@
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/04_editing_eml.html</loc>
-    <lastmod>2022-08-15T23:14:32.225Z</lastmod>
+    <lastmod>2022-08-16T23:38:55.499Z</lastmod>
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/06_editing_sysmeta.html</loc>
-    <lastmod>2022-08-15T23:20:52.217Z</lastmod>
+    <lastmod>2022-08-18T23:11:52.973Z</lastmod>
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/07_building_provenance.html</loc>
-    <lastmod>2022-08-15T23:21:02.420Z</lastmod>
+    <lastmod>2022-08-18T23:12:15.843Z</lastmod>
   </url>
 </urlset>

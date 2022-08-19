@@ -37,3 +37,6 @@ vignettes/*.pdf
 /docs
 
 *.DS_Store
+
+# Styles file from bookdown
+styles.css
