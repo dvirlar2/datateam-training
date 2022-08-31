@@ -4,5 +4,5 @@ format: html
 ---
 
 
-```{r, child = '../workflows/nesting_data/nesting_a_data_package.qmd'}
+```{r, child = '../training/workflows/nesting_data/nesting_a_data_package.qmd'}
 ```

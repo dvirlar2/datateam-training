@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.248">
+<meta name="generator" content="quarto-1.0.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NCEAS Data Team Reference Guide - 2&nbsp; Edit Data Packages</title>
+<title>NCEAS Data Team Reference Guide - Edit Data Packages</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,13 +80,14 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
-<meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
 <link href="./explore_eml.html" rel="next">
 <link href="./miscellaneous.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -94,16 +95,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -121,21 +124,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </head>
 
-<body class="floating nav-fixed">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">NCEAS Data Team Reference Guide</span>
-  </a>
-          <div id="quarto-search" class="" title="Search"></div>
-      </div> <!-- /container-fluid -->
-    </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Edit Data Packages</span></h1>
+      <h1 class="quarto-secondary-nav-title">Edit Data Packages</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -143,9 +138,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Data Team <br> Reference Guide</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://arcticdata.io" title="Arctic Data Center" class="sidebar-tool px-1"><i class="bi bi-house-door-fill"></i></a>
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -160,62 +164,68 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./miscellaneous.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Miscellaneous</span></a>
+  <a href="./miscellaneous.html" class="sidebar-item-text sidebar-link">Miscellaneous</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./edit_data_packages.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Edit Data Packages</span></a>
+  <a href="./edit_data_packages.html" class="sidebar-item-text sidebar-link active">Edit Data Packages</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./explore_eml.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Explore EML</span></a>
+  <a href="./explore_eml.html" class="sidebar-item-text sidebar-link">Explore EML</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./edit_eml.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Edit EML</span></a>
+  <a href="./edit_eml.html" class="sidebar-item-text sidebar-link">Edit EML</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pi_correspondence.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">PI Correspondence</span></a>
+  <a href="./pi_correspondence.html" class="sidebar-item-text sidebar-link">PI Correspondence</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./misc_file_types.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Miscellaneous file types</span></a>
+  <a href="./misc_file_types.html" class="sidebar-item-text sidebar-link">Miscellaneous file types</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wrangle_data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Wrangle Data</span></a>
+  <a href="./wrangle_data.html" class="sidebar-item-text sidebar-link">Wrangle Data</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./solr_queries.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Solr Queries</span></a>
+  <a href="./solr_queries.html" class="sidebar-item-text sidebar-link">Solr Queries</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./adc_web_submissions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ADC Web Submissions</span></a>
+  <a href="./adc_web_submissions.html" class="sidebar-item-text sidebar-link">ADC Web Submissions</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data_portals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Data Portals</span></a>
+  <a href="./data_portals.html" class="sidebar-item-text sidebar-link">Data Portals</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data_packages_arcticdatautils.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Using arcticdatautils</span></a>
+  <a href="./data_packages_arcticdatautils.html" class="sidebar-item-text sidebar-link">Using arcticdatautils</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nesting_data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Nesting Data</span></a>
+  <a href="./nesting_data.html" class="sidebar-item-text sidebar-link">Nesting Data</a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://nceas.github.io/datateam-training/training/" class="sidebar-item-text sidebar-link">Training Manual</a>
   </div>
 </li>
     </ul>
@@ -224,48 +234,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#datapack-background" id="toc-datapack-background" class="nav-link active" data-scroll-target="#datapack-background"> <span class="header-section-number">2.1</span> datapack Background</a>
+  <li><a href="#datapack-background" id="toc-datapack-background" class="nav-link active" data-scroll-target="#datapack-background">datapack Background</a>
   <ul class="collapse">
-  <li><a href="#navigating-data-packages" id="toc-navigating-data-packages" class="nav-link" data-scroll-target="#navigating-data-packages"> <span class="header-section-number">2.1.1</span> Navigating data packages</a></li>
-  <li><a href="#data-objects" id="toc-data-objects" class="nav-link" data-scroll-target="#data-objects"> <span class="header-section-number">2.1.2</span> Data Objects</a></li>
-  <li><a href="#provenance" id="toc-provenance" class="nav-link" data-scroll-target="#provenance"> <span class="header-section-number">2.1.3</span> Provenance</a></li>
+  <li><a href="#navigating-data-packages" id="toc-navigating-data-packages" class="nav-link" data-scroll-target="#navigating-data-packages">Navigating data packages</a></li>
+  <li><a href="#data-objects" id="toc-data-objects" class="nav-link" data-scroll-target="#data-objects">Data Objects</a></li>
+  <li><a href="#provenance" id="toc-provenance" class="nav-link" data-scroll-target="#provenance">Provenance</a></li>
   </ul></li>
-  <li><a href="#create-a-new-data-package" id="toc-create-a-new-data-package" class="nav-link" data-scroll-target="#create-a-new-data-package"> <span class="header-section-number">2.2</span> Create a new data package</a>
+  <li><a href="#create-a-new-data-package" id="toc-create-a-new-data-package" class="nav-link" data-scroll-target="#create-a-new-data-package">Create a new data package</a>
   <ul class="collapse">
-  <li><a href="#upload-new-data-files" id="toc-upload-new-data-files" class="nav-link" data-scroll-target="#upload-new-data-files"> <span class="header-section-number">2.2.1</span> Upload new data files</a></li>
-  <li><a href="#upload-the-package" id="toc-upload-the-package" class="nav-link" data-scroll-target="#upload-the-package"> <span class="header-section-number">2.2.2</span> Upload the package</a></li>
+  <li><a href="#upload-new-data-files" id="toc-upload-new-data-files" class="nav-link" data-scroll-target="#upload-new-data-files">Upload new data files</a></li>
+  <li><a href="#upload-the-package" id="toc-upload-the-package" class="nav-link" data-scroll-target="#upload-the-package">Upload the package</a></li>
   </ul></li>
-  <li><a href="#update-packages-with-datapack" id="toc-update-packages-with-datapack" class="nav-link" data-scroll-target="#update-packages-with-datapack"> <span class="header-section-number">2.3</span> Update packages with datapack</a>
+  <li><a href="#update-packages-with-datapack" id="toc-update-packages-with-datapack" class="nav-link" data-scroll-target="#update-packages-with-datapack">Update packages with datapack</a>
   <ul class="collapse">
-  <li><a href="#get-the-package" id="toc-get-the-package" class="nav-link" data-scroll-target="#get-the-package"> <span class="header-section-number">2.3.1</span> Get the package</a></li>
-  <li><a href="#update-the-metadata" id="toc-update-the-metadata" class="nav-link" data-scroll-target="#update-the-metadata"> <span class="header-section-number">2.3.2</span> Update the metadata</a></li>
-  <li><a href="#modify-the-data-files" id="toc-modify-the-data-files" class="nav-link" data-scroll-target="#modify-the-data-files"> <span class="header-section-number">2.3.3</span> Modify the data files</a></li>
-  <li><a href="#publish-update" id="toc-publish-update" class="nav-link" data-scroll-target="#publish-update"> <span class="header-section-number">2.3.4</span> Publish update</a></li>
+  <li><a href="#get-the-package" id="toc-get-the-package" class="nav-link" data-scroll-target="#get-the-package">Get the package</a></li>
+  <li><a href="#update-the-metadata" id="toc-update-the-metadata" class="nav-link" data-scroll-target="#update-the-metadata">Update the metadata</a></li>
+  <li><a href="#modify-the-data-files" id="toc-modify-the-data-files" class="nav-link" data-scroll-target="#modify-the-data-files">Modify the data files</a></li>
+  <li><a href="#publish-update" id="toc-publish-update" class="nav-link" data-scroll-target="#publish-update">Publish update</a></li>
   </ul></li>
-  <li><a href="#add-a-pre-generated-identifier-to-the-eml" id="toc-add-a-pre-generated-identifier-to-the-eml" class="nav-link" data-scroll-target="#add-a-pre-generated-identifier-to-the-eml"> <span class="header-section-number">2.4</span> Add a pre-generated identifier to the EML</a></li>
-  <li><a href="#edit-sysmeta" id="toc-edit-sysmeta" class="nav-link" data-scroll-target="#edit-sysmeta"> <span class="header-section-number">2.5</span> Edit sysmeta</a>
+  <li><a href="#add-a-pre-generated-identifier-to-the-eml" id="toc-add-a-pre-generated-identifier-to-the-eml" class="nav-link" data-scroll-target="#add-a-pre-generated-identifier-to-the-eml">Add a pre-generated identifier to the EML</a></li>
+  <li><a href="#edit-sysmeta" id="toc-edit-sysmeta" class="nav-link" data-scroll-target="#edit-sysmeta">Edit sysmeta</a>
   <ul class="collapse">
-  <li><a href="#identifiers-and-sysmeta" id="toc-identifiers-and-sysmeta" class="nav-link" data-scroll-target="#identifiers-and-sysmeta"> <span class="header-section-number">2.5.1</span> Identifiers and sysmeta</a></li>
-  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources"> <span class="header-section-number">2.5.2</span> Additional resources</a></li>
+  <li><a href="#identifiers-and-sysmeta" id="toc-identifiers-and-sysmeta" class="nav-link" data-scroll-target="#identifiers-and-sysmeta">Identifiers and sysmeta</a></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional resources</a></li>
   </ul></li>
-  <li><a href="#obsolescence-chain" id="toc-obsolescence-chain" class="nav-link" data-scroll-target="#obsolescence-chain"> <span class="header-section-number">2.6</span> Obsolescence chain</a></li>
-  <li><a href="#set-dataone-nodes" id="toc-set-dataone-nodes" class="nav-link" data-scroll-target="#set-dataone-nodes"> <span class="header-section-number">2.7</span> Set DataONE nodes</a>
+  <li><a href="#obsolescence-chain" id="toc-obsolescence-chain" class="nav-link" data-scroll-target="#obsolescence-chain">Obsolescence chain</a></li>
+  <li><a href="#set-dataone-nodes" id="toc-set-dataone-nodes" class="nav-link" data-scroll-target="#set-dataone-nodes">Set DataONE nodes</a>
   <ul class="collapse">
-  <li><a href="#staging-test-nodes" id="toc-staging-test-nodes" class="nav-link" data-scroll-target="#staging-test-nodes"> <span class="header-section-number">2.7.1</span> Staging (Test) nodes</a></li>
-  <li><a href="#production-nodes" id="toc-production-nodes" class="nav-link" data-scroll-target="#production-nodes"> <span class="header-section-number">2.7.2</span> Production nodes</a></li>
+  <li><a href="#staging-test-nodes" id="toc-staging-test-nodes" class="nav-link" data-scroll-target="#staging-test-nodes">Staging (Test) nodes</a></li>
+  <li><a href="#production-nodes" id="toc-production-nodes" class="nav-link" data-scroll-target="#production-nodes">Production nodes</a></li>
   </ul></li>
-  <li><a href="#set-rights-and-access" id="toc-set-rights-and-access" class="nav-link" data-scroll-target="#set-rights-and-access"> <span class="header-section-number">2.8</span> Set rights and access</a>
+  <li><a href="#set-rights-and-access" id="toc-set-rights-and-access" class="nav-link" data-scroll-target="#set-rights-and-access">Set rights and access</a>
   <ul class="collapse">
-  <li><a href="#my-profile" id="toc-my-profile" class="nav-link" data-scroll-target="#my-profile"> <span class="header-section-number">2.8.1</span> My profile</a></li>
+  <li><a href="#my-profile" id="toc-my-profile" class="nav-link" data-scroll-target="#my-profile">My profile</a></li>
   </ul></li>
-  <li><a href="#update-a-package-with-a-new-data-object" id="toc-update-a-package-with-a-new-data-object" class="nav-link" data-scroll-target="#update-a-package-with-a-new-data-object"> <span class="header-section-number">2.9</span> Update a package with a new data object</a>
+  <li><a href="#update-a-package-with-a-new-data-object" id="toc-update-a-package-with-a-new-data-object" class="nav-link" data-scroll-target="#update-a-package-with-a-new-data-object">Update a package with a new data object</a>
   <ul class="collapse">
-  <li><a href="#publish-update-1" id="toc-publish-update-1" class="nav-link" data-scroll-target="#publish-update-1"> <span class="header-section-number">2.9.1</span> Publish update</a></li>
+  <li><a href="#publish-update-1" id="toc-publish-update-1" class="nav-link" data-scroll-target="#publish-update-1">Publish update</a></li>
   </ul></li>
-  <li><a href="#update-a-data-object" id="toc-update-a-data-object" class="nav-link" data-scroll-target="#update-a-data-object"> <span class="header-section-number">2.10</span> Update a data object</a></li>
+  <li><a href="#update-a-data-object" id="toc-update-a-data-object" class="nav-link" data-scroll-target="#update-a-data-object">Update a data object</a></li>
   </ul>
 </nav>
     </div>
@@ -274,20 +284,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Edit Data Packages</span></h1>
+<h1 class="title d-none d-lg-block">Edit Data Packages</h1>
 </div>
-
-
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Authors</div>
-    <div class="quarto-title-meta-contents">
-          </div>
-  </div>
     
     
   </div>
@@ -295,8 +298,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="datapack-background" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="datapack-background"><span class="header-section-number">2.1</span> datapack Background</h2>
+<section id="datapack-background" class="level2">
+<h2 class="anchored" data-anchor-id="datapack-background">datapack Background</h2>
 <p><em>adapted from the dataone and datapack vingettes</em></p>
 <p><code>datapack</code> is written differently than most R packages you may have encountered in the past. This is because it uses the <a href="https://adv-r.hadley.nz/s4.html">S4</a> system instead.</p>
 <div class="cell">
@@ -306,15 +309,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p><strong>Data packages</strong></p>
 <p>Data packages are a class that has slots for <code>relations</code> (provenance), <code>objects</code>(the metadata and data file(s)) and <code>systemMetadata</code>.</p>
-<section id="navigating-data-packages" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="navigating-data-packages"><span class="header-section-number">2.1.1</span> Navigating data packages</h3>
+<section id="navigating-data-packages" class="level3">
+<h3 class="anchored" data-anchor-id="navigating-data-packages">Navigating data packages</h3>
 <p><strong>Nodes</strong></p>
-<p>Using this example on arcticdata.io ::: {.cell}</p>
+<p>Using this example on arcticdata.io</p>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>d1c_test <span class="ot">&lt;-</span> dataone<span class="sc">::</span><span class="fu">D1Client</span>(<span class="st">"STAGING"</span>, <span class="st">"urn:node:mnTestARCTIC"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p>
-<p>To use the member node information, use the <code>mn</code> slot ::: {.cell}</p>
+</div>
+<p>To use the member node information, use the <code>mn</code> slot</p>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>d1c_test<span class="sc">@</span>mn</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p>
+</div>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -334,67 +339,83 @@ Note
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> dataone<span class="sc">::</span><span class="fu">getDataPackage</span>(d1c, <span class="st">"resource_map_urn:uuid:1f9eee7e-2d03-43c4-ad7f-f300e013ab28"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="data-objects" class="level3" data-number="2.1.2">
-<h3 data-number="2.1.2" class="anchored" data-anchor-id="data-objects"><span class="header-section-number">2.1.2</span> Data Objects</h3>
-<p>Check out the <code>objects</code> slot ::: {.cell}</p>
+<section id="data-objects" class="level3">
+<h3 class="anchored" data-anchor-id="data-objects">Data Objects</h3>
+<p>Check out the <code>objects</code> slot</p>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>dp<span class="sc">@</span>objects</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p>
-<p>Get the number for data and metadata files associated with this data package: ::: {.cell}</p>
+</div>
+<p>Get the number for data and metadata files associated with this data package:</p>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getSize</span>(dp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p>
-<p>Get the file names and corresponding pids ::: {.cell}</p>
+</div>
+<p>Get the file names and corresponding pids</p>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getValue</span>(dp, <span class="at">name=</span><span class="st">"sysmeta@fileName"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p>
+</div>
 <p><strong>Get identifiers</strong></p>
-<p>You can search by any of the <code>sysmeta</code> slots such as <code>fileName</code> and <code>formatId</code> and get the corresponding identifier(s): ::: {.cell}</p>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>metadataId <span class="ot">&lt;-</span> <span class="fu">selectMember</span>(dp, <span class="at">name=</span><span class="st">"sysmeta@ADD THE NAME OF THE SLOT"</span>, <span class="at">value=</span><span class="st">"PATTERN TO SEARCH BY"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p>
-<p><strong>Example:</strong> ::: {.cell}</p>
+<p>You can search by any of the <code>sysmeta</code> slots such as <code>fileName</code> and <code>formatId</code> and get the corresponding identifier(s):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>metadataId <span class="ot">&lt;-</span> <span class="fu">selectMember</span>(dp, <span class="at">name=</span><span class="st">"sysmeta@ADD THE NAME OF THE SLOT"</span>, </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>                           <span class="at">value=</span><span class="st">"PATTERN TO SEARCH BY"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Example:</strong></p>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">selectMember</span>(dp, <span class="at">name=</span><span class="st">"sysmeta@formatId"</span>, <span class="at">value=</span><span class="st">"image/tiff"</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">selectMember</span>(dp, <span class="at">name=</span><span class="st">"sysmeta@fileName"</span>, <span class="at">value=</span><span class="st">"filename.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p>
+</div>
 </section>
-<section id="provenance" class="level3" data-number="2.1.3">
-<h3 data-number="2.1.3" class="anchored" data-anchor-id="provenance"><span class="header-section-number">2.1.3</span> Provenance</h3>
-<p>View the provenance as a dataTable. We will get into detail in the Building provenance chapter. ::: {.cell}</p>
+<section id="provenance" class="level3">
+<h3 class="anchored" data-anchor-id="provenance">Provenance</h3>
+<p>View the provenance as a dataTable. We will get into detail in the Building provenance chapter.</p>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>dp<span class="sc">@</span>relations<span class="sc">$</span>relations</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p>
+</div>
 </section>
 </section>
-<section id="create-a-new-data-package" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="create-a-new-data-package"><span class="header-section-number">2.2</span> Create a new data package</h2>
+<section id="create-a-new-data-package" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-new-data-package">Create a new data package</h2>
 <p><em>adapted from the dataone and datapack vingettes</em></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dataone)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(datapack)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(uuid)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Create a new data package - data package is a class that has slots for <code>relations</code> (provenance), <code>objects</code>(the metadata and data file(s)) and <code>systemMetadata</code>. ::: {.cell}</p>
+<p>To create a new data package, follow the code below. Remember, a data package is a class that has slots for <code>relations</code> (provenance), <code>objects</code>(the metadata and data file(s)) and <code>systemMetadata</code>.</p>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">new</span>(<span class="st">"DataPackage"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p>
-<section id="upload-new-data-files" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="upload-new-data-files"><span class="header-section-number">2.2.1</span> Upload new data files</h3>
-<section id="create-and-add-a-metadata-file" class="level4" data-number="2.2.1.1">
-<h4 data-number="2.2.1.1" class="anchored" data-anchor-id="create-and-add-a-metadata-file"><span class="header-section-number">2.2.1.1</span> Create and add a metadata file</h4>
+</div>
+<section id="upload-new-data-files" class="level3">
+<h3 class="anchored" data-anchor-id="upload-new-data-files">Upload new data files</h3>
+<section id="create-and-add-a-metadata-file" class="level4">
+<h4 class="anchored" data-anchor-id="create-and-add-a-metadata-file">Create and add a metadata file</h4>
 <p>In this example we will use this previously written EML metadata. Here we are getting the file path from the dataone package and saving that as the object <code>emlFile</code>.</p>
 <p>This is a bit of an unusual way to reference a local file path, but all this does is looks within the R package <code>dataone</code> and grabs the path to a metadata document stored within that package. If you print the value of <code>emlFile</code> you’ll see it is just a file path, but it points to a special place on the server where that package is installed. Usually you will just reference EML paths that are stored within your user file system.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>emlFile <span class="ot">&lt;-</span> <span class="fu">system.file</span>(<span class="st">"extdata/strix-pacific-northwest.xml"</span>, <span class="at">package=</span><span class="st">"dataone"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>emlFile <span class="ot">&lt;-</span> <span class="fu">system.file</span>(<span class="st">"extdata/strix-pacific-northwest.xml"</span>, </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>                       <span class="at">package =</span> <span class="st">"dataone"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Create a new <code>DataObject</code> and add it to the package. ::: {.cell}</p>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>metadataObj <span class="ot">&lt;-</span> <span class="fu">new</span>(<span class="st">"DataObject"</span>, <span class="at">format=</span><span class="st">"https://eml.ecoinformatics.org/eml-2.2.0"</span>, <span class="at">filename=</span>emlFile)</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">addMember</span>(dp, metadataObj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p>
-<p>Check the dp object to see if the <code>DataObject</code> was added correctly. ::: {.cell}</p>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>dp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p>
-</section>
-<section id="add-some-additional-data-files" class="level4" data-number="2.2.1.2">
-<h4 data-number="2.2.1.2" class="anchored" data-anchor-id="add-some-additional-data-files"><span class="header-section-number">2.2.1.2</span> Add some additional data files</h4>
+<p>Create a new <code>DataObject</code> and add it to the package. In the case below, our new <code>DataObject</code> will be a metadata file.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>sourceData <span class="ot">&lt;-</span> <span class="fu">system.file</span>(<span class="st">"extdata/OwlNightj.csv"</span>, <span class="at">package=</span><span class="st">"dataone"</span>)</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>sourceObj <span class="ot">&lt;-</span> <span class="fu">new</span>(<span class="st">"DataObject"</span>, <span class="at">format=</span><span class="st">"text/csv"</span>, <span class="at">filename=</span>sourceData)</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">addMember</span>(dp, sourceObj, metadataObj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>metadataObj <span class="ot">&lt;-</span> <span class="fu">new</span>(<span class="st">"DataObject"</span>, </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">format =</span> <span class="st">"https://eml.ecoinformatics.org/eml-2.2.0"</span>, </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">filename =</span> emlFile)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">addMember</span>(dp, metadataObj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Check the dp object to see if the <code>DataObject</code> was added correctly.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>dp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="add-some-additional-data-files" class="level4">
+<h4 class="anchored" data-anchor-id="add-some-additional-data-files">Add some additional data files</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>sourceData <span class="ot">&lt;-</span> <span class="fu">system.file</span>(<span class="st">"extdata/OwlNightj.csv"</span>, <span class="at">package =</span> <span class="st">"dataone"</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>sourceObj <span class="ot">&lt;-</span> <span class="fu">new</span>(<span class="st">"DataObject"</span>, <span class="at">format =</span> <span class="st">"text/csv"</span>, <span class="at">filename =</span> sourceData)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">addMember</span>(dp, sourceObj, metadataObj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -411,17 +432,21 @@ Note
 </div>
 </section>
 </section>
-<section id="upload-the-package" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="upload-the-package"><span class="header-section-number">2.2.2</span> Upload the package</h3>
+<section id="upload-the-package" class="level3">
+<h3 class="anchored" data-anchor-id="upload-the-package">Upload the package</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>d1c <span class="ot">&lt;-</span> dataone<span class="sc">::</span><span class="fu">D1Client</span>(<span class="st">"STAGING"</span>, <span class="st">"urn:node:mnTestARCTIC"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Make sure to give access privileges to the ADC admins: ::: {.cell}</p>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>myAccessRules <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">subject=</span><span class="st">"CN=arctic-data-admins,DC=dataone,DC=org"</span>, <span class="at">permission=</span><span class="st">"changePermission"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p>
-<p>Get necessary token from test.arcticdata.io to upload the dataset prior uploading the datapackage: ::: {.cell}</p>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>packageId <span class="ot">&lt;-</span> <span class="fu">uploadDataPackage</span>(d1c, dp, <span class="at">public=</span><span class="cn">TRUE</span>, <span class="at">accessRules=</span>myAccessRules, <span class="at">quiet=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p>
+<p>Make sure to give access privileges to the ADC admins. Although you may be tempted to edit the format of the string in the <code>subject</code> argument, you must keep it exactly as is. Otherwise you’ll run into error messages!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>myAccessRules <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">subject =</span> <span class="st">"CN=arctic-data-admins,DC=dataone,DC=org"</span>, </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>                            <span class="at">permission =</span> <span class="st">"changePermission"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Get necessary token from <a href="test.arcticdata.io">test.arcticdata.io</a> to upload the dataset prior uploading the datapackage:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>packageId <span class="ot">&lt;-</span> <span class="fu">uploadDataPackage</span>(d1c, dp, <span class="at">public =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>                               <span class="at">accessRules =</span> myAccessRules, <span class="at">quiet =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -433,15 +458,28 @@ Note
 </div>
 <div class="callout-body-container callout-body">
 <p><strong>If you want to preserve folder structures, you can use this method</strong></p>
-<p>In this example adding the csv files to a folder named data and scripts</p>
-<p>outputData &lt;- system.file(“extdata/Strix-occidentalis-obs.csv”, package=“dataone”) outputObj &lt;- new(“DataObject”, format=“text/csv”, filename=outputData, targetPath = “data”) dp &lt;- addMember(dp, outputObj, metadataObj)</p>
-<p>progFile &lt;- system.file(“extdata/filterObs.R”, package=“dataone”) progObj &lt;- new(“DataObject”, format=“application/R”, filename=progFile, targetPath = “scripts”, mediaType=“text/x-rsrc”) dp &lt;- addMember(dp, progObj, metadataObj)</p>
+<p>In this example, adding the csv files to a folder named data and scripts:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>outputData <span class="ot">&lt;-</span> <span class="fu">system.file</span>(<span class="st">"extdata/Strix-occidentalis-obs.csv"</span>, <span class="at">package=</span><span class="st">"dataone"</span>) </span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>outputObj <span class="ot">&lt;-</span> <span class="fu">new</span>(<span class="st">"DataObject"</span>, <span class="at">format =</span> <span class="st">"text/csv"</span>, <span class="at">filename =</span> outputData,</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">targetPath =</span> <span class="st">"data"</span>)</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">addMember</span>(dp, outputObj, metadataObj)</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>progFile <span class="ot">&lt;-</span> <span class="fu">system.file</span>(<span class="st">"extdata/filterObs.R"</span>, <span class="at">package =</span> <span class="st">"dataone"</span>)</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>progObj <span class="ot">&lt;-</span> <span class="fu">new</span>(<span class="st">"DataObject"</span>, <span class="at">format =</span> <span class="st">"application/R"</span>, <span class="at">filename =</span> progFile, </span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>               <span class="at">targetPath =</span> <span class="st">"scripts"</span>, <span class="at">mediaType =</span> <span class="st">"text/x-rsrc"</span>)</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">addMember</span>(dp, progObj, metadataObj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 </section>
 </section>
-<section id="update-packages-with-datapack" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="update-packages-with-datapack"><span class="header-section-number">2.3</span> Update packages with datapack</h2>
+<section id="update-packages-with-datapack" class="level2">
+<h2 class="anchored" data-anchor-id="update-packages-with-datapack">Update packages with datapack</h2>
 <p>Once you have updated the data objects and saved the metadata to a file, we can update the metadata and add the new <code>pid</code> to the resource map using <code>datapack::updateDataObject()</code>.</p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -469,21 +507,21 @@ Warning
 <p>You must use these R packages for data packages that have provenance or folder hierarchy (<code>arcticdatatutils</code> does not support those features)</p>
 </div>
 </div>
-<section id="get-the-package" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="get-the-package"><span class="header-section-number">2.3.1</span> Get the package</h3>
+<section id="get-the-package" class="level3">
+<h3 class="anchored" data-anchor-id="get-the-package">Get the package</h3>
 <p>Setting the node is done slightly differently: ::: {.cell}</p>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>d1c_test <span class="ot">&lt;-</span> dataone<span class="sc">::</span><span class="fu">D1Client</span>(<span class="st">"STAGING"</span>, <span class="st">"urn:node:mnTestARCTIC"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>d1c_test <span class="ot">&lt;-</span> dataone<span class="sc">::</span><span class="fu">D1Client</span>(<span class="st">"STAGING"</span>, <span class="st">"urn:node:mnTestARCTIC"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>:::</p>
 <p>Get a pre-existing package: ::: {.cell}</p>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>packageId <span class="ot">&lt;-</span> <span class="st">"the resource map"</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">getDataPackage</span>(d1c_test, <span class="at">identifier=</span>packageId, <span class="at">lazyLoad=</span><span class="cn">TRUE</span>, <span class="at">quiet=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>packageId <span class="ot">&lt;-</span> <span class="st">"the resource map"</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">getDataPackage</span>(d1c_test, <span class="at">identifier=</span>packageId, <span class="at">lazyLoad=</span><span class="cn">TRUE</span>, <span class="at">quiet=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>:::</p>
 </section>
-<section id="update-the-metadata" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="update-the-metadata"><span class="header-section-number">2.3.2</span> Update the metadata</h3>
+<section id="update-the-metadata" class="level3">
+<h3 class="anchored" data-anchor-id="update-the-metadata">Update the metadata</h3>
 <p>Get the metadata identifier ::: {.cell}</p>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>metadataId <span class="ot">&lt;-</span> <span class="fu">selectMember</span>(dp, <span class="at">name=</span><span class="st">"sysmeta@formatId"</span>, <span class="at">value=</span><span class="st">"https://eml.ecoinformatics.org/eml-2.2.0"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>metadataId <span class="ot">&lt;-</span> <span class="fu">selectMember</span>(dp, <span class="at">name=</span><span class="st">"sysmeta@formatId"</span>, <span class="at">value=</span><span class="st">"https://eml.ecoinformatics.org/eml-2.2.0"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>:::</p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -499,26 +537,26 @@ Note
 </div>
 </div>
 <p>Read the EML doc ::: {.cell}</p>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>doc <span class="ot">&lt;-</span> <span class="fu">read_eml</span>(<span class="fu">getObject</span>(d1c<span class="sc">@</span>mn, metadataId))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>doc <span class="ot">&lt;-</span> <span class="fu">read_eml</span>(<span class="fu">getObject</span>(d1c<span class="sc">@</span>mn, metadataId))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>:::</p>
 <p>Edit the EML as usual - see the documents in Edit EML for details</p>
 <p>Once you are happy with your changes, you can update your data package to include the new metadata file using <code>replaceMember</code> ::: {.cell}</p>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>eml_path <span class="ot">&lt;-</span> <span class="st">"path/to/your/saved/eml.xml"</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_eml</span>(doc, eml_path)</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">replaceMember</span>(dp, metadataId, <span class="at">replacement=</span>eml_path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>eml_path <span class="ot">&lt;-</span> <span class="st">"path/to/your/saved/eml.xml"</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_eml</span>(doc, eml_path)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">replaceMember</span>(dp, metadataId, <span class="at">replacement=</span>eml_path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>:::</p>
 </section>
-<section id="modify-the-data-files" class="level3" data-number="2.3.3">
-<h3 data-number="2.3.3" class="anchored" data-anchor-id="modify-the-data-files"><span class="header-section-number">2.3.3</span> Modify the data files</h3>
+<section id="modify-the-data-files" class="level3">
+<h3 class="anchored" data-anchor-id="modify-the-data-files">Modify the data files</h3>
 <p>remove zip files ::: {.cell}</p>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>zipId <span class="ot">&lt;-</span> <span class="fu">selectMember</span>(dp, <span class="at">name=</span><span class="st">"sysmeta@formatId"</span>, <span class="at">value=</span><span class="st">"application/vnd.shp+zip"</span>)</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">removeMember</span>(dp, zipId, <span class="at">removeRelationships =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>zipId <span class="ot">&lt;-</span> <span class="fu">selectMember</span>(dp, <span class="at">name=</span><span class="st">"sysmeta@formatId"</span>, <span class="at">value=</span><span class="st">"application/vnd.shp+zip"</span>)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">removeMember</span>(dp, zipId, <span class="at">removeRelationships =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>:::</p>
 <p>add an existing data object</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>dataObj <span class="ot">&lt;-</span> <span class="fu">getDataObject</span>(d1c_test, <span class="at">id=</span><span class="st">"urn:uuid: here"</span>, <span class="at">lazyLoad=</span>T, <span class="at">limit=</span><span class="st">"1TB"</span>)</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">addMember</span>(dp, dataObj, <span class="at">mo=</span>metadataId)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>dataObj <span class="ot">&lt;-</span> <span class="fu">getDataObject</span>(d1c_test, <span class="at">id=</span><span class="st">"urn:uuid: here"</span>, <span class="at">lazyLoad=</span>T, <span class="at">limit=</span><span class="st">"1TB"</span>)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">addMember</span>(dp, dataObj, <span class="at">mo=</span>metadataId)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -534,68 +572,68 @@ Note
 </div>
 </div>
 </section>
-<section id="publish-update" class="level3" data-number="2.3.4">
-<h3 data-number="2.3.4" class="anchored" data-anchor-id="publish-update"><span class="header-section-number">2.3.4</span> Publish update</h3>
-<section id="using-a-doi" class="level5" data-number="2.3.4.0.1">
-<h5 data-number="2.3.4.0.1" class="anchored" data-anchor-id="using-a-doi"><span class="header-section-number">2.3.4.0.1</span> Using a DOI</h5>
+<section id="publish-update" class="level3">
+<h3 class="anchored" data-anchor-id="publish-update">Publish update</h3>
+<section id="using-a-doi" class="level5">
+<h5 class="anchored" data-anchor-id="using-a-doi">Using a DOI</h5>
 <p>If you want to publish with a DOI (Digital Object Identifier) instead of a UUID (Universally Unique Identifier), (a) you need to change the <code>public</code> argument to <code>TRUE</code> and generate a DOI identifier.</p>
 <p><strong>This should only be done after the package is finalized and has been thoroughly reviewed!</strong></p>
 <ol type="1">
 <li>Updating a package with a new DOI:</li>
 </ol>
 <p>A Digital Object Identifier (DOI) may be assigned to the metadata <strong>DataObject</strong>, using the <code>generateIdentifier</code>: ::: {.cell}</p>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>doi <span class="ot">&lt;-</span> dataone<span class="sc">::</span><span class="fu">generateIdentifier</span>(d1c_test<span class="sc">@</span>mn, <span class="st">"DOI"</span>)</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">replaceMember</span>(dp, metadataId, <span class="at">replacement=</span>eml_path, <span class="at">newId=</span>doi)</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>newPackageId <span class="ot">&lt;-</span> <span class="fu">uploadDataPackage</span>(d1c_test, dp, <span class="at">public=</span><span class="cn">TRUE</span>, <span class="at">quiet=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>doi <span class="ot">&lt;-</span> dataone<span class="sc">::</span><span class="fu">generateIdentifier</span>(d1c_test<span class="sc">@</span>mn, <span class="st">"DOI"</span>)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">replaceMember</span>(dp, metadataId, <span class="at">replacement=</span>eml_path, <span class="at">newId=</span>doi)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>newPackageId <span class="ot">&lt;-</span> <span class="fu">uploadDataPackage</span>(d1c_test, dp, <span class="at">public=</span><span class="cn">TRUE</span>, <span class="at">quiet=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>:::</p>
 <ol start="2" type="1">
 <li>Updating a package with a pre-issued DOI ::: {.cell}</li>
 </ol>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">replaceMember</span>(dp, metadataId, <span class="at">replacement=</span>eml_path, <span class="at">newId=</span><span class="st">"your pre-issued doi previously generated"</span>)</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>newPackageId <span class="ot">&lt;-</span> <span class="fu">uploadDataPackage</span>(d1c_test, dp, <span class="at">public=</span><span class="cn">TRUE</span>, <span class="at">quiet=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">replaceMember</span>(dp, metadataId, <span class="at">replacement=</span>eml_path, <span class="at">newId=</span><span class="st">"your pre-issued doi previously generated"</span>)</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>newPackageId <span class="ot">&lt;-</span> <span class="fu">uploadDataPackage</span>(d1c_test, dp, <span class="at">public=</span><span class="cn">TRUE</span>, <span class="at">quiet=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>:::</p>
 <p>Refresh the landing page at test.arcticdata.io/#view/… for this package and then follow the “newer version” link to view the latest.</p>
 </section>
 </section>
 </section>
-<section id="add-a-pre-generated-identifier-to-the-eml" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="add-a-pre-generated-identifier-to-the-eml"><span class="header-section-number">2.4</span> Add a pre-generated identifier to the EML</h2>
+<section id="add-a-pre-generated-identifier-to-the-eml" class="level2">
+<h2 class="anchored" data-anchor-id="add-a-pre-generated-identifier-to-the-eml">Add a pre-generated identifier to the EML</h2>
 <p>When you pre-generate a UUID or DOI, the change is not automatically reflected in the <code>packageId</code> section of the EML. Use the code below to ensure that the EML lines up with the desired identifier:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Generate DOI and add to EML</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that you cannot generate a DOI on test nodes</span></span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>doiPid <span class="ot">&lt;-</span> <span class="fu">generateIdentifier</span>(mn, <span class="st">"DOI"</span>)</span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>doc<span class="sc">$</span>packageId <span class="ot">&lt;-</span> doiPid</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Generate DOI and add to EML</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that you cannot generate a DOI on test nodes</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>doiPid <span class="ot">&lt;-</span> <span class="fu">generateIdentifier</span>(mn, <span class="st">"DOI"</span>)</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>doc<span class="sc">$</span>packageId <span class="ot">&lt;-</span> doiPid</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Be sure to include the <code>identifier=</code> argument in your <a href="https://nceas.github.io/datateam-training/reference/update-a-package-with-a-new-data-object.html#publish-update" target="_blank">publish update</a> command so the pre-generated identifier is applied.</p>
 </section>
-<section id="edit-sysmeta" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="edit-sysmeta"><span class="header-section-number">2.5</span> Edit sysmeta</h2>
+<section id="edit-sysmeta" class="level2">
+<h2 class="anchored" data-anchor-id="edit-sysmeta">Edit sysmeta</h2>
 <p>To edit the sysmeta of an object (data file, EML, or resource map, etc.) with a <code>PID</code>, first load the sysmeta into R using the following command:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>sysmeta <span class="ot">&lt;-</span> <span class="fu">getSystemMetadata</span>(mn, pid)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>sysmeta <span class="ot">&lt;-</span> <span class="fu">getSystemMetadata</span>(d1c<span class="sc">@</span>mn, pid)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then edit the sysmeta slots by using <code>@</code> functionality. For example, to change the <code>fileName</code> use the following command:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>sysmeta<span class="sc">@</span>fileName <span class="ot">&lt;-</span> <span class="st">'NewFileName.csv'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>sysmeta<span class="sc">@</span>fileName <span class="ot">&lt;-</span> <span class="st">'NewFileName.csv'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Note that some slots cannot be changed by simple text replace (particularly the <code>accessPolicy</code>). There are various helper functions for changing the <code>accessPolicy</code> and <code>rightsHolder</code> such as <code>datapack::addAccessRule()</code> (which takes the sysmeta as an input) or <a href="https://nceas.github.io/datateam-training/reference/set-rights-and-access.html#set-rights-and-access" target="_blank"><code>arcticdatautils::set_rights_and_access()</code></a>, which only requires a <code>PID</code>. In general, you most frequently need to use <code>dataone::getSystemMetadata()</code> to change either the <code>formatId</code> or <code>fileName</code> slots (see <a href="https://cn.dataone.org/cn/v2/formats" target="_blank">the DataONE list of format ids</a>) for acceptable formats.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example of setting the formatId slot</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>sysmeta<span class="sc">@</span>formatId <span class="ot">&lt;-</span> <span class="st">"eml://ecoinformatics.org/eml-2.1.1"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example of setting the formatId slot</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>sysmeta<span class="sc">@</span>formatId <span class="ot">&lt;-</span> <span class="st">"eml://ecoinformatics.org/eml-2.1.1"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>After you have changed the necessary slot, you can update the system metadata using the following command:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">updateSystemMetadata</span>(mn, pid, sysmeta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">updateSystemMetadata</span>(d1c<span class="sc">@</span>mn, pid, sysmeta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="identifiers-and-sysmeta" class="level3" data-number="2.5.1">
-<h3 data-number="2.5.1" class="anchored" data-anchor-id="identifiers-and-sysmeta"><span class="header-section-number">2.5.1</span> Identifiers and sysmeta</h3>
+<section id="identifiers-and-sysmeta" class="level3">
+<h3 class="anchored" data-anchor-id="identifiers-and-sysmeta">Identifiers and sysmeta</h3>
 <p>Importantly, changing the system metadata does NOT necessitate a change in the <code>PID</code> of an object. This is because changes to the system metadata do not change the object itself, they are only changing the description of the object (although ideally the system metadata are accurate when an object is first published).</p>
 </section>
-<section id="additional-resources" class="level3" data-number="2.5.2">
-<h3 data-number="2.5.2" class="anchored" data-anchor-id="additional-resources"><span class="header-section-number">2.5.2</span> Additional resources</h3>
+<section id="additional-resources" class="level3">
+<h3 class="anchored" data-anchor-id="additional-resources">Additional resources</h3>
 <p>For a more in-depth (and technical) guide to sysmeta, check out the DataONE documentation:</p>
 <ul>
 <li><a href="https://releases.dataone.org/online/api-documentation-v2.0.1/design/SystemMetadata.html" target="_blank">System Metadata</a></li>
@@ -603,34 +641,34 @@ Note
 </ul>
 </section>
 </section>
-<section id="obsolescence-chain" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="obsolescence-chain"><span class="header-section-number">2.6</span> Obsolescence chain</h2>
+<section id="obsolescence-chain" class="level2">
+<h2 class="anchored" data-anchor-id="obsolescence-chain">Obsolescence chain</h2>
 <p>You can obsolete a dataset using the function <code>datamgmt::obsolete_package()</code>. Use the documentation for instructions on using the function. The following workflow explains how the functions operate.</p>
 <p>This chunk is to obsolete one data set. If there are more to add to the chain, more steps can be added. Be very careful. Make sure to fill in <code>obsoletes</code> and <code>obsoletedBy</code> slots for each one. The <code>obsoletes</code> and <code>obsoletedBy</code> fields must be <code>NA</code>, once they are populated they can’t be modified.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get oldest version of the file you want to be visible. Use get_all_versions and look at the latest.</span></span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="co"># urn:uuid:...</span></span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="co"># PID for data set to be obsoleted (hidden): doi:10…</span></span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="co"># adding data set to obsolete (hide) in the slot before the first version of the visible data set</span></span>
-<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>sysmeta1 <span class="ot">&lt;-</span> <span class="fu">getSystemMetadata</span>(mn, <span class="st">"urn:uuid:example_pid"</span>)</span>
-<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>sysmeta1<span class="sc">@</span>obsoletes <span class="ot">&lt;-</span> <span class="st">"doi:10.example_doi"</span></span>
-<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a><span class="fu">updateSystemMetadata</span>(mn, <span class="st">"urn:uuid:example_pid"</span>, sysmeta1)</span>
-<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a><span class="co"># adding first version to obsolescence chain after obsoleted (hidden) version</span></span>
-<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>sysmeta0 <span class="ot">&lt;-</span> <span class="fu">getSystemMetadata</span>(mn, <span class="st">"doi:10.example_doi"</span>)</span>
-<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>sysmeta0<span class="sc">@</span>obsoletedBy <span class="ot">&lt;-</span> <span class="st">"urn:uuid:example_pid"</span></span>
-<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a><span class="fu">updateSystemMetadata</span>(mn, <span class="st">"doi:10.example_doi"</span>, sysmeta0)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get oldest version of the file you want to be visible. Use get_all_versions and look at the latest.</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="co"># urn:uuid:...</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="co"># PID for data set to be obsoleted (hidden): doi:10…</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="co"># adding data set to obsolete (hide) in the slot before the first version of the visible data set</span></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>sysmeta1 <span class="ot">&lt;-</span> <span class="fu">getSystemMetadata</span>(mn, <span class="st">"urn:uuid:example_pid"</span>)</span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>sysmeta1<span class="sc">@</span>obsoletes <span class="ot">&lt;-</span> <span class="st">"doi:10.example_doi"</span></span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a><span class="fu">updateSystemMetadata</span>(mn, <span class="st">"urn:uuid:example_pid"</span>, sysmeta1)</span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a><span class="co"># adding first version to obsolescence chain after obsoleted (hidden) version</span></span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>sysmeta0 <span class="ot">&lt;-</span> <span class="fu">getSystemMetadata</span>(mn, <span class="st">"doi:10.example_doi"</span>)</span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a>sysmeta0<span class="sc">@</span>obsoletedBy <span class="ot">&lt;-</span> <span class="st">"urn:uuid:example_pid"</span></span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a><span class="fu">updateSystemMetadata</span>(mn, <span class="st">"doi:10.example_doi"</span>, sysmeta0)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The following code is equivalent to the code chunk above. This method is recommended, however it is necessary to read the function documentation first.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>datamgmt<span class="sc">::</span><span class="fu">obsolete_package</span>(mn, <span class="at">metadata_obsolete =</span> <span class="st">"doi:10.example_doi"</span>, </span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>                           <span class="at">metadata_new =</span> <span class="st">"urn:uuid:example_pid"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>datamgmt<span class="sc">::</span><span class="fu">obsolete_package</span>(mn, <span class="at">metadata_obsolete =</span> <span class="st">"doi:10.example_doi"</span>, </span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>                           <span class="at">metadata_new =</span> <span class="st">"urn:uuid:example_pid"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="set-dataone-nodes" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="set-dataone-nodes"><span class="header-section-number">2.7</span> Set DataONE nodes</h2>
+<section id="set-dataone-nodes" class="level2">
+<h2 class="anchored" data-anchor-id="set-dataone-nodes">Set DataONE nodes</h2>
 <p>DataONE is a network of data repositories that is structured with coordinating nodes (CN) and member nodes (MN). The network tree looks something like this:</p>
 <p><img src="../images/dataone-nodes-tree.png" class="img-fluid"></p>
 <p>At the top level is DataONE itself. Within DataONE there are several coordinating nodes, including nodes for both production material and testing material. Within these coordinating nodes are many member nodes, including ones for both the Arctic Data Center and the KNB. To set the environment in which you want to publish data, you need to set both the coordinating node and the member node. For example, if you are publishing to the Arctic Data Center test site, you would want to set the coordinating node to STAGING and the member node to mnTestArctic.</p>
@@ -648,131 +686,137 @@ Warning
 </div>
 </div>
 <p>The primary nodes we work on, and how to set them in R, are below:</p>
-<section id="staging-test-nodes" class="level3" data-number="2.7.1">
-<h3 data-number="2.7.1" class="anchored" data-anchor-id="staging-test-nodes"><span class="header-section-number">2.7.1</span> Staging (Test) nodes</h3>
+<section id="staging-test-nodes" class="level3">
+<h3 class="anchored" data-anchor-id="staging-test-nodes">Staging (Test) nodes</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ADC (test.arcticdata.io)</span></span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>cn_staging <span class="ot">&lt;-</span> <span class="fu">CNode</span>(<span class="st">'STAGING'</span>)</span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>adc_test <span class="ot">&lt;-</span> <span class="fu">getMNode</span>(cn_staging,<span class="st">'urn:node:mnTestARCTIC'</span>)</span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="co"># KNB (dev.nceas.ucsb.edu)</span></span>
-<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>cn_staging2 <span class="ot">&lt;-</span> <span class="fu">CNode</span>(<span class="st">"STAGING2"</span>)</span>
-<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>knb_test <span class="ot">&lt;-</span> <span class="fu">getMNode</span>(cn_staging2, <span class="st">"urn:node:mnTestKNB"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ADC (test.arcticdata.io)</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>cn_staging <span class="ot">&lt;-</span> <span class="fu">CNode</span>(<span class="st">'STAGING'</span>)</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>adc_test <span class="ot">&lt;-</span> <span class="fu">getMNode</span>(cn_staging,<span class="st">'urn:node:mnTestARCTIC'</span>)</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="co"># KNB (dev.nceas.ucsb.edu)</span></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>cn_staging2 <span class="ot">&lt;-</span> <span class="fu">CNode</span>(<span class="st">"STAGING2"</span>)</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>knb_test <span class="ot">&lt;-</span> <span class="fu">getMNode</span>(cn_staging2, <span class="st">"urn:node:mnTestKNB"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="production-nodes" class="level3" data-number="2.7.2">
-<h3 data-number="2.7.2" class="anchored" data-anchor-id="production-nodes"><span class="header-section-number">2.7.2</span> Production nodes</h3>
+<section id="production-nodes" class="level3">
+<h3 class="anchored" data-anchor-id="production-nodes">Production nodes</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ADC (arcticdata.io)</span></span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>cn <span class="ot">&lt;-</span> <span class="fu">CNode</span>(<span class="st">'PROD'</span>)</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>adc <span class="ot">&lt;-</span> <span class="fu">getMNode</span>(cn,<span class="st">'urn:node:ARCTIC'</span>)</span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="co"># KNB (knb.ecoinformatics.org)</span></span>
-<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>knb <span class="ot">&lt;-</span> <span class="fu">getMNode</span>(cn, <span class="st">"urn:node:KNB"</span>)</span>
-<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a><span class="co"># GOA </span></span>
-<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>goa <span class="ot">&lt;-</span> <span class="fu">getMNode</span>(cn, <span class="st">"urn:node:GOA"</span>)</span>
-<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a><span class="co"># You can also use the datamgmt::guess_membernode function to set a member node</span></span>
-<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: this pid looks like a URL - it's really a unique identifier</span></span>
-<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a>dryad <span class="ot">&lt;-</span> datamgmt<span class="sc">::</span><span class="fu">guess_member_node</span>(<span class="st">'https://doi.org/10.5061/dryad.k6gf1tf/15?ver=2018-09-18T03:54:10.492+00:00'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ADC (arcticdata.io)</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>cn <span class="ot">&lt;-</span> <span class="fu">CNode</span>(<span class="st">'PROD'</span>)</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>adc <span class="ot">&lt;-</span> <span class="fu">getMNode</span>(cn,<span class="st">'urn:node:ARCTIC'</span>)</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="co"># KNB (knb.ecoinformatics.org)</span></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>knb <span class="ot">&lt;-</span> <span class="fu">getMNode</span>(cn, <span class="st">"urn:node:KNB"</span>)</span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a><span class="co"># GOA </span></span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>goa <span class="ot">&lt;-</span> <span class="fu">getMNode</span>(cn, <span class="st">"urn:node:GOA"</span>)</span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a><span class="co"># You can also use the datamgmt::guess_membernode function to set a member node</span></span>
+<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: this pid looks like a URL - it's really a unique identifier</span></span>
+<span id="cb38-13"><a href="#cb38-13" aria-hidden="true" tabindex="-1"></a>dryad <span class="ot">&lt;-</span> datamgmt<span class="sc">::</span><span class="fu">guess_member_node</span>(<span class="st">'https://doi.org/10.5061/dryad.k6gf1tf/15?ver=2018-09-18T03:54:10.492+00:00'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>More DataONE STAGING nodes can be found <a href="https://cn-stage.test.dataone.org/cn/v2/node" target="_blank">here</a> More DataONE PROD nodes can be found <a href="https://cn.dataone.org/cn/v2/node" target="_blank">here</a></p>
 </section>
 </section>
-<section id="set-rights-and-access" class="level2" data-number="2.8">
-<h2 data-number="2.8" class="anchored" data-anchor-id="set-rights-and-access"><span class="header-section-number">2.8</span> Set rights and access</h2>
+<section id="set-rights-and-access" class="level2">
+<h2 class="anchored" data-anchor-id="set-rights-and-access">Set rights and access</h2>
 <p>One final step when creating/updating packages is to make sure that the rights and access on all the objects that were uploaded are set correctly within the sysmeta. The function <code>arcticdatautils::set_rights_and_access()</code> will set both, and <code>arcticdatautils::set_access()</code> will just set access. There are two functions for this because a <code>rightsHolder</code> should always have access, but not all people who need access are <code>rightsHolder</code>s. The <code>rightsHolder</code> of the data package is typically the <code>submitter</code> (if the data set is submitted through the web form (“editor”)), but if a data team member is publishing objects for a PI, the <code>rightsHolder</code> should be the main point of contact for the data set (i.e.&nbsp;the person who requested that we upload the data for them).</p>
 <p>To set the rights and access for all of the objects in a <a href="https://nceas.github.io/datateam-training/reference/get-package-and-eml.html#get-package-and-eml" target="_blank">package</a>, first get the ORCiD of the person to whom you are giving rights and access. You can set this manually, or grab it from one of the creators in an EML file. You can look up ORCID iDs <a href="https://orcid.org/orcid-search/search" target="_blank">here</a></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Manually set ORCiD</span></span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a> subject <span class="ot">&lt;-</span> <span class="st">'http://orcid.org/PUT-YOUR-ORCD-HERE'</span></span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Set ORCiD from EML creator</span></span>
-<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="co"># if only 1 creator exists</span></span>
-<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a> subject <span class="ot">&lt;-</span> doc<span class="sc">$</span>dataset<span class="sc">$</span>creator<span class="sc">$</span>userId<span class="sc">$</span>userId</span>
-<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a> <span class="co"># if more than 1 creator exists and you want the first one</span></span>
-<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a> subject <span class="ot">&lt;-</span> doc<span class="sc">$</span>dataset<span class="sc">$</span>creator[[<span class="dv">1</span>]]<span class="sc">$</span>userId<span class="sc">$</span>userId</span>
-<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a> <span class="co"># As a convention we use `http:` instead of `https:` in our system metadata</span></span>
-<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a> subject <span class="ot">&lt;-</span> <span class="fu">sub</span>(<span class="st">"^https://"</span>, <span class="st">"http://"</span>, subject)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Manually set ORCiD</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a> subject <span class="ot">&lt;-</span> <span class="st">'http://orcid.org/PUT-YOUR-ORCD-HERE'</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Set ORCiD from EML creator</span></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="co"># if only 1 creator exists</span></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a> subject <span class="ot">&lt;-</span> doc<span class="sc">$</span>dataset<span class="sc">$</span>creator<span class="sc">$</span>userId<span class="sc">$</span>userId</span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a> <span class="co"># if more than 1 creator exists and you want the first one</span></span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a> subject <span class="ot">&lt;-</span> doc<span class="sc">$</span>dataset<span class="sc">$</span>creator[[<span class="dv">1</span>]]<span class="sc">$</span>userId<span class="sc">$</span>userId</span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a> <span class="co"># As a convention we use `http:` instead of `https:` in our system metadata</span></span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a> subject <span class="ot">&lt;-</span> <span class="fu">sub</span>(<span class="st">"^https://"</span>, <span class="st">"http://"</span>, subject)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Note, when setting metadata, the ORCiD must start with <code>http://</code>. ORCiDs in EML should start with <code>https://</code>. The <code>sub()</code> command above will change this formatting for you.</p>
 <p>Next, set the rights and access using the following command:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set_rights_and_access</span>(mn, </span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">pids =</span> <span class="fu">c</span>(pkg<span class="sc">$</span>metadata, pkg<span class="sc">$</span>data, pkg<span class="sc">$</span>resource_map),</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">subject =</span> subject,</span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">permissions =</span> <span class="fu">c</span>(<span class="st">'read'</span>,<span class="st">'write'</span>,<span class="st">'changePermission'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set_rights_and_access</span>(mn, </span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">pids =</span> <span class="fu">c</span>(pkg<span class="sc">$</span>metadata, pkg<span class="sc">$</span>data, pkg<span class="sc">$</span>resource_map),</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">subject =</span> subject,</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">permissions =</span> <span class="fu">c</span>(<span class="st">'read'</span>,<span class="st">'write'</span>,<span class="st">'changePermission'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If you ever need to remove/add public access to your package or object, you can use <code>remove_public_read()</code> or <code>set_public_read()</code>, respectively.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">remove_public_read</span>(mn, <span class="fu">c</span>(pkg<span class="sc">$</span>metadata, pkg<span class="sc">$</span>data, pkg<span class="sc">$</span>resource_map))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">remove_public_read</span>(mn, <span class="fu">c</span>(pkg<span class="sc">$</span>metadata, pkg<span class="sc">$</span>data, pkg<span class="sc">$</span>resource_map))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="my-profile" class="level3" data-number="2.8.1">
-<h3 data-number="2.8.1" class="anchored" data-anchor-id="my-profile"><span class="header-section-number">2.8.1</span> My profile</h3>
+<section id="my-profile" class="level3">
+<h3 class="anchored" data-anchor-id="my-profile">My profile</h3>
 <p>The datasets that render under a user’s profile page like <a href="https://arcticdata.io/catalog/profile/http://orcid.org/0000-0003-3644-7237" target="_blank">here</a> are added if one of the following three System Metadata fields exists. The subject is the <code>rightsHolder</code> or the subject has one of either <code>write</code> or <code>changePermission</code> in the <code>accessPolicy</code>.</p>
 <p>If you ever need to remove a subject from the <code>accessPolicy</code> or update the <code>rightsHolder</code> you can use <code>arcticdatautils::remove_access</code> and <code>arcticdatautils::set_rightsHolder</code>, respectively.</p>
 </section>
 </section>
-<section id="update-a-package-with-a-new-data-object" class="level2" data-number="2.9">
-<h2 data-number="2.9" class="anchored" data-anchor-id="update-a-package-with-a-new-data-object"><span class="header-section-number">2.9</span> Update a package with a new data object</h2>
+<section id="update-a-package-with-a-new-data-object" class="level2">
+<h2 class="anchored" data-anchor-id="update-a-package-with-a-new-data-object">Update a package with a new data object</h2>
 <p>Once you have updated the data objects and saved the metadata to a file, we can update the metadata and use <code>replaceMember</code> to update the package with the new metadata.</p>
 <p>Make sure you have the package you want to update loaded into R using <code>dataone::getDataPackage()</code>.</p>
-<section id="publish-update-1" class="level3" data-number="2.9.1">
-<h3 data-number="2.9.1" class="anchored" data-anchor-id="publish-update-1"><span class="header-section-number">2.9.1</span> Publish update</h3>
-<p>Now we can update your data package to include the new data object. Assuming you have updated your data package earlier something like the below: ::: {.cell}</p>
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>d1c_test <span class="ot">&lt;-</span> dataone<span class="sc">::</span><span class="fu">D1Client</span>(<span class="st">"STAGING"</span>, <span class="st">"urn:node:mnTestARCTIC"</span>)</span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>packageId <span class="ot">&lt;-</span> <span class="st">"the resource map"</span></span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">getDataPackage</span>(d1c_test, <span class="at">identifier=</span>packageId, <span class="at">lazyLoad=</span><span class="cn">TRUE</span>, <span class="at">quiet=</span><span class="cn">FALSE</span>)</span>
-<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>metadataId <span class="ot">&lt;-</span> <span class="fu">selectMember</span>(dp, <span class="at">name=</span><span class="st">"sysmeta@formatId"</span>, <span class="at">value=</span><span class="st">"https://eml.ecoinformatics.org/eml-2.2.0"</span>)</span>
-<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="co">#some modification to the EML here</span></span>
-<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>eml_path <span class="ot">&lt;-</span> <span class="st">"path/to/your/saved/eml.xml"</span></span>
-<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a><span class="fu">write_eml</span>(doc, eml_path)</span>
-<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">replaceMember</span>(dp, metadataId, <span class="at">replacement=</span>eml_path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p>
-<p>You can then upload your data package: ::: {.cell}</p>
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>myAccessRules <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">subject=</span><span class="st">"CN=arctic-data-admins,DC=dataone,DC=org"</span>, <span class="at">permission=</span><span class="st">"changePermission"</span>) </span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>packageId <span class="ot">&lt;-</span> <span class="fu">uploadDataPackage</span>(d1c_test, dp, <span class="at">public=</span><span class="cn">FALSE</span>, <span class="at">accessRules=</span>myAccessRules, <span class="at">quiet=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p>
+<section id="publish-update-1" class="level3">
+<h3 class="anchored" data-anchor-id="publish-update-1">Publish update</h3>
+<p>Now we can update your data package to include the new data object. Assuming you have updated your data package earlier something like the below:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>d1c_test <span class="ot">&lt;-</span> dataone<span class="sc">::</span><span class="fu">D1Client</span>(<span class="st">"STAGING"</span>, <span class="st">"urn:node:mnTestARCTIC"</span>)</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>packageId <span class="ot">&lt;-</span> <span class="st">"the resource map"</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">getDataPackage</span>(d1c_test, <span class="at">identifier=</span>packageId, <span class="at">lazyLoad=</span><span class="cn">TRUE</span>, <span class="at">quiet=</span><span class="cn">FALSE</span>)</span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>metadataId <span class="ot">&lt;-</span> <span class="fu">selectMember</span>(dp, <span class="at">name=</span><span class="st">"sysmeta@formatId"</span>, <span class="at">value=</span><span class="st">"https://eml.ecoinformatics.org/eml-2.2.0"</span>)</span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a><span class="co">#some modification to the EML here</span></span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>eml_path <span class="ot">&lt;-</span> <span class="st">"path/to/your/saved/eml.xml"</span></span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a><span class="fu">write_eml</span>(doc, eml_path)</span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">replaceMember</span>(dp, metadataId, <span class="at">replacement=</span>eml_path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You can then upload your data package:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>myAccessRules <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">subject=</span><span class="st">"CN=arctic-data-admins,DC=dataone,DC=org"</span>, <span class="at">permission=</span><span class="st">"changePermission"</span>) </span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>packageId <span class="ot">&lt;-</span> <span class="fu">uploadDataPackage</span>(d1c_test, dp, <span class="at">public=</span><span class="cn">FALSE</span>, <span class="at">accessRules=</span>myAccessRules, <span class="at">quiet=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>If a package is ready to be public, you can change the <code>public</code> argument in the <code>datapack::uploadDataPackage()</code> call to <code>TRUE</code>.</p>
-<p>If you want to publish with a DOI (Digital Object Identifier) instead of a UUID (Universally Unique Identifier), you need to do this when replacing the metadata. <strong>This should only be done after the package is finalized and has been thoroughly reviewed!</strong> ::: {.cell}</p>
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>doi <span class="ot">&lt;-</span> dataone<span class="sc">::</span><span class="fu">generateIdentifier</span>(d1c_test<span class="sc">@</span>mn, <span class="st">"DOI"</span>)</span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">replaceMember</span>(dp, metadataId, <span class="at">replacement=</span>eml_path, <span class="at">newId=</span>doi)</span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>newPackageId <span class="ot">&lt;-</span> <span class="fu">uploadDataPackage</span>(d1c_test, dp, <span class="at">public=</span><span class="cn">TRUE</span>, <span class="at">quiet=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p>
-<p>If there is a pre-issued DOI (researcher requested the DOI for the publication first), please do the following: ::: {.cell}</p>
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">replaceMember</span>(dp, metadataId, <span class="at">replacement=</span>eml_path, <span class="at">newId=</span><span class="st">"your pre-issued doi previously generated"</span>)</span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>newPackageId <span class="ot">&lt;-</span> <span class="fu">uploadDataPackage</span>(d1c_test, dp, <span class="at">public=</span><span class="cn">TRUE</span>, <span class="at">quiet=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p>
+<p>If you want to publish with a DOI (Digital Object Identifier) instead of a UUID (Universally Unique Identifier), you need to do this when replacing the metadata. <strong>This should only be done after the package is finalized and has been thoroughly reviewed!</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>doi <span class="ot">&lt;-</span> dataone<span class="sc">::</span><span class="fu">generateIdentifier</span>(d1c_test<span class="sc">@</span>mn, <span class="st">"DOI"</span>)</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">replaceMember</span>(dp, metadataId, <span class="at">replacement=</span>eml_path, <span class="at">newId=</span>doi)</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>newPackageId <span class="ot">&lt;-</span> <span class="fu">uploadDataPackage</span>(d1c_test, dp, <span class="at">public=</span><span class="cn">TRUE</span>, <span class="at">quiet=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If there is a pre-issued DOI (researcher requested the DOI for the publication first), please do the following:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">replaceMember</span>(dp, metadataId, <span class="at">replacement=</span>eml_path, <span class="at">newId=</span><span class="st">"your pre-issued doi previously generated"</span>)</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>newPackageId <span class="ot">&lt;-</span> <span class="fu">uploadDataPackage</span>(d1c_test, dp, <span class="at">public=</span><span class="cn">TRUE</span>, <span class="at">quiet=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>If the package has children, see how to do this using <code>arcticdatautils::publish_update</code> in the nesting section of the reference manual.</p>
 <p>Refresh the landing page at test.arcticdata.io/#view/… for this package and then follow the “newer version” link to view the latest.</p>
 </section>
 </section>
-<section id="update-a-data-object" class="level2" data-number="2.10">
-<h2 data-number="2.10" class="anchored" data-anchor-id="update-a-data-object"><span class="header-section-number">2.10</span> Update a data object</h2>
+<section id="update-a-data-object" class="level2">
+<h2 class="anchored" data-anchor-id="update-a-data-object">Update a data object</h2>
 <p>To update a data file associated with a data package, you need to do three things:</p>
 <ol type="1">
 <li>update the object itself,</li>
 <li>update the resource map (which affiliates the object with the metadata), and</li>
 <li>update the metadata that describes that object</li>
 </ol>
-<p>The <code>datapack::replaceMember</code> function takes care of the first two of these tasks. First you need to get the pid of the file you want to replace by using <code>datapack::selectMember</code> ::: {.cell}</p>
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>metadataId <span class="ot">&lt;-</span> <span class="fu">selectMember</span>(dp, <span class="at">name=</span><span class="st">"sysmeta@formatId"</span>, <span class="at">value=</span><span class="st">"https://eml.ecoinformatics.org/eml-2.2.0"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p>
-<p>Then use <code>replaceMember</code>: ::: {.cell}</p>
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">replaceMember</span>(dp, metadataId, <span class="at">replacement=</span>file_path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p>
+<p>The <code>datapack::replaceMember</code> function takes care of the first two of these tasks. First you need to get the pid of the file you want to replace by using <code>datapack::selectMember</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>metadataId <span class="ot">&lt;-</span> <span class="fu">selectMember</span>(dp, <span class="at">name=</span><span class="st">"sysmeta@formatId"</span>, <span class="at">value=</span><span class="st">"https://eml.ecoinformatics.org/eml-2.2.0"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then use <code>replaceMember</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">replaceMember</span>(dp, metadataId, <span class="at">replacement=</span>file_path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>If you want to remove some files from the data package we can use <code>datapack::removeMember</code>. If we wanted to remove all the zip files associated with this data package, we can use <code>datapack::removeMember</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>zipId <span class="ot">&lt;-</span> <span class="fu">selectMember</span>(dp, <span class="at">name=</span><span class="st">"sysmeta@formatId"</span>, <span class="at">value=</span><span class="st">"application/vnd.shp+zip"</span>)</span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="fu">removeMember</span>(dp, zipId, <span class="at">removeRelationships =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>zipId <span class="ot">&lt;-</span> <span class="fu">selectMember</span>(dp, <span class="at">name=</span><span class="st">"sysmeta@formatId"</span>, <span class="at">value=</span><span class="st">"application/vnd.shp+zip"</span>)</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">removeMember</span>(dp, zipId, <span class="at">removeRelationships =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -794,8 +838,129 @@ Note
 </section>
 
 </main> <!-- /main -->
-<script type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -815,7 +980,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.blur();
     // flash "checked"
     button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
     setTimeout(function() {
+      button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
     // clear code selection
@@ -873,12 +1041,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./miscellaneous.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Miscellaneous</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Miscellaneous</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./explore_eml.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Explore EML</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">Explore EML</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.248">
+<meta name="generator" content="quarto-1.0.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NCEAS Data Team Reference Guide - 9&nbsp; ADC Web Submissions</title>
+<title>NCEAS Data Team Reference Guide - ADC Web Submissions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,13 +80,14 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
-<meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
 <link href="./data_portals.html" rel="next">
 <link href="./solr_queries.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -94,16 +95,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -121,21 +124,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </head>
 
-<body class="floating nav-fixed">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">NCEAS Data Team Reference Guide</span>
-  </a>
-          <div id="quarto-search" class="" title="Search"></div>
-      </div> <!-- /container-fluid -->
-    </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ADC Web Submissions</span></h1>
+      <h1 class="quarto-secondary-nav-title">ADC Web Submissions</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -143,9 +138,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Data Team <br> Reference Guide</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://arcticdata.io" title="Arctic Data Center" class="sidebar-tool px-1"><i class="bi bi-house-door-fill"></i></a>
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -160,62 +164,68 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./miscellaneous.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Miscellaneous</span></a>
+  <a href="./miscellaneous.html" class="sidebar-item-text sidebar-link">Miscellaneous</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./edit_data_packages.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Edit Data Packages</span></a>
+  <a href="./edit_data_packages.html" class="sidebar-item-text sidebar-link">Edit Data Packages</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./explore_eml.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Explore EML</span></a>
+  <a href="./explore_eml.html" class="sidebar-item-text sidebar-link">Explore EML</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./edit_eml.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Edit EML</span></a>
+  <a href="./edit_eml.html" class="sidebar-item-text sidebar-link">Edit EML</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pi_correspondence.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">PI Correspondence</span></a>
+  <a href="./pi_correspondence.html" class="sidebar-item-text sidebar-link">PI Correspondence</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./misc_file_types.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Miscellaneous file types</span></a>
+  <a href="./misc_file_types.html" class="sidebar-item-text sidebar-link">Miscellaneous file types</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wrangle_data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Wrangle Data</span></a>
+  <a href="./wrangle_data.html" class="sidebar-item-text sidebar-link">Wrangle Data</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./solr_queries.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Solr Queries</span></a>
+  <a href="./solr_queries.html" class="sidebar-item-text sidebar-link">Solr Queries</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./adc_web_submissions.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ADC Web Submissions</span></a>
+  <a href="./adc_web_submissions.html" class="sidebar-item-text sidebar-link active">ADC Web Submissions</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data_portals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Data Portals</span></a>
+  <a href="./data_portals.html" class="sidebar-item-text sidebar-link">Data Portals</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data_packages_arcticdatautils.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Using arcticdatautils</span></a>
+  <a href="./data_packages_arcticdatautils.html" class="sidebar-item-text sidebar-link">Using arcticdatautils</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nesting_data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Nesting Data</span></a>
+  <a href="./nesting_data.html" class="sidebar-item-text sidebar-link">Nesting Data</a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://nceas.github.io/datateam-training/training/" class="sidebar-item-text sidebar-link">Training Manual</a>
   </div>
 </li>
     </ul>
@@ -224,13 +234,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#add-physicals-to-submissions" id="toc-add-physicals-to-submissions" class="nav-link active" data-scroll-target="#add-physicals-to-submissions"> <span class="header-section-number">9.1</span> Add physicals to submissions</a></li>
-  <li><a href="#assess-attributes" id="toc-assess-attributes" class="nav-link" data-scroll-target="#assess-attributes"> <span class="header-section-number">9.2</span> Assess attributes</a></li>
-  <li><a href="#list-submissions-to-the-arctic-data-center" id="toc-list-submissions-to-the-arctic-data-center" class="nav-link" data-scroll-target="#list-submissions-to-the-arctic-data-center"> <span class="header-section-number">9.3</span> List submissions to the Arctic Data Center</a></li>
-  <li><a href="#recover-failed-submissions" id="toc-recover-failed-submissions" class="nav-link" data-scroll-target="#recover-failed-submissions"> <span class="header-section-number">9.4</span> Recover failed submissions</a></li>
+  <li><a href="#add-physicals-to-submissions" id="toc-add-physicals-to-submissions" class="nav-link active" data-scroll-target="#add-physicals-to-submissions">Add physicals to submissions</a></li>
+  <li><a href="#assess-attributes" id="toc-assess-attributes" class="nav-link" data-scroll-target="#assess-attributes">Assess attributes</a></li>
+  <li><a href="#list-submissions-to-the-arctic-data-center" id="toc-list-submissions-to-the-arctic-data-center" class="nav-link" data-scroll-target="#list-submissions-to-the-arctic-data-center">List submissions to the Arctic Data Center</a></li>
+  <li><a href="#recover-failed-submissions" id="toc-recover-failed-submissions" class="nav-link" data-scroll-target="#recover-failed-submissions">Recover failed submissions</a></li>
   </ul>
 </nav>
     </div>
@@ -239,20 +249,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ADC Web Submissions</span></h1>
+<h1 class="title d-none d-lg-block">ADC Web Submissions</h1>
 </div>
-
-
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Authors</div>
-    <div class="quarto-title-meta-contents">
-          </div>
-  </div>
     
     
   </div>
@@ -260,8 +263,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="add-physicals-to-submissions" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="add-physicals-to-submissions"><span class="header-section-number">9.1</span> Add physicals to submissions</h2>
+<!-- {{< include ../training/workflows/adc_web_submissions/add_physicals_to_submissions.qmd >}} -->
+<section id="add-physicals-to-submissions" class="level2">
+<h2 class="anchored" data-anchor-id="add-physicals-to-submissions">Add physicals to submissions</h2>
 <p>New submissions made through the web editor will not have any <code>physical</code> sections within the <code>otherEntity</code>s. Add them to the EML with the following script:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(doc<span class="sc">$</span>dataset<span class="sc">$</span>otherEntity)) {</span>
@@ -289,8 +293,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>:::</p>
 </section>
-<section id="assess-attributes" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="assess-attributes"><span class="header-section-number">9.2</span> Assess attributes</h2>
+<section id="assess-attributes" class="level2">
+<h2 class="anchored" data-anchor-id="assess-attributes">Assess attributes</h2>
 <p>New submissions made through the web editor should have attributes created by the <code>submitter</code>. If there are no attributes, or if they are incomplete, please use the <a href="https://nceas.github.io/datateam-training/reference/email-templates.html" target="_blank">email template</a> to correspond with the <code>submitter</code> to ask for attributes.</p>
 <p>Additionally, the web editor will not allow for the creation of custom units. <code>submitter</code>s should select <code>other/none</code> in the editor unit dropdown if they cannot find their desired unit. In the EML document, these will result in <code>dimensionless</code> units. Accordingly, new submissions should be checked for <code>dimensionless</code> units. This can be done with the following code. Note that this only applies if there is more than one <code>otherEntity</code>.</p>
 <div class="cell">
@@ -312,8 +316,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>If dimensionless units are found, first check the <code>attributeDefinition</code>, <code>attributeLabel</code>, and <code>attributeName</code> to see if <code>dimensionless</code> seems to be an appropriate unit for the attribute. If there is any question about whether or not <code>dimensionless</code> seems appropriate, ask another member of the data team. If there is still any question about what the unit should be, reach out to the <code>submitter</code> and ask for clarification.</p>
 </section>
-<section id="list-submissions-to-the-arctic-data-center" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="list-submissions-to-the-arctic-data-center"><span class="header-section-number">9.3</span> List submissions to the Arctic Data Center</h2>
+<section id="list-submissions-to-the-arctic-data-center" class="level2">
+<h2 class="anchored" data-anchor-id="list-submissions-to-the-arctic-data-center">List submissions to the Arctic Data Center</h2>
 <p>If the arctic bot fails to pick up a new submission, due to an invalid token or another error, we can check for submissions using a solr query. The <code>list_submissions()</code> function in the <code>arcticdatautils</code> package is a convenience wrapper around the solr query. If the function doesn’t specifically fit your needs it’s fairly straight-forward to modify the source code. <em>Note:</em> the function can be applied to any node, although it filters out results if the submitter is in the Arctic Data Center Admins group. Refer to the function documentation for more information.</p>
 <ul>
 <li>View submissions to the Arctic Data Center from 10/1/18 to 10/7/18 ::: {.cell}</li>
@@ -332,8 +336,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                            <span class="at">as =</span> <span class="st">"data.frame"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>:::</p>
 </section>
-<section id="recover-failed-submissions" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="recover-failed-submissions"><span class="header-section-number">9.4</span> Recover failed submissions</h2>
+<section id="recover-failed-submissions" class="level2">
+<h2 class="anchored" data-anchor-id="recover-failed-submissions">Recover failed submissions</h2>
 <p>A submission may result in an error when the EML cannot be validated through <code>EML::eml_validate</code>, preventing it from being written to an indicated path. This usually occurs when the metacatUI detects a submission error and uploads the EML as a data object instead of text. When this happens, <code>arcticdatautils::recover_failed_submission</code> can be used to retrieve the original EML file. The function removes the error message to get a valid EML document.</p>
 <p>For the example below, <code>pid</code> is the metadata <code>pid</code> containing the failed submission. The <code>path</code> parameter indicates where you want to write the recovered EML version to on your server’s local working directory.</p>
 <div class="cell">
@@ -350,8 +354,129 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 
 </main> <!-- /main -->
-<script type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -371,7 +496,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.blur();
     // flash "checked"
     button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
     setTimeout(function() {
+      button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
     // clear code selection
@@ -429,12 +557,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./solr_queries.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Solr Queries</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Solr Queries</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./data_portals.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Data Portals</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">Data Portals</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

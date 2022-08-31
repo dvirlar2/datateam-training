@@ -1,33 +1,65 @@
 project:
-  type: book
+  type: website
   output-dir: docs
 
-book:
+website:
   title: "NCEAS Data Team Reference Guide"
   author: "Jesse Goldstein, Dominic Mullen, Jeanette Clark, Irene Steves, Mitchell Maier, Bryce Mecum, Peter Slaughter, Emily O'Dean, Jasmine Lai, Daphne Virlar-Knight"
-  css: datateam-training/styles.css
+#  css: datateam-training/styles.css
+  date: last-modified
+  date-format: MMMM D, YYYY
+  
   site-url: https://nceas.github.io/datateam-training/reference/
   repo-url: https://github.com/NCEAS/datateam-training
+  
   repo-branch: main
+  
   search: true
+ 
   page-navigation: true
-  navbar:
+
+#  navbar:
+#    search: true
+
+  sidebar:
+    title: "Data Team <br> Reference Guide"
+    style: "docked"
     search: true
-  chapters:
-    - index.qmd
-    - miscellaneous.qmd
-    - edit_data_packages.qmd
-    - explore_eml.qmd
-    - edit_eml.qmd
-    - pi_correspondence.qmd
-    - misc_file_types.qmd
-    - wrangle_data.qmd
-    - solr_queries.qmd
-    - adc_web_submissions.qmd
-    - data_portals.qmd
-    - data_packages_arcticdatautils.qmd
-    - nesting_data.qmd
+    align: center
+    tools: 
+      - icon: house-door-fill
+        href: https://arcticdata.io
+        text: "Arctic Data Center"
+    collapse-level: 1
+
+    contents:
+      - href: index.qmd
+        text: "About"
+      - miscellaneous.qmd
+      - edit_data_packages.qmd
+      - explore_eml.qmd
+      - edit_eml.qmd
+      - pi_correspondence.qmd
+      - misc_file_types.qmd
+      - wrangle_data.qmd
+      - solr_queries.qmd
+      - adc_web_submissions.qmd
+      - data_portals.qmd
+      - data_packages_arcticdatautils.qmd
+      - nesting_data.qmd
+      - text: "---"
+      - href: "https://nceas.github.io/datateam-training/training/"
+        text: "Training Manual"
 
 format:
   html:
-    theme: cosmo
+    theme: 
+      light: 
+        - cosmo
+        - ../light-styles.css
+      dark:
+        - superhero
+        - ../dark- styles.css
+    code-copy: true
+    code-overflow: wrap
+    toc: true

@@ -3,40 +3,40 @@ title: "Edit Data Packages"
 format: html
 ---
 
-```{r, child = '../workflows/edit_data_packages/01_datapack_background.qmd'}
+```{r, child = '../training/workflows/edit_data_packages/01_datapack_background.qmd'}
 ```
 
 
-```{r, child = '../workflows/edit_data_packages/02_create_package_data_pack.qmd'}
+```{r, child = '../training/workflows/edit_data_packages/02_create_package_data_pack.qmd'}
 ```
 
 
-```{r, child = '../workflows/edit_data_packages/03_update_package_datapack.qmd'}
+```{r, child = '../training/workflows/edit_data_packages/03_update_package_datapack.qmd'}
 ```
 
 
-```{r, child = '../workflows/edit_data_packages/add_a_pre-generated_identifier.qmd'}
+```{r, child = '../training/workflows/edit_data_packages/add_a_pre-generated_identifier.qmd'}
 ```
 
-```{r, child = '../workflows/edit_data_packages/edit_sysmeta.qmd'}
-```
-
-
-```{r, child = '../workflows/edit_data_packages/obsolescence_chain.qmd'}
+```{r, child = '../training/workflows/edit_data_packages/edit_sysmeta.qmd'}
 ```
 
 
-```{r, child = '../workflows/edit_data_packages/set_dataone_nodes.qmd'}
+```{r, child = '../training/workflows/edit_data_packages/obsolescence_chain.qmd'}
 ```
 
 
-```{r, child = '../workflows/edit_data_packages/set_rights_and_access.qmd'}
+```{r, child = '../training/workflows/edit_data_packages/set_dataone_nodes.qmd'}
 ```
 
 
-```{r, child = '../workflows/edit_data_packages/update_a_package.qmd'}
+```{r, child = '../training/workflows/edit_data_packages/set_rights_and_access.qmd'}
 ```
 
 
-```{r, child = '../workflows/edit_data_packages/update_an_object.qmd'}
+```{r, child = '../training/workflows/edit_data_packages/update_a_package.qmd'}
+```
+
+
+```{r, child = '../training/workflows/edit_data_packages/update_an_object.qmd'}
 ```

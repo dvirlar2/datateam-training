@@ -3,32 +3,32 @@ title: "PI Correspondence"
 format: html
 ---
 
-```{r, child = '../workflows/pi_correspondence/A_email_templates.qmd'}
+```{r, child = '../training/workflows/pi_correspondence/A_email_templates.qmd'}
 ```
 
 
-```{r, child = '../workflows/pi_correspondence/email_templates_pi_faqs.qmd'}
+```{r, child = '../training/workflows/pi_correspondence/email_templates_pi_faqs.qmd'}
 ```
 
 
-```{r, child = '../workflows/pi_correspondence/example_data_packages.qmd'}
+```{r, child = '../training/workflows/pi_correspondence/example_data_packages.qmd'}
 ```
 
 
-```{r, child = '../workflows/pi_correspondence/final_review_checklist.qmd'}
+```{r, child = '../training/workflows/pi_correspondence/final_review_checklist.qmd'}
 ```
 
-```{r, child = '../workflows/pi_correspondence/initial_review_checklist.qmd'}
-```
-
-
-```{r, child = '../workflows/pi_correspondence/large_file_transfer.qmd'}
+```{r, child = '../training/workflows/pi_correspondence/initial_review_checklist.qmd'}
 ```
 
 
-```{r, child = '../workflows/pi_correspondence/navigate_rt.qmd'}
+```{r, child = '../training/workflows/pi_correspondence/large_file_transfer.qmd'}
 ```
 
 
-```{r, child = '../workflows/pi_correspondence/replicate_dataset.qmd'}
+```{r, child = '../training/workflows/pi_correspondence/navigate_rt.qmd'}
+```
+
+
+```{r, child = '../training/workflows/pi_correspondence/replicate_dataset.qmd'}
 ```

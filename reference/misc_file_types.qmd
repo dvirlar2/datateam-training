@@ -3,24 +3,24 @@ title: "Miscellaneous file types"
 format: html
 ---
 
-```{r, child = '../workflows/misc_file_types/convert_xls_to_csv.qmd'}
+```{r, child = '../training/workflows/misc_file_types/convert_xls_to_csv.qmd'}
 ```
 
 
-```{r, child = '../workflows/misc_file_types/datalogger_files.qmd'}
+```{r, child = '../training/workflows/misc_file_types/datalogger_files.qmd'}
 ```
 
 
-```{r, child = '../workflows/misc_file_types/netCDF_chunk.qmd'}
+```{r, child = '../training/workflows/misc_file_types/netCDF_chunk.qmd'}
 ```
 
 
-```{r, child = '../workflows/misc_file_types/reorganize_files.qmd'}
+```{r, child = '../training/workflows/misc_file_types/reorganize_files.qmd'}
 ```
 
-```{r, child = '../workflows/misc_file_types/scan_rar_files.qmd'}
+```{r, child = '../training/workflows/misc_file_types/scan_rar_files.qmd'}
 ```
 
 
-```{r, child = '../workflows/misc_file_types/spatial_data.qmd'}
+```{r, child = '../training/workflows/misc_file_types/spatial_data.qmd'}
 ```

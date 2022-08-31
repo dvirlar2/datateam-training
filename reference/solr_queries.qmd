@@ -18,28 +18,28 @@ Once you understand the logic of queries, it becomes a flexible and useful tool 
 
 Querying Solr is possible by <a href = 'https://nceas.github.io/datateam-training/reference/query-solr-via-a-browser.html' target='_blank'>adding a query onto the end of a base URL</a> or through the <a href = 'https://nceas.github.io/datateam-training/reference/query-solr-via-r.html' target='_blank'>`dataone::query()` function in R</a>. For now, we'll just cover the basics of Solr queries in R. 
 
-```{r, child = '../workflows/solr_queries/construct_a_query.qmd'}
+```{r, child = '../training/workflows/solr_queries/construct_a_query.qmd'}
 ```
 
 
-```{r, child = '../workflows/solr_queries/query_solr_via_browser.qmd'}
+```{r, child = '../training/workflows/solr_queries/query_solr_via_browser.qmd'}
 ```
 
 
-```{r, child = '../workflows/solr_queries/query_solr_via_R.qmd'}
+```{r, child = '../training/workflows/solr_queries/query_solr_via_R.qmd'}
 ```
 
 
-```{r, child = '../workflows/solr_queries/use_facets.qmd'}
+```{r, child = '../training/workflows/solr_queries/use_facets.qmd'}
 ```
 
-```{r, child = '../workflows/solr_queries/use_stats.qmd'}
-```
-
-
-```{r, child = '../workflows/solr_queries/y_example_solr_queries.qmd'}
+```{r, child = '../training/workflows/solr_queries/use_stats.qmd'}
 ```
 
 
-```{r, child = '../workflows/solr_queries/z_solr_resources.qmd'}
+```{r, child = '../training/workflows/solr_queries/y_example_solr_queries.qmd'}
+```
+
+
+```{r, child = '../training/workflows/solr_queries/z_solr_resources.qmd'}
 ```

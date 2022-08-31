@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.248">
+<meta name="generator" content="quarto-1.0.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NCEAS Data Team Reference Guide - 10&nbsp; Data Portals</title>
+<title>NCEAS Data Team Reference Guide - Data Portals</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,13 +80,14 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
-<meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
 <link href="./data_packages_arcticdatautils.html" rel="next">
 <link href="./adc_web_submissions.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -94,16 +95,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -121,21 +124,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </head>
 
-<body class="floating nav-fixed">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">NCEAS Data Team Reference Guide</span>
-  </a>
-          <div id="quarto-search" class="" title="Search"></div>
-      </div> <!-- /container-fluid -->
-    </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Data Portals</span></h1>
+      <h1 class="quarto-secondary-nav-title">Data Portals</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -143,9 +138,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Data Team <br> Reference Guide</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://arcticdata.io" title="Arctic Data Center" class="sidebar-tool px-1"><i class="bi bi-house-door-fill"></i></a>
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -160,62 +164,68 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./miscellaneous.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Miscellaneous</span></a>
+  <a href="./miscellaneous.html" class="sidebar-item-text sidebar-link">Miscellaneous</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./edit_data_packages.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Edit Data Packages</span></a>
+  <a href="./edit_data_packages.html" class="sidebar-item-text sidebar-link">Edit Data Packages</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./explore_eml.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Explore EML</span></a>
+  <a href="./explore_eml.html" class="sidebar-item-text sidebar-link">Explore EML</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./edit_eml.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Edit EML</span></a>
+  <a href="./edit_eml.html" class="sidebar-item-text sidebar-link">Edit EML</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pi_correspondence.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">PI Correspondence</span></a>
+  <a href="./pi_correspondence.html" class="sidebar-item-text sidebar-link">PI Correspondence</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./misc_file_types.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Miscellaneous file types</span></a>
+  <a href="./misc_file_types.html" class="sidebar-item-text sidebar-link">Miscellaneous file types</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wrangle_data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Wrangle Data</span></a>
+  <a href="./wrangle_data.html" class="sidebar-item-text sidebar-link">Wrangle Data</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./solr_queries.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Solr Queries</span></a>
+  <a href="./solr_queries.html" class="sidebar-item-text sidebar-link">Solr Queries</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./adc_web_submissions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ADC Web Submissions</span></a>
+  <a href="./adc_web_submissions.html" class="sidebar-item-text sidebar-link">ADC Web Submissions</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data_portals.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Data Portals</span></a>
+  <a href="./data_portals.html" class="sidebar-item-text sidebar-link active">Data Portals</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data_packages_arcticdatautils.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Using arcticdatautils</span></a>
+  <a href="./data_packages_arcticdatautils.html" class="sidebar-item-text sidebar-link">Using arcticdatautils</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nesting_data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Nesting Data</span></a>
+  <a href="./nesting_data.html" class="sidebar-item-text sidebar-link">Nesting Data</a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://nceas.github.io/datateam-training/training/" class="sidebar-item-text sidebar-link">Training Manual</a>
   </div>
 </li>
     </ul>
@@ -224,21 +234,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#customizing-data-portals" id="toc-customizing-data-portals" class="nav-link active" data-scroll-target="#customizing-data-portals"> <span class="header-section-number">10.1</span> Customizing Data Portals</a>
+  <li><a href="#customizing-data-portals" id="toc-customizing-data-portals" class="nav-link active" data-scroll-target="#customizing-data-portals">Customizing Data Portals</a>
   <ul class="collapse">
-  <li><a href="#my-portals" id="toc-my-portals" class="nav-link" data-scroll-target="#my-portals"> <span class="header-section-number">10.1.1</span> My portals</a></li>
-  <li><a href="#creating-data-filters" id="toc-creating-data-filters" class="nav-link" data-scroll-target="#creating-data-filters"> <span class="header-section-number">10.1.2</span> Creating Data Filters</a></li>
-  <li><a href="#advanced-portal-customizations" id="toc-advanced-portal-customizations" class="nav-link" data-scroll-target="#advanced-portal-customizations"> <span class="header-section-number">10.1.3</span> Advanced portal customizations</a></li>
-  <li><a href="#updating-portals" id="toc-updating-portals" class="nav-link" data-scroll-target="#updating-portals"> <span class="header-section-number">10.1.4</span> Updating portals</a></li>
+  <li><a href="#my-portals" id="toc-my-portals" class="nav-link" data-scroll-target="#my-portals">My portals</a></li>
+  <li><a href="#creating-data-filters" id="toc-creating-data-filters" class="nav-link" data-scroll-target="#creating-data-filters">Creating Data Filters</a></li>
+  <li><a href="#advanced-portal-customizations" id="toc-advanced-portal-customizations" class="nav-link" data-scroll-target="#advanced-portal-customizations">Advanced portal customizations</a></li>
+  <li><a href="#updating-portals" id="toc-updating-portals" class="nav-link" data-scroll-target="#updating-portals">Updating portals</a></li>
   </ul></li>
-  <li><a href="#distributed-biological-observatory-dbo-submissions" id="toc-distributed-biological-observatory-dbo-submissions" class="nav-link" data-scroll-target="#distributed-biological-observatory-dbo-submissions"> <span class="header-section-number">10.2</span> Distributed Biological Observatory (DBO) submissions</a></li>
-  <li><a href="#mosaic" id="toc-mosaic" class="nav-link" data-scroll-target="#mosaic"> <span class="header-section-number">10.3</span> MOSAiC</a>
+  <li><a href="#distributed-biological-observatory-dbo-submissions" id="toc-distributed-biological-observatory-dbo-submissions" class="nav-link" data-scroll-target="#distributed-biological-observatory-dbo-submissions">Distributed Biological Observatory (DBO) submissions</a></li>
+  <li><a href="#mosaic" id="toc-mosaic" class="nav-link" data-scroll-target="#mosaic">MOSAiC</a>
   <ul class="collapse">
-  <li><a href="#dataset-level-annotations" id="toc-dataset-level-annotations" class="nav-link" data-scroll-target="#dataset-level-annotations"> <span class="header-section-number">10.3.1</span> Dataset Level Annotations</a></li>
-  <li><a href="#portal-updates" id="toc-portal-updates" class="nav-link" data-scroll-target="#portal-updates"> <span class="header-section-number">10.3.2</span> Portal updates</a></li>
+  <li><a href="#dataset-level-annotations" id="toc-dataset-level-annotations" class="nav-link" data-scroll-target="#dataset-level-annotations">Dataset Level Annotations</a></li>
+  <li><a href="#portal-updates" id="toc-portal-updates" class="nav-link" data-scroll-target="#portal-updates">Portal updates</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -248,20 +258,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Data Portals</span></h1>
+<h1 class="title d-none d-lg-block">Data Portals</h1>
 </div>
-
-
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Authors</div>
-    <div class="quarto-title-meta-contents">
-          </div>
-  </div>
     
     
   </div>
@@ -269,18 +272,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="customizing-data-portals" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="customizing-data-portals"><span class="header-section-number">10.1</span> Customizing Data Portals</h2>
+<section id="customizing-data-portals" class="level2">
+<h2 class="anchored" data-anchor-id="customizing-data-portals">Customizing Data Portals</h2>
 <blockquote class="blockquote">
 <p>Create a custom, branded portal for your research topic or lab group that spans datasets in the Arctic Data Center – available for all users. Branded portals provide a convenient, readily customized way to communicate your science, your team, your data, and related data from within the Arctic Data Center. The portals feature makes highlighting and sharing related datasets easy for researchers.</p>
 </blockquote>
 <p>General information on data portals can be found on the main page: <a href="https://arcticdata.io/data-portals/" target="_blank">https://arcticdata.io/data-portals/</a></p>
-<section id="my-portals" class="level3" data-number="10.1.1">
-<h3 data-number="10.1.1" class="anchored" data-anchor-id="my-portals"><span class="header-section-number">10.1.1</span> My portals</h3>
+<section id="my-portals" class="level3">
+<h3 class="anchored" data-anchor-id="my-portals">My portals</h3>
 <p>My portals allows members of the Arctic Data Center Team to view all the portals currently created. This can be found in <code>Settings</code> under the <code>My Portals</code> section.</p>
 </section>
-<section id="creating-data-filters" class="level3" data-number="10.1.2">
-<h3 data-number="10.1.2" class="anchored" data-anchor-id="creating-data-filters"><span class="header-section-number">10.1.2</span> Creating Data Filters</h3>
+<section id="creating-data-filters" class="level3">
+<h3 class="anchored" data-anchor-id="creating-data-filters">Creating Data Filters</h3>
 <p>Useful search terms to use:</p>
 <ul>
 <li>NSF award number</li>
@@ -290,11 +293,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>### Set Access Permissions For some portals such as PerCS portal, will need to be added by running <code>set_access()</code>. Please see the specific portal for the exact arguments to pass.</p>
 </section>
-<section id="advanced-portal-customizations" class="level3" data-number="10.1.3">
-<h3 data-number="10.1.3" class="anchored" data-anchor-id="advanced-portal-customizations"><span class="header-section-number">10.1.3</span> Advanced portal customizations</h3>
+<section id="advanced-portal-customizations" class="level3">
+<h3 class="anchored" data-anchor-id="advanced-portal-customizations">Advanced portal customizations</h3>
 <p>These requires the manual update of the portal document for features that are not available on the website yet. Please ask Jeanette for more assistance. For an example of a portal with all the features, see the <a href="https://search.dataone.org/portals/SASAP/Data">SASAP Portal</a>.</p>
-<section id="custom-filters" class="level4" data-number="10.1.3.1">
-<h4 data-number="10.1.3.1" class="anchored" data-anchor-id="custom-filters"><span class="header-section-number">10.1.3.1</span> Custom Filters</h4>
+<section id="custom-filters" class="level4">
+<h4 class="anchored" data-anchor-id="custom-filters">Custom Filters</h4>
 <ul>
 <li>Most os the time copy and pasting desired from the SASAP portal is a good place to start</li>
 <li><strong>Tips</strong> - try to collapse the specific section and copy that to make sure you copy everything is needed</li>
@@ -326,8 +329,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       &lt;chooseMultiple&gt;true&lt;/chooseMultiple&gt;
 &lt;/choiceFilter&gt;</code></pre>
 </section>
-<section id="custom-colour-schemes" class="level4" data-number="10.1.3.2">
-<h4 data-number="10.1.3.2" class="anchored" data-anchor-id="custom-colour-schemes"><span class="header-section-number">10.1.3.2</span> Custom Colour schemes</h4>
+<section id="custom-colour-schemes" class="level4">
+<h4 class="anchored" data-anchor-id="custom-colour-schemes">Custom Colour schemes</h4>
 <p>Look for this section in the xml and replace the hex codes:</p>
 <pre><code> &lt;option&gt;
         &lt;optionName&gt;primaryColor&lt;/optionName&gt;
@@ -342,15 +345,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         &lt;optionValue&gt;#EB5638&lt;/optionValue&gt;
     &lt;/option&gt;</code></pre>
 </section>
-<section id="people-page" class="level4" data-number="10.1.3.3">
-<h4 data-number="10.1.3.3" class="anchored" data-anchor-id="people-page"><span class="header-section-number">10.1.3.3</span> People page</h4>
+<section id="people-page" class="level4">
+<h4 class="anchored" data-anchor-id="people-page">People page</h4>
 <ul>
 <li>also a formatted page - see the SASAP portal for details</li>
 </ul>
 </section>
 </section>
-<section id="updating-portals" class="level3" data-number="10.1.4">
-<h3 data-number="10.1.4" class="anchored" data-anchor-id="updating-portals"><span class="header-section-number">10.1.4</span> Updating portals</h3>
+<section id="updating-portals" class="level3">
+<h3 class="anchored" data-anchor-id="updating-portals">Updating portals</h3>
 <p>For portals on DataOne - use the ucsb node. Portals made on the ADC use the same node as the datasets. ::: {.cell}</p>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dataone)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(EML)</span>
@@ -375,8 +378,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>:::</p>
 </section>
 </section>
-<section id="distributed-biological-observatory-dbo-submissions" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="distributed-biological-observatory-dbo-submissions"><span class="header-section-number">10.2</span> Distributed Biological Observatory (DBO) submissions</h2>
+<section id="distributed-biological-observatory-dbo-submissions" class="level2">
+<h2 class="anchored" data-anchor-id="distributed-biological-observatory-dbo-submissions">Distributed Biological Observatory (DBO) submissions</h2>
 <p>DBO packages are organized under a project page (viewable <a href="https://arcticdata.io/catalog/projects/DBO" target="_blank">here</a>). In order to make sure that DBO datasets appear in the special DBO data search correctly, there are a few additional metadata requirements.</p>
 <ul>
 <li>give <code>read</code> and <code>write</code> access to the entire data package (using <code>set_access</code>) to the group: <code>"CN=DBO,DC=dataone,DC=org"</code>
@@ -423,8 +426,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>After you have updated your dataset, navigate to <a href="https://arcticdata.io/catalog/projects/DBO/data" target="_blank">https://arcticdata.io/catalog/projects/DBO/data</a> and make sure that the different filters work as expected. Your dataset should be discoverable in some way through all of the filters.</p>
 </section>
-<section id="mosaic" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="mosaic"><span class="header-section-number">10.3</span> MOSAiC</h2>
+<section id="mosaic" class="level2">
+<h2 class="anchored" data-anchor-id="mosaic">MOSAiC</h2>
 <p>Look out for datasets that are part of the MOSAiC expedition from 2019 -2020. There are a couple of special steps for datasets from this project.</p>
 <p><strong>When working on MOSAiC datasets:</strong></p>
 <ol type="1">
@@ -452,8 +455,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="https://arcticdata.io/catalog/view/urn%3Auuid%3A679b719b-2feb-4b61-a975-282149995b51">Example with non-polarstern vessels</a></li>
 </ol>
 <p>The following shows how to add the annotations using <code>arcticdatautils</code> and manually in the case the functions fail to work:</p>
-<section id="dataset-level-annotations" class="level3" data-number="10.3.1">
-<h3 data-number="10.3.1" class="anchored" data-anchor-id="dataset-level-annotations"><span class="header-section-number">10.3.1</span> Dataset Level Annotations</h3>
+<section id="dataset-level-annotations" class="level3">
+<h3 class="anchored" data-anchor-id="dataset-level-annotations">Dataset Level Annotations</h3>
 <p>There are 5 main campaigns in the MOSAiC expedition. The main campaigns follow the pattern <code>PS122/#</code>. For the full campaign list it is easiest to see on the <a href="https://www.pangaea.de/expeditions/byproject/MOSAiC">PANGAEA website</a></p>
 <p><strong>arcticdatautils</strong> ::: {.cell}</p>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>doc<span class="sc">$</span>dataset<span class="sc">$</span>id <span class="ot">&lt;-</span> <span class="st">"your id here"</span></span>
@@ -492,8 +495,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>  ) <span class="co">#*** this changes depending on the campaign</span></span>
 <span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="attribute-level-annotations" class="level4" data-number="10.3.1.1">
-<h4 data-number="10.3.1.1" class="anchored" data-anchor-id="attribute-level-annotations"><span class="header-section-number">10.3.1.1</span> Attribute Level Annotations</h4>
+<section id="attribute-level-annotations" class="level4">
+<h4 class="anchored" data-anchor-id="attribute-level-annotations">Attribute Level Annotations</h4>
 <p>Apply these to the attribute level of the dataset. Event IDs should have already be identified earlier on in the dataset review. Check the ticket overview for details.</p>
 <p><strong>arcticdatautils</strong></p>
 <div class="cell">
@@ -542,8 +545,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>:::</p>
 </section>
 </section>
-<section id="portal-updates" class="level3" data-number="10.3.2">
-<h3 data-number="10.3.2" class="anchored" data-anchor-id="portal-updates"><span class="header-section-number">10.3.2</span> Portal updates</h3>
+<section id="portal-updates" class="level3">
+<h3 class="anchored" data-anchor-id="portal-updates">Portal updates</h3>
 <p>The filters are based on the MOSAiC ontology. The <code>Campaign</code> and <code>Basis</code> filters should remain relatively the same. However there are over 500 Method and Devices. So the decision was made to only show the ones we have annotated.</p>
 <p>We can query for all of them and output them formatted as a choice:</p>
 <div class="cell">
@@ -556,8 +559,129 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 
 </main> <!-- /main -->
-<script type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -577,7 +701,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.blur();
     // flash "checked"
     button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
     setTimeout(function() {
+      button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
     // clear code selection
@@ -635,12 +762,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./adc_web_submissions.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ADC Web Submissions</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">ADC Web Submissions</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./data_packages_arcticdatautils.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Using arcticdatautils</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">Using arcticdatautils</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

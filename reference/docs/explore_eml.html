@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.248">
+<meta name="generator" content="quarto-1.0.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NCEAS Data Team Reference Guide - 3&nbsp; Explore EML</title>
+<title>NCEAS Data Team Reference Guide - Explore EML</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,13 +80,14 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
-<meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
 <link href="./edit_eml.html" rel="next">
 <link href="./edit_data_packages.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -94,16 +95,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -121,21 +124,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </head>
 
-<body class="floating nav-fixed">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">NCEAS Data Team Reference Guide</span>
-  </a>
-          <div id="quarto-search" class="" title="Search"></div>
-      </div> <!-- /container-fluid -->
-    </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Explore EML</span></h1>
+      <h1 class="quarto-secondary-nav-title">Explore EML</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -143,9 +138,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Data Team <br> Reference Guide</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://arcticdata.io" title="Arctic Data Center" class="sidebar-tool px-1"><i class="bi bi-house-door-fill"></i></a>
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -160,62 +164,68 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./miscellaneous.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Miscellaneous</span></a>
+  <a href="./miscellaneous.html" class="sidebar-item-text sidebar-link">Miscellaneous</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./edit_data_packages.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Edit Data Packages</span></a>
+  <a href="./edit_data_packages.html" class="sidebar-item-text sidebar-link">Edit Data Packages</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./explore_eml.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Explore EML</span></a>
+  <a href="./explore_eml.html" class="sidebar-item-text sidebar-link active">Explore EML</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./edit_eml.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Edit EML</span></a>
+  <a href="./edit_eml.html" class="sidebar-item-text sidebar-link">Edit EML</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pi_correspondence.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">PI Correspondence</span></a>
+  <a href="./pi_correspondence.html" class="sidebar-item-text sidebar-link">PI Correspondence</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./misc_file_types.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Miscellaneous file types</span></a>
+  <a href="./misc_file_types.html" class="sidebar-item-text sidebar-link">Miscellaneous file types</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wrangle_data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Wrangle Data</span></a>
+  <a href="./wrangle_data.html" class="sidebar-item-text sidebar-link">Wrangle Data</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./solr_queries.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Solr Queries</span></a>
+  <a href="./solr_queries.html" class="sidebar-item-text sidebar-link">Solr Queries</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./adc_web_submissions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ADC Web Submissions</span></a>
+  <a href="./adc_web_submissions.html" class="sidebar-item-text sidebar-link">ADC Web Submissions</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data_portals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Data Portals</span></a>
+  <a href="./data_portals.html" class="sidebar-item-text sidebar-link">Data Portals</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data_packages_arcticdatautils.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Using arcticdatautils</span></a>
+  <a href="./data_packages_arcticdatautils.html" class="sidebar-item-text sidebar-link">Using arcticdatautils</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nesting_data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Nesting Data</span></a>
+  <a href="./nesting_data.html" class="sidebar-item-text sidebar-link">Nesting Data</a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://nceas.github.io/datateam-training/training/" class="sidebar-item-text sidebar-link">Training Manual</a>
   </div>
 </li>
     </ul>
@@ -224,12 +234,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#access-specific-elements" id="toc-access-specific-elements" class="nav-link active" data-scroll-target="#access-specific-elements"> <span class="header-section-number">3.1</span> Access specific elements</a></li>
-  <li><a href="#navigate-through-eml" id="toc-navigate-through-eml" class="nav-link" data-scroll-target="#navigate-through-eml"> <span class="header-section-number">3.2</span> Navigate through EML</a></li>
-  <li><a href="#understand-the-eml-schema" id="toc-understand-the-eml-schema" class="nav-link" data-scroll-target="#understand-the-eml-schema"> <span class="header-section-number">3.3</span> Understand the EML schema</a></li>
+  <li><a href="#access-specific-elements" id="toc-access-specific-elements" class="nav-link active" data-scroll-target="#access-specific-elements">Access specific elements</a></li>
+  <li><a href="#navigate-through-eml" id="toc-navigate-through-eml" class="nav-link" data-scroll-target="#navigate-through-eml">Navigate through EML</a></li>
+  <li><a href="#understand-the-eml-schema" id="toc-understand-the-eml-schema" class="nav-link" data-scroll-target="#understand-the-eml-schema">Understand the EML schema</a></li>
   </ul>
 </nav>
     </div>
@@ -238,20 +248,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Explore EML</span></h1>
+<h1 class="title d-none d-lg-block">Explore EML</h1>
 </div>
-
-
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Authors</div>
-    <div class="quarto-title-meta-contents">
-          </div>
-  </div>
     
     
   </div>
@@ -259,8 +262,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="access-specific-elements" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="access-specific-elements"><span class="header-section-number">3.1</span> Access specific elements</h2>
+<section id="access-specific-elements" class="level2">
+<h2 class="anchored" data-anchor-id="access-specific-elements">Access specific elements</h2>
 <p>The <code>eml_get()</code> function is a powerful tool for exploring EML (more on that <a href="https://ropensci.github.io/EML/" target="_blank">here</a> ). It takes any chunk of EML and returns <em>all instances</em> of the element you specify. <em>Note:</em> you’ll have to specify the element of interest exactly, according to the spelling/capitalization conventions used in EML. Here are some examples:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>doc <span class="ot">&lt;-</span> <span class="fu">read_eml</span>(<span class="fu">system.file</span>(<span class="st">"example-eml.xml"</span>, <span class="at">package =</span> <span class="st">"arcticdatautils"</span>))</span>
@@ -302,8 +305,8 @@ westBoundingCoordinate: '-135'</code></pre>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Answer: doc$dataset$creator[[i]]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="navigate-through-eml" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="navigate-through-eml"><span class="header-section-number">3.2</span> Navigate through EML</h2>
+<section id="navigate-through-eml" class="level2">
+<h2 class="anchored" data-anchor-id="navigate-through-eml">Navigate through EML</h2>
 <p>The first task when editing an EML file is navigating the EML file. An EML file is organized in a structure that contains many lists nested within other lists. The function <code>View</code> allows you to get a crude view of an EML file in the viewer. It can be useful for exploring the file.</p>
 <div class="cell">
 
@@ -312,23 +315,24 @@ westBoundingCoordinate: '-135'</code></pre>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Need to be in this member node to explore file</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>d1c_test <span class="ot">&lt;-</span> dataone<span class="sc">::</span><span class="fu">D1Client</span>(<span class="st">"STAGING"</span>, <span class="st">"urn:node:mnTestARCTIC"</span>)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>doc <span class="ot">&lt;-</span> <span class="fu">read_eml</span>(<span class="fu">getObject</span>(d1c_test<span class="sc">@</span>mn, <span class="st">"urn:uuid:558eabf1-1e91-4881-8ba3-ef8684d8f6a1"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>doc <span class="ot">&lt;-</span> <span class="fu">read_eml</span>(<span class="fu">getObject</span>(d1c_test<span class="sc">@</span>mn, </span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"urn:uuid:558eabf1-1e91-4881-8ba3-ef8684d8f6a1"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(doc)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><img src="../images/eml_view.png" class="img-fluid"></p>
+<p><img src="../../images/eml_view.png" class="img-fluid"></p>
 <p>The complex EML document is represented in R as as series of named, nested lists. We use lists all the time in R! A <code>data.frame</code> is one example of a special kind of list that we use all the time. You may be familiar with the syntax <code>dataframe$column_name</code> which allows us to select a particular column of a <code>data.frame</code>. Under the hood, a <code>data.frame</code> is a named list of vectors with the same length. You select one of those vectors using the <code>$</code> operator, which is called the “list selector operator.”</p>
 <p>Just like you navigate in a <code>data.frame</code>, you can use the <code>$</code> operator to navigate through the EML structure. The <code>$</code> operator allows you to go deeper into the EML structure and to see what elements are nested within other elements. However, you have to tell R where you want to go in the structure when you use the <code>$</code> symbol. For example, if you want to view the dataset element of your EML you would use the command <code>doc$dataset</code>. If you want to view the creators of your data set you would use <code>doc$dataset$creator</code>. Note here that <code>creator</code> is contained within <code>dataset</code>. If you aren’t sure where you want to go, hit the tab button on your keyboard after typing <code>$</code> and a list of available elements in the structure will appear (e.g., <code>doc$&lt;TAB&gt;</code>):</p>
-<p><img src="../images/rstudio_autocomplete.png" class="img-fluid"></p>
+<p><img src="../../images/rstudio_autocomplete.png" class="img-fluid"></p>
 <p>Note that if you hit tab, and nothing pops up, this most likely implies that you are trying to go into an EML element that can take a series items. For example <code>doc$dataset$creator$&lt;TAB&gt;</code> will not show a pop-up menu. This is because <code>creator</code> is a series-type object (i.e.&nbsp;you can have multiple <code>creator</code>s). If you want to go deeper into <code>creator</code>, you first must tell R which <code>creator</code> you are interested in. Do this by writing <code>[[i]]</code> first where <code>i</code> is the index of the <code>creator</code> you are concerned with. For example, if you want to look at the first <code>creator</code> i = 1. Now <code>doc$dataset$creator[[1]]$&lt;TAB&gt;</code> will give you many more options. Note, an empty autocomplete result sometimes means you have reached the end of a branch in the EML structure.</p>
 <p>At this point stop and take a deep breath. The key takeaway is that EML is a hierarchical tree structure. The best way to get familiar with it is to explore the structure. Try entering <code>doc$dataset</code> into your console, and print it. Now make the search more specific, for instance: <code>doc$dataset$abstract</code>.</p>
 </section>
-<section id="understand-the-eml-schema" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="understand-the-eml-schema"><span class="header-section-number">3.3</span> Understand the EML schema</h2>
+<section id="understand-the-eml-schema" class="level2">
+<h2 class="anchored" data-anchor-id="understand-the-eml-schema">Understand the EML schema</h2>
 <p>Another great resource for navigating the EML structure is looking at the <a href="https://eml.ecoinformatics.org/schema/" target="_blank">schema</a> which defines the structure. The schema diagrams on this page are interactive. Further explanations of the symbology can be found <a href="https://www.oxygenxml.com/doc/versions/22.0/ug-editor/topics/relax-ng-schema-diagram-symbols.html?hl=symbols" target="_blank">here</a>. The schema is complicated and may take some time to get familiar with before you will be able to fully understand it.</p>
 <p>For example, let’s take a look at <a href="https://eml.ecoinformatics.org/images/eml-party.png" target="_blank">eml-party</a>. To start off, notice that some elements have bolded lines leading to them.</p>
-<p><img src="../images/eml-party.png" class="img-fluid"></p>
+<p><img src="../../images/eml-party.png" class="img-fluid"></p>
 <p>A bold line indicates that the element is <em>required</em> if the element above it (to the left in the schema) is used, otherwise the element is <em>optional</em>.</p>
 <p>Notice also that next to the <code>givenName</code> element it says “0..infinity”. This means that the element is unbounded — a single party can have many given names and there is no limit on how many you can add. However, this text does not appear for the <code>surName</code> element — a party can have only one surname.</p>
 <p>You will also see icons linking the EML slots together, which indicate the ordering of subsequent slots. These can indicate either a “sequence” or a “choice”. In our example from <code>eml-party</code>, a “choice” icon indicates that either an <code>individualName</code>, <code>organizationName</code>, or <code>positionName</code> is required, but you do not need all three. However, the “sequence” icon tells us that if you use an <code>individualName</code>, you must include the <code>surName</code> as a child element. If you include the optional child elements <code>salutation</code> and <code>givenName</code>, they must be written in the order presented in the schema.</p>
@@ -339,8 +343,129 @@ westBoundingCoordinate: '-135'</code></pre>
 </section>
 
 </main> <!-- /main -->
-<script type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -360,7 +485,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.blur();
     // flash "checked"
     button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
     setTimeout(function() {
+      button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
     // clear code selection
@@ -418,12 +546,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./edit_data_packages.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Edit Data Packages</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Edit Data Packages</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./edit_eml.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Edit EML</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">Edit EML</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -4,54 +4,54 @@ format: html
 ---
 
 
-```{r, child = '../workflows/edit_eml/edit_an_eml_element.qmd'}
+```{r, child = '../training/workflows/edit_eml/edit_an_eml_element.qmd'}
 ```
 
 
-```{r, child = '../workflows/edit_eml/edit_attributelists.qmd'}
+```{r, child = '../training/workflows/edit_eml/edit_attributelists.qmd'}
 ```
 
 
-```{r, child = '../workflows/edit_eml/edit_custom_units.qmd'}
+```{r, child = '../training/workflows/edit_eml/edit_custom_units.qmd'}
 ```
 
 
-```{r, child = '../workflows/edit_eml/edit_datatables.qmd'}
+```{r, child = '../training/workflows/edit_eml/edit_datatables.qmd'}
 ```
 
-```{r, child = '../workflows/edit_eml/edit_semantic_annotation.qmd'}
-```
-
-
-```{r, child = '../workflows/edit_eml/edit_spatialdata.qmd'}
+```{r, child = '../training/workflows/edit_eml/edit_semantic_annotation.qmd'}
 ```
 
 
-```{r, child = '../workflows/edit_eml/format_text.qmd'}
+```{r, child = '../training/workflows/edit_eml/edit_spatialdata.qmd'}
 ```
 
 
-```{r, child = '../workflows/edit_eml/series_identifier.qmd'}
-```
-
-```{r, child = '../workflows/edit_eml/set_coverages.qmd'}
+```{r, child = '../training/workflows/edit_eml/format_text.qmd'}
 ```
 
 
-```{r, child = '../workflows/edit_eml/set_methods.qmd'}
+```{r, child = '../training/workflows/edit_eml/series_identifier.qmd'}
+```
+
+```{r, child = '../training/workflows/edit_eml/set_coverages.qmd'}
 ```
 
 
-```{r, child = '../workflows/edit_eml/set_parties.qmd'}
+```{r, child = '../training/workflows/edit_eml/set_methods.qmd'}
 ```
 
 
-```{r, child = '../workflows/edit_eml/set_physical.qmd'}
-```
-
-```{r, child = '../workflows/edit_eml/set_project.qmd'}
+```{r, child = '../training/workflows/edit_eml/set_parties.qmd'}
 ```
 
 
-```{r, child = '../workflows/edit_eml/use_references.qmd'}
+```{r, child = '../training/workflows/edit_eml/set_physical.qmd'}
+```
+
+```{r, child = '../training/workflows/edit_eml/set_project.qmd'}
+```
+
+
+```{r, child = '../training/workflows/edit_eml/use_references.qmd'}
 ```

@@ -4,18 +4,18 @@ format: html
 ---
 Please use `datapack` and `dataone` for regular data processing. This information is kept for troubleshooting and legacy purposes.
 
-```{r, child = '../workflows/data_packages_arcticdatautils/create_a_resource_map.qmd'}
+```{r, child = '../training/workflows/data_packages_arcticdatautils/create_a_resource_map.qmd'}
 ```
 
 
-```{r, child = '../workflows/data_packages_arcticdatautils/get_package_and_eml.qmd'}
+```{r, child = '../training/workflows/data_packages_arcticdatautils/get_package_and_eml.qmd'}
 ```
 
 
-```{r, child = '../workflows/data_packages_arcticdatautils/publish_an_object.qmd'}
+```{r, child = '../training/workflows/data_packages_arcticdatautils/publish_an_object.qmd'}
 ```
 
 
-```{r, child = '../workflows/data_packages_arcticdatautils/reorder_entities.qmd'}
+```{r, child = '../training/workflows/data_packages_arcticdatautils/reorder_entities.qmd'}
 ```
 
