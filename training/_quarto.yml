@@ -1,11 +1,11 @@
 
 project:
-  type: book
+  type: website
   output-dir: docs
   resources:
     - "*.png"
 
-book:
+website:
   title: "NCEAS Data Team Training"
   author: "Jesse Goldstein, Dominic Mullen, Jeanette Clark, Irene Steves, Mitchell Maier, Bryce Mecum, Peter Slaughter, Emily O'Dean, Jasmine Lai, Daphne Virlar-Knight"
   date: last-modified
@@ -29,19 +29,31 @@ book:
         text: "Arctic Data Center"
     collapse-level: 1
 
-  chapters:
-    - index.qmd
-    - 01_introduction.qmd
-    - 02_creating_a_data_package.qmd
-    - 03_exploring_eml.qmd
-    - 04_editing_eml.qmd
-    - 05_updating_a_data_package.qmd
-    - 06_editing_sysmeta.qmd
-    - 07_building_provenance.qmd
-    - 08_using_git.qmd
-    - 09_first_ticket.qmd
-    - 10_advanced.qmd
-    - text: "---"
+    contents:
+      - index.qmd
+      - href: 01_introduction.qmd
+        text: "1. Introduction to Open Science"
+      - href: 02_creating_a_data_package.qmd
+        text: "2. Creating a Data Package"
+      - href: 03_exploring_eml.qmd
+        text: "3. Exploring EML"
+      - href: 04_editing_eml.qmd
+        text: "4. Editing EML"
+      - href: 05_updating_a_data_package.qmd
+        text: "5. Updating a Data Package"
+      - href: 06_editing_sysmeta.qmd
+        text: "6. Editing Sysmeta"
+      - href: 07_building_provenance.qmd
+        text: "7. Building Provenance"
+      - href: 08_using_git.qmd
+        text: "8. Using Git"
+      - href: 09_first_ticket.qmd
+        text: "9. First Ticket"
+      - href: 10_advanced.qmd
+        text: "10. Beyond Your First Ticket"
+      - text: "---"
+      - href: "https://nceas.github.io/datateam-training/reference"
+        text: "Reference Guide"
     #- text: <li><a href="https://nceas.github.io/datateam-training/reference" target="blank">Reference Guide</a></li>
    # - <li><a href="https://nceas.github.io/datateam-training/reference" target="blank">Reference Guide</a></li>
     # - {<a href="https://nceas.github.io/datateam-training/reference/">Testing Page</a>}
@@ -53,9 +65,9 @@ book:
   #contents:
    # - 10_advanced.qmd
 
-  appendices: 
+  # appendices: 
     # - ../reference/_quarto.yml
-    - ../reference/index.qmd
+    # - ../reference/index.qmd
 
 format:
   html:
@@ -69,14 +81,6 @@ format:
     code-copy: true
     code-overflow: wrap
     toc: true
-    split_by: chapter
-    config:
-      toc:
-        collapse: section
-        before: |
-          <li><a href="./">Data Team Training</a></li>
-        after: |
-          <li><a href="https://nceas.github.io/datateam-training/reference" target="blank">Reference Guide</a></li>
 
   pdf:
     documentclass: scrreprt

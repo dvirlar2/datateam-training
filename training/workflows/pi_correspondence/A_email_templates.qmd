@@ -14,12 +14,22 @@ Quick reference:
 - [Final email templates](https://nceas.github.io/datateam-training/reference/email-templates.html#final-email-templates)
 - [Additional email template](https://nceas.github.io/datateam-training/reference/email-templates.html#additional-email-templates)
 
-
+<!--
 ```{r, echo = FALSE}
-chapter <- "workflows/pi_correspondence/email_templates/"
+chapter <- "~/datateam-training/training/workflows/pi_correspondence/email_templates/"
 sections <- dir(path = chapter, pattern = ".qmd$")
 children <- paste0(chapter, sections)
 ```
 
-```{r, child = children}
-```
+```{r}
+``` 
+-->
+
+<!-- {{< include /workflows/pi_correspondence/email_templates/A_initial_email_template.qmd >}}
+-->
+
+{{< include /email_templates/A_initial_email_template.qmd >}}
+
+{{< include /email_templates/B_final_email_templates.qmd >}}
+
+{{< include /email_templates/C_additional_email_templates.qmd >}}

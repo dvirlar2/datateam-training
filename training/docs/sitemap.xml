@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nceas.github.io/datateam-training/training/index.html</loc>
-    <lastmod>2022-08-18T23:09:25.663Z</lastmod>
+    <lastmod>2022-08-26T23:59:58.910Z</lastmod>
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/01_introduction.html</loc>
-    <lastmod>2022-08-17T00:07:54.234Z</lastmod>
+    <lastmod>2022-08-26T23:07:26.020Z</lastmod>
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/08_using_git.html</loc>
@@ -14,11 +14,11 @@
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/09_first_ticket.html</loc>
-    <lastmod>2022-08-16T05:25:04.261Z</lastmod>
+    <lastmod>2022-08-26T23:59:49.701Z</lastmod>
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/10_advanced.html</loc>
-    <lastmod>2022-08-16T05:14:12.586Z</lastmod>
+    <lastmod>2022-08-26T23:42:07.823Z</lastmod>
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/03_exploring_eml.html</loc>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/02_creating_a_data_package.html</loc>
-    <lastmod>2022-08-18T23:09:46.864Z</lastmod>
+    <lastmod>2022-08-27T00:00:54.922Z</lastmod>
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/05_updating_a_data_package.html</loc>
@@ -47,5 +47,265 @@
   <url>
     <loc>https://nceas.github.io/datateam-training/training/07_building_provenance.html</loc>
     <lastmod>2022-08-18T23:12:15.843Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/pi_correspondence/email_templates/A_initial_email_template.html</loc>
+    <lastmod>2022-08-26T22:45:17.447Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/pi_correspondence/A_email_templates.html</loc>
+    <lastmod>2022-08-26T23:47:49.303Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/pi_correspondence/email_templates_pi_faqs.html</loc>
+    <lastmod>2022-08-26T22:51:10.778Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/pi_correspondence/initial_review_checklist.html</loc>
+    <lastmod>2022-08-26T22:51:11.192Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/pi_correspondence/example_data_packages.html</loc>
+    <lastmod>2022-08-26T22:51:11.543Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/data_packages_arcticdatautils/reorder_entities.html</loc>
+    <lastmod>2022-08-26T22:51:13.009Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/data_packages_arcticdatautils/get_package_and_eml.html</loc>
+    <lastmod>2022-08-26T22:51:14.442Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/data_packages_arcticdatautils/publish_an_object.html</loc>
+    <lastmod>2022-08-26T22:51:15.707Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/data_packages_arcticdatautils/create_a_resource_map.html</loc>
+    <lastmod>2022-08-26T22:51:16.741Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/wrangle_data/clean_column_names.html</loc>
+    <lastmod>2022-08-26T22:51:17.976Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/wrangle_data/fix_excel_dates.html</loc>
+    <lastmod>2022-08-26T22:51:19.058Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/miscellaneous/code_snippets.html</loc>
+    <lastmod>2022-08-26T22:51:20.332Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/miscellaneous/metacat_version.html</loc>
+    <lastmod>2022-08-26T22:51:20.647Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/miscellaneous/file_paths.html</loc>
+    <lastmod>2022-08-26T22:51:21.911Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/miscellaneous/resources_for_r.html</loc>
+    <lastmod>2022-08-26T22:51:22.285Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/nesting_data/nesting_a_data_package.html</loc>
+    <lastmod>2022-08-26T22:51:24.014Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/data_portals/mosaic.html</loc>
+    <lastmod>2022-08-26T22:51:25.462Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/data_portals/data_portals.html</loc>
+    <lastmod>2022-08-26T22:51:26.765Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/data_portals/dbo_packages.html</loc>
+    <lastmod>2022-08-26T22:51:27.923Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/adc_web_submissions/recover_failed_submission.html</loc>
+    <lastmod>2022-08-26T22:51:28.970Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/adc_web_submissions/add_physicals_to_submissions.html</loc>
+    <lastmod>2022-08-26T22:51:30.278Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/adc_web_submissions/list_submissions_to_adc.html</loc>
+    <lastmod>2022-08-26T22:51:31.720Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/adc_web_submissions/assess_attributes.html</loc>
+    <lastmod>2022-08-26T22:51:32.821Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_data_packages/01_datapack_background.html</loc>
+    <lastmod>2022-08-26T22:51:34.330Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_data_packages/add_a_pre-generated_identifier.html</loc>
+    <lastmod>2022-08-26T22:51:35.366Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_data_packages/show_indexing_status.html</loc>
+    <lastmod>2022-08-26T22:51:36.409Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_data_packages/03_update_package_datapack.html</loc>
+    <lastmod>2022-08-26T22:51:37.917Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_data_packages/update_a_package.html</loc>
+    <lastmod>2022-08-26T22:51:39.461Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_data_packages/set_rights_and_access.html</loc>
+    <lastmod>2022-08-26T22:51:40.907Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_data_packages/set_dataone_nodes.html</loc>
+    <lastmod>2022-08-26T22:51:42.173Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_data_packages/edit_sysmeta.html</loc>
+    <lastmod>2022-08-26T22:51:43.553Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_data_packages/obsolescence_chain.html</loc>
+    <lastmod>2022-08-26T22:51:44.780Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_data_packages/02_create_package_data_pack.html</loc>
+    <lastmod>2022-08-26T22:51:46.296Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_data_packages/update_an_object.html</loc>
+    <lastmod>2022-08-26T22:51:47.640Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/solr_queries/query_solr_via_browser.html</loc>
+    <lastmod>2022-08-26T22:51:47.960Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/solr_queries/use_stats.html</loc>
+    <lastmod>2022-08-26T22:51:48.265Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/solr_queries/construct_a_query.html</loc>
+    <lastmod>2022-08-26T22:51:49.456Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/solr_queries/y_example_solr_queries.html</loc>
+    <lastmod>2022-08-26T22:51:51.103Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/solr_queries/query_solr_via_R.html</loc>
+    <lastmod>2022-08-26T22:51:52.358Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/solr_queries/use_facets.html</loc>
+    <lastmod>2022-08-26T22:51:52.676Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/solr_queries/z_solr_resources.html</loc>
+    <lastmod>2022-08-26T22:51:52.972Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_eml/set_parties.html</loc>
+    <lastmod>2022-08-26T22:51:54.386Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_eml/edit_attributelists.html</loc>
+    <lastmod>2022-08-26T22:51:55.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_eml/series_identifier.html</loc>
+    <lastmod>2022-08-26T22:51:57.056Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_eml/format_text.html</loc>
+    <lastmod>2022-08-26T22:51:58.103Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_eml/set_physical.html</loc>
+    <lastmod>2022-08-26T22:51:59.130Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_eml/edit_spatialdata.html</loc>
+    <lastmod>2022-08-26T22:52:00.249Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_eml/edit_otherentities.html</loc>
+    <lastmod>2022-08-26T22:52:01.607Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_eml/use_references.html</loc>
+    <lastmod>2022-08-26T22:52:02.805Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_eml/edit_datatables.html</loc>
+    <lastmod>2022-08-26T22:52:04.150Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_eml/edit_semantic_annotation.html</loc>
+    <lastmod>2022-08-26T22:52:05.529Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_eml/edit_custom_units.html</loc>
+    <lastmod>2022-08-26T22:52:06.859Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_eml/set_project.html</loc>
+    <lastmod>2022-08-26T22:52:07.191Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_eml/edit_an_eml_element.html</loc>
+    <lastmod>2022-08-26T22:52:08.501Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_eml/set_coverages.html</loc>
+    <lastmod>2022-08-26T22:52:09.717Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/edit_eml/set_methods.html</loc>
+    <lastmod>2022-08-26T22:52:10.908Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/explore_eml/access_specific_elements.html</loc>
+    <lastmod>2022-08-26T22:52:12.246Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/explore_eml/navigate_through_eml.html</loc>
+    <lastmod>2022-08-26T22:52:14.885Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/explore_eml/understand_eml_schema.html</loc>
+    <lastmod>2022-08-26T22:52:15.211Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/misc_file_types/scan_rar_files.html</loc>
+    <lastmod>2022-08-26T22:52:16.425Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/misc_file_types/datalogger_files.html</loc>
+    <lastmod>2022-08-26T22:52:16.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/misc_file_types/convert_xls_to_csv.html</loc>
+    <lastmod>2022-08-26T22:52:18.037Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/misc_file_types/reorganize_files.html</loc>
+    <lastmod>2022-08-26T22:52:22.463Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/misc_file_types/netCDF_chunk.html</loc>
+    <lastmod>2022-08-26T22:52:23.764Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/misc_file_types/spatial_data.html</loc>
+    <lastmod>2022-08-26T22:52:24.841Z</lastmod>
   </url>
 </urlset>

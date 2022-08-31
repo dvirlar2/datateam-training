@@ -10,7 +10,7 @@ three separate interfaces:
 
 ### Front page 
 
-![](../images/front_page_rt.png)
+![](../../images/front_page_rt.png)
 
 This is what you see first   
 
@@ -30,7 +30,7 @@ This is what you see first
 
 ### All tickets
 
-![](../images/all_tickets_rt.png)   
+![](../../images/all_tickets_rt.png)   
 
 This is the queue interface from number 6 of the Front page  
 1. Ticket number and title  
@@ -39,7 +39,7 @@ This is the queue interface from number 6 of the Front page
 
 ### Example ticket 
 
-![](../images/example_ticket_rt.png)  
+![](../../images/example_ticket_rt.png)  
 
 1. Title - Include the PI's name for reference  
 2. Display - homepage of the ticket  
