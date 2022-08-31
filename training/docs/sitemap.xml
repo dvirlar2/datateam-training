@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/08_using_git.html</loc>
-    <lastmod>2022-08-15T23:32:52.228Z</lastmod>
+    <lastmod>2022-08-31T20:13:05.451Z</lastmod>
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/09_first_ticket.html</loc>
@@ -54,7 +54,7 @@
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/workflows/pi_correspondence/A_email_templates.html</loc>
-    <lastmod>2022-08-26T23:47:49.303Z</lastmod>
+    <lastmod>2022-08-31T20:13:04.018Z</lastmod>
   </url>
   <url>
     <loc>https://nceas.github.io/datateam-training/training/workflows/pi_correspondence/email_templates_pi_faqs.html</loc>
@@ -307,5 +307,9 @@
   <url>
     <loc>https://nceas.github.io/datateam-training/training/workflows/misc_file_types/spatial_data.html</loc>
     <lastmod>2022-08-26T22:52:24.841Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas.github.io/datateam-training/training/workflows/pi_correspondence/navigate_rt.html</loc>
+    <lastmod>2022-08-31T20:13:02.124Z</lastmod>
   </url>
 </urlset>

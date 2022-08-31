@@ -44,7 +44,7 @@ After running these commands, the Terminal window should look like this: ![globa
 Next, we will tell Git to store your PAT. We must do this because of the way our server operating system handles credentials. If you don't run the next line, your PAT will expire immediately on the server, even though we will set it up on GitHub to be valid for 90 days.
 
 ```{r, eval = FALSE}
-git config --global credential.helper 'cache -- timeout=10000000'
+git config --global credential.helper 'cache --timeout=10000000'
 ```
 
 Finally, check to make sure everything looks correct by entering the following command, which will return the options that you have set.
