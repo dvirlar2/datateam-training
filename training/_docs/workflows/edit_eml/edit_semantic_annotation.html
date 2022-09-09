@@ -254,10 +254,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3 class="anchored" data-anchor-id="how-annotations-are-used">How annotations are used</h3>
 <p>This is a <a href="https://arcticdata.io/catalog/view/doi%3A10.18739%2FA2KW57J9Q">dataset</a> that has semantic annotations included.</p>
 <p>On the website you can see annotations in each of the attributes.</p>
-<p><img src="../../images/annotations_web.png" class="img-fluid"></p>
-<p><img src="../../images/annotations_web.png" class="img-fluid"></p>
+<p><img src="https://nceas.github.io/datateam-training/images/annotations_web.png" class="img-fluid"></p>
 <p>You can click on any one of them to search for more datasets with that same annotation.</p>
-<p><img src="../../images/annotations_web_use.png" class="img-fluid"></p>
+<p><img src="https://nceas.github.io/datateam-training/images/annotations_web_use.png" class="img-fluid"></p>
 <section id="attribute-level-annotations" class="level4">
 <h4 class="anchored" data-anchor-id="attribute-level-annotations">Attribute-level annotations</h4>
 <p>To add annotations to the <code>attributeList</code> you will need information about the <code>propertyURI</code> and <code>valueURI</code></p>
@@ -362,7 +361,7 @@ Note
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>                                                                                       <span class="at">propertyURI =</span> <span class="st">"http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Finally, add the <code>valueURI</code> information from your search.</p>
-<p><img src="../images/bioportal_term.png" class="img-fluid"> You should see an ID on the Bioportal page that looks like a URL - this is the <code>valueURI</code>. Use the value to populate the label element.</p>
+<p><img src="https://nceas.github.io/datateam-training/images/bioportal_term.png" class="img-fluid"> You should see an ID on the Bioportal page that looks like a URL - this is the <code>valueURI</code>. Use the value to populate the label element.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>doc<span class="sc">$</span>dataset<span class="sc">$</span>dataTable[[<span class="dv">3</span>]]<span class="sc">$</span>attributeList<span class="sc">$</span>attribute[[<span class="dv">6</span>]]<span class="sc">$</span>annotation<span class="sc">$</span>valueURI <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">label =</span> <span class="st">"Water Salinity"</span>,</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">valueURI =</span> <span class="st">"http://purl.dataone.org/odo/ECSO_00001164"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

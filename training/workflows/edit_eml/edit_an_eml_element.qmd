@@ -1,3 +1,7 @@
+---
+output-dir: ../../../_docs
+---
+
 ## Edit an EML element
 
 There are multiple ways to edit an EML element. 
@@ -25,11 +29,7 @@ However, this isn't always the best method to edit the EML, particularly if the 
 
 To edit a section where you are not 100% sure of the sub-elements, using the `eml$elementName()` helper functions from the EML package will pre-populate the options for you if you utilize the RStudio autocomplete functionality. The arguments in these functions show the available slots for any given EML element. For example, typing `doc$dataset$abstract <- eml$abstract()<TAB>` will show you that the `abstract` element can take either the `section` or `para` sub-elements. 
 
-![](../../images/eml_function_autocomplete.png) 
-
-![](images/eml_function_autocomplete.png) 
-
-![](/images/eml_function_autocomplete.png) 
+![](https://nceas.github.io/datateam-training/images/eml_function_autocomplete.png) 
 
 
 ```{r, eval = FALSE}

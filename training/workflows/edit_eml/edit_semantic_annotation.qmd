@@ -1,3 +1,6 @@
+---
+output-dir: ../../../_docs
+---
 ## Semantic annotations
 
 For a brief overview of what a semantic annotation is, and why we use them check out [this video.](https://drive.google.com/file/d/1Err-fL8O21kd1NzHJ9HJkK_B2fpt4sQW/view?usp=sharing)
@@ -19,13 +22,11 @@ This is a  <a href = 'https://arcticdata.io/catalog/view/doi%3A10.18739%2FA2KW57
 
 On the website you can see annotations in each of the attributes. 
 
-![](../../images/annotations_web.png) 
- 
-![](../../images/annotations_web.png) 
+![](https://nceas.github.io/datateam-training/images/annotations_web.png)
 
 You can click on any one of them to search for more datasets with that same annotation. 
 
-![](../../images/annotations_web_use.png) 
+![](https://nceas.github.io/datateam-training/images/annotations_web_use.png) 
 
 
 #### Attribute-level annotations
@@ -131,7 +132,7 @@ doc$dataset$dataTable[[3]]$attributeList$attribute[[6]]$annotation$propertyURI <
 
 Finally, add the `valueURI` information from your search. 
 
-![](../images/bioportal_term.png)
+![](https://nceas.github.io/datateam-training/images/bioportal_term.png)
 You should see an ID on the Bioportal page that looks like a URL - this is the `valueURI`. Use the value to populate the label element.
 
 ```{r, eval = F}
