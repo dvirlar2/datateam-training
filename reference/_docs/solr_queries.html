@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>NCEAS Data Team Reference Guide - Solr Queries</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./adc_web_submissions.html" rel="next">
+<link href="./wrangle_data.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Solr Queries</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Data Team <br> Reference Guide</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://arcticdata.io" title="Arctic Data Center" class="sidebar-tool px-1"><i class="bi bi-house-door-fill"></i></a>
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">About</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./miscellaneous.html" class="sidebar-item-text sidebar-link">Miscellaneous</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./edit_data_packages.html" class="sidebar-item-text sidebar-link">Edit Data Packages</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./explore_eml.html" class="sidebar-item-text sidebar-link">Explore EML</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./edit_eml.html" class="sidebar-item-text sidebar-link">Edit EML</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pi_correspondence.html" class="sidebar-item-text sidebar-link">PI Correspondence</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./misc_file_types.html" class="sidebar-item-text sidebar-link">Miscellaneous file types</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./wrangle_data.html" class="sidebar-item-text sidebar-link">Wrangle Data</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./solr_queries.html" class="sidebar-item-text sidebar-link active">Solr Queries</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./adc_web_submissions.html" class="sidebar-item-text sidebar-link">ADC Web Submissions</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data_portals.html" class="sidebar-item-text sidebar-link">Data Portals</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data_packages_arcticdatautils.html" class="sidebar-item-text sidebar-link">Using arcticdatautils</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./nesting_data.html" class="sidebar-item-text sidebar-link">Nesting Data</a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://nceas.github.io/datateam-training/training/" class="sidebar-item-text sidebar-link">Training Manual</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#construct-a-query" id="toc-construct-a-query" class="nav-link active" data-scroll-target="#construct-a-query">Construct a query</a></li>
+  <li><a href="#query-solr-via-a-browser" id="toc-query-solr-via-a-browser" class="nav-link" data-scroll-target="#query-solr-via-a-browser">Query Solr via a browser</a></li>
+  <li><a href="#query-solr-via-r" id="toc-query-solr-via-r" class="nav-link" data-scroll-target="#query-solr-via-r">Query Solr via R</a></li>
+  <li><a href="#use-facets" id="toc-use-facets" class="nav-link" data-scroll-target="#use-facets">Use facets</a></li>
+  <li><a href="#use-stats" id="toc-use-stats" class="nav-link" data-scroll-target="#use-stats">Use stats</a></li>
+  <li><a href="#example-solr-queries" id="toc-example-solr-queries" class="nav-link" data-scroll-target="#example-solr-queries">Example Solr queries</a>
+  <ul class="collapse">
+  <li><a href="#find-everything" id="toc-find-everything" class="nav-link" data-scroll-target="#find-everything">Find everything</a></li>
+  <li><a href="#query-a-wildcard-expression" id="toc-query-a-wildcard-expression" class="nav-link" data-scroll-target="#query-a-wildcard-expression">Query a wildcard expression</a></li>
+  <li><a href="#query-multiple-fields" id="toc-query-multiple-fields" class="nav-link" data-scroll-target="#query-multiple-fields">Query multiple fields</a></li>
+  <li><a href="#query-by-formattype" id="toc-query-by-formattype" class="nav-link" data-scroll-target="#query-by-formattype">Query by formatType</a></li>
+  <li><a href="#query-pids-by-a-specific-submitter" id="toc-query-pids-by-a-specific-submitter" class="nav-link" data-scroll-target="#query-pids-by-a-specific-submitter">Query pids by a specific submitter</a></li>
+  <li><a href="#query-pids-with-special-characters" id="toc-query-pids-with-special-characters" class="nav-link" data-scroll-target="#query-pids-with-special-characters">Query pids with special characters</a></li>
+  <li><a href="#query-multiple-conditions-within-one-field" id="toc-query-multiple-conditions-within-one-field" class="nav-link" data-scroll-target="#query-multiple-conditions-within-one-field">Query multiple conditions within one field</a></li>
+  <li><a href="#query-for-latest-versions-only" id="toc-query-for-latest-versions-only" class="nav-link" data-scroll-target="#query-for-latest-versions-only">Query for latest versions only</a></li>
+  <li><a href="#use-not-in-a-query" id="toc-use-not-in-a-query" class="nav-link" data-scroll-target="#use-not-in-a-query">Use NOT in a query</a></li>
+  <li><a href="#query-a-coordinating-node" id="toc-query-a-coordinating-node" class="nav-link" data-scroll-target="#query-a-coordinating-node">Query a coordinating node</a></li>
+  <li><a href="#query-for-emls-that-document-a-specific-data-pid" id="toc-query-for-emls-that-document-a-specific-data-pid" class="nav-link" data-scroll-target="#query-for-emls-that-document-a-specific-data-pid">Query for EMLs that document a specific data pid</a></li>
+  <li><a href="#query-for-files-uploaded-during-a-specific-time" id="toc-query-for-files-uploaded-during-a-specific-time" class="nav-link" data-scroll-target="#query-for-files-uploaded-during-a-specific-time">Query for files uploaded during a specific time</a></li>
+  <li><a href="#use-facets-1" id="toc-use-facets-1" class="nav-link" data-scroll-target="#use-facets-1">Use facets</a></li>
+  </ul></li>
+  <li><a href="#more-resources" id="toc-more-resources" class="nav-link" data-scroll-target="#more-resources">More resources</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Solr Queries</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>Solr is what’s known as an index, which helps us keep track of the data, metadata, and resource map objects stored in our metadata catalog, <a href="https://www.dataone.org/software-tools/metacat" target="_blank">Metacat</a>.</p>
+<p>Solr allows you to quickly search through any coordinating or member node. Some more common use-cases include:</p>
+<ul>
+<li><strong>Recovering lost PIDs</strong> - if you publish new data objects (<a href="https://nceas.github.io/datateam-training/reference/update-a-data-object.html" target="_blank"><code>publish_object</code></a>) but forget to save the <code>PID</code>s, you can recover them with a query. For example, you can search for all data objects that are <em>not</em> associated with a resource map <em>and</em> are published using your ORCiD (<code>q=-resourceMap:*+AND+submitter:*XXXX-YYYY-ZZZZ-WWWW</code>)</li>
+<li><strong>Working with groups of packages</strong> - if you want to find all data, metadata, and resource maps associated with a PI, you can use their last name (<code>q=origin:*SURNAME*</code>) or perhaps their ORCiD (<code>q=rightsHolder:*XXXX-YYYY-ZZZZ-WWWW</code>) or both (<code>q=origin:*SURNAME*+OR+rightsHolder:*XXXX-YYYY-ZZZZ-WWWW</code>) to retrieve information about packages associated with them</li>
+</ul>
+<p>Once you understand the logic of queries, it becomes a flexible and useful tool that you can integrate into your R workflow. You can use queries to answer a variety of interesting questions, for example:</p>
+<ul>
+<li>What are the most recently updated data sets?</li>
+<li>What metadata and data objects are in a given data package?</li>
+<li>What is the total size (in terms of disk space) of all objects stored in Metacat?</li>
+</ul>
+<p>Querying Solr is possible by <a href="https://nceas.github.io/datateam-training/reference/query-solr-via-a-browser.html" target="_blank">adding a query onto the end of a base URL</a> or through the <a href="https://nceas.github.io/datateam-training/reference/query-solr-via-r.html" target="_blank"><code>dataone::query()</code> function in R</a>. For now, we’ll just cover the basics of Solr queries in R.</p>
+<section id="construct-a-query" class="level2">
+<h2 class="anchored" data-anchor-id="construct-a-query">Construct a query</h2>
+<p>Each Solr query is comprised of a number of parameters. These are like arguments to a function in R, but they are entered as parts of a URL.</p>
+<p>The most common parameters are:</p>
+<ul>
+<li><code>q</code>: The query. This is like <code>subset()</code> or <code>dplyr::filter()</code> in R.</li>
+<li><code>fl</code>: What fields are returned for the documents that match your query (<code>q</code>). If not set, all fields are returned.</li>
+<li><code>rows</code>: The maximum number of documents to return. Solr will truncate your result if the result size is greater than <code>rows</code>.</li>
+<li><code>sort</code>: Sorts the result by the values in the given Solr field (e.g., sort by date uploaded).</li>
+</ul>
+<p>The query (<code>q</code>) parameter uses a syntax that looks like <code>field:value</code>, where <code>field</code> is one of the Solr fields and <code>value</code> is an expression. The expression can match a specific value exactly, e.g., <code>q=identifier:arctic-data.7747.1</code> or <code>q=identifier:"doi:10.5065/D60P0X4S"</code>, which finds the Solr document for a specific Object by <code>PID</code> (identifier).</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In the second example, the DOI <code>PID</code> is surrounded in double quotes. This is because Solr has <a href="https://lucene.apache.org/core/2_9_4/queryparsersyntax.html" target="_blank">reserved characters</a>, of which <code>:</code> is one, so we have to help Solr by surrounding values with reserved characters in them in quotes or by escaping them.</p>
+</div>
+</div>
+<p>To view the list of query-able parameters on the Arctic Data Center and their descriptions, you can visit <a href="https://arcticdata.io/metacat/d1/mn/v2/query/solr" target="_blank">https://arcticdata.io/metacat/d1/mn/v2/query/solr</a>. The list of parameters is also provided below:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>  [1] "solr"                        "_root_"                     
+  [3] "_text_"                      "_version_"                  
+  [5] "abstract"                    "archived"                   
+  [7] "attribute"                   "attributeDescription"       
+  [9] "attributeLabel"              "attributeName"              
+ [11] "attributeUnit"               "author"                     
+ [13] "authorGivenName"             "authorGivenNameSort"        
+ [15] "authoritativeMN"             "authorLastName"             
+ [17] "authorSurName"               "authorSurNameSort"          
+ [19] "awardNumber"                 "awardTitle"                 
+ [21] "beginDate"                   "blockedReplicationMN"       
+ [23] "changePermission"            "checksum"                   
+ [25] "checksumAlgorithm"           "class"                      
+ [27] "collectionQuery"             "contactOrganization"        
+ [29] "contactOrganizationText"     "datasource"                 
+ [31] "dataUrl"                     "dateModified"               
+ [33] "datePublished"               "dateUploaded"               
+ [35] "decade"                      "documents"                  
+ [37] "eastBoundCoord"              "edition"                    
+ [39] "endDate"                     "family"                     
+ [41] "fileID"                      "fileName"                   
+ [43] "formatId"                    "formatType"                 
+ [45] "funderIdentifier"            "funderName"                 
+ [47] "funding"                     "fundingText"                
+ [49] "gcmdKeyword"                 "genus"                      
+ [51] "geoform"                     "geohash_1"                  
+ [53] "geohash_2"                   "geohash_3"                  
+ [55] "geohash_4"                   "geohash_5"                  
+ [57] "geohash_6"                   "geohash_7"                  
+ [59] "geohash_8"                   "geohash_9"                  
+ [61] "hasPart"                     "id"                         
+ [63] "identifier"                  "investigator"               
+ [65] "investigatorText"            "isDocumentedBy"             
+ [67] "isPartOf"                    "isPublic"                   
+ [69] "isService"                   "isSpatial"                  
+ [71] "keyConcept"                  "keywords"                   
+ [73] "keywordsText"                "kingdom"                    
+ [75] "label"                       "language"                   
+ [77] "logo"                        "LTERSite"                   
+ [79] "mediaType"                   "mediaTypeProperty"          
+ [81] "namedLocation"               "noBoundingBox"              
+ [83] "northBoundCoord"             "numberReplicas"             
+ [85] "obsoletedBy"                 "obsoletes"                  
+ [87] "ogcUrl"                      "order"                      
+ [89] "origin"                      "originator"                 
+ [91] "originatorText"              "originText"                 
+ [93] "parameter"                   "parameterText"              
+ [95] "phylum"                      "placeKey"                   
+ [97] "preferredReplicationMN"      "presentationCat"            
+ [99] "project"                     "projectText"                
+[101] "prov_generated"              "prov_generatedByExecution"  
+[103] "prov_generatedByProgram"     "prov_generatedByUser"       
+[105] "prov_hasDerivations"         "prov_hasSources"            
+[107] "prov_instanceOfClass"        "prov_used"                  
+[109] "prov_usedByExecution"        "prov_usedByProgram"         
+[111] "prov_usedByUser"             "prov_wasDerivedFrom"        
+[113] "prov_wasExecutedByExecution" "prov_wasExecutedByUser"     
+[115] "prov_wasGeneratedBy"         "prov_wasInformedBy"         
+[117] "pubDate"                     "purpose"                    
+[119] "readPermission"              "relatedOrganizations"       
+[121] "replicaMN"                   "replicationAllowed"         
+[123] "replicationStatus"           "replicaVerifiedDate"        
+[125] "resourceMap"                 "rightsHolder"               
+[127] "scientificName"              "sem_annotated_by"           
+[129] "sem_annotates"               "sem_annotation"             
+[131] "sem_comment"                 "sensor"                     
+[133] "sensorText"                  "seriesId"                   
+[135] "serviceCoupling"             "serviceDescription"         
+[137] "serviceEndpoint"             "serviceInput"               
+[139] "serviceOutput"               "serviceTitle"               
+[141] "serviceType"                 "site"                       
+[143] "siteText"                    "size"                       
+[145] "sku"                         "source"                     
+[147] "sourceText"                  "southBoundCoord"            
+[149] "species"                     "submitter"                  
+[151] "term"                        "termText"                   
+[153] "text"                        "title"                      
+[155] "titlestr"                    "topic"                      
+[157] "topicText"                   "updateDate"                 
+[159] "webUrl"                      "westBoundCoord"             
+[161] "writePermission"            </code></pre>
+</div>
+</div>
+</section>
+<section id="query-solr-via-a-browser" class="level2">
+<h2 class="anchored" data-anchor-id="query-solr-via-a-browser">Query Solr via a browser</h2>
+<p>Solr is queried via what’s called an HTTP API (Application Program Interface). Practically, what this means it that you can execute a query in your browser by tacking a query onto a base URL.</p>
+<p>This is similar to the way Google handles your searches. If I search “soil science” in Google, for example, the URL becomes:</p>
+<pre><code>https://www.google.com/search?q=soil+science&amp;oq=soil+science&amp;aqs=chrome.0.69i59.1350j0j1&amp;sourceid=chrome&amp;ie=UTF-8</code></pre>
+<p>If I break it down into pieces, I get:</p>
+<ul>
+<li>the <strong>base URL</strong> - <code>https://www.google.com/search</code></li>
+<li><code>?</code>, after which the query parameters are listed</li>
+<li>the <strong>query</strong> - <code>q=soil+science</code></li>
+<li><strong>other parameters</strong>, which are separated by <code>&amp;</code> - <code>oq=soil+science&amp;aqs=chrome.0.69i59.1350j0j1&amp;sourceid=chrome&amp;ie=UTF-8</code></li>
+</ul>
+<p>Most of the time, you’ll query either the Arctic Data Center member node or the <code>PROD</code> coordinating node, which have the following base URLs:</p>
+<ul>
+<li>Arctic Data Center member node: <a href="https://arcticdata.io/metacat/d1/mn/v2/query/solr" target="_blank">https://arcticdata.io/metacat/d1/mn/v2/query/solr</a></li>
+<li><code>PROD</code> coordinating node: <a href="https://cn.dataone.org/cn/v2/query/solr" target="_blank">https://cn.dataone.org/cn/v2/query/solr</a></li>
+</ul>
+<p>You can then append your query parameters to your base URL:</p>
+<p><code>https://arcticdata.io/metacat/d1/mn/v2/query/solr/?q={QUERY}&amp;fl={FIELDS}&amp;rows={ROWS}</code></p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Visit the base URL to see a list of fields Solr is storing for the objects it indexes.</p>
+<p>There is a large set of queryable fields, though not all types of objects will have values set for all of the possible fields because some fields do not make sense for some objects (e.g., <code>title</code> for a CSV).</p>
+</div>
+</div>
+</section>
+<section id="query-solr-via-r" class="level2">
+<h2 class="anchored" data-anchor-id="query-solr-via-r">Query Solr via R</h2>
+<p>Though it’s possible to <a href="https://nceas.github.io/datateam-training/reference/query-solr-via-a-browser.html" target="_blank">query Solr directly through its HTTP API</a>, we typically run our queries through R, for two main reasons:</p>
+<ol type="1">
+<li>The result is returned in a more useful way to R without extra work on your part</li>
+<li>We can more easily pass our authentication token with the query</li>
+</ol>
+<p>Why does #2 matter? Well by default, all of those URLs above only return publicly-readable Solr documents. If a private document matches any of those queries, Solr won’t tell you that. It will act like the non-public-readable documents don’t exist. So we must pass an authentication token to access non-public-readable content. This bit is crucial for working with the ADC, so you’ll very often want to use R instead of visiting those URLs in a web browser.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>cn <span class="ot">&lt;-</span> <span class="fu">CNode</span>(<span class="st">"PROD"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>adc <span class="ot">&lt;-</span> <span class="fu">getMNode</span>(cn, <span class="st">"urn:node:ARCTIC"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Set your token if you need/want!</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#string your parameters together like this: dataone::query(mn, "q=title:*soil*&amp;fl=title&amp;rows=10")</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">#or alternatively, list them out:</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">query</span>(adc, <span class="fu">list</span>(<span class="at">q=</span><span class="st">"title:*soil*"</span>,</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>                <span class="at">fl=</span><span class="st">"title"</span>,</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>                <span class="at">rows=</span><span class="st">"10"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>By default, <code>query</code> returns the result as a <code>list</code>, but a <code>data.frame</code> can be a more useful way to work with the result. To get a <code>data.frame</code> instead, just set the <code>as</code> argument to ‘data.frame’ to get a <code>data.frame</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">query</span>(adc, <span class="fu">list</span>(<span class="at">q=</span><span class="st">"title:*soil*"</span>,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                <span class="at">fl=</span><span class="st">"title"</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">rows=</span><span class="st">"10"</span>),</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">as =</span> <span class="st">"data.frame"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="use-facets" class="level2">
+<h2 class="anchored" data-anchor-id="use-facets">Use facets</h2>
+<p>We can also summarize what’s in Solr with <a href="https://lucene.apache.org/solr/guide/7_3/faceting.html" target="_blank">faceting</a>, which lets us <strong>group</strong> Solr documents together and <strong>count</strong> them. This is like <code>table</code> in R. Faceting can do a query within a query, but more commonly it’s used to summarize unique values in a field. For example, we can find the unique <code>formatId</code>s on data objects:</p>
+<ul>
+<li><a href="https://arcticdata.io/metacat/d1/mn/v2/query/solr/?q=*:*&amp;fq=formatType:DATA&amp;facet=true&amp;facet.field=formatId&amp;rows=0" target="_blank">https://arcticdata.io/metacat/d1/mn/v2/query/solr/?q=<em>:</em>&amp;fq=formatType:DATA&amp;facet=true&amp;facet.field=formatId&amp;rows=0</a></li>
+</ul>
+<p>To facet, we usually do a few things:</p>
+<ul>
+<li>Add the parameter <code>facet=true</code></li>
+<li>Add the parameter <code>facet.field={FIELD}</code> with the field we want to facet (group) on</li>
+<li>Set <code>rows=0</code> because we don’t care about the matched Solr documents</li>
+<li>Optionally specify <code>fq={expression}</code> which filters out Solr documents before faceting. In the above example, we have to do this to count only data objects. Without it, the facet result would include <code>formatId</code>s for metadata and resource maps, which we don’t want.</li>
+</ul>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Currently, the <code>dataone::query()</code> function does not support faceting, so you’ll have to run your queries as a URL.</p>
+<p>For additional ways to use faceting (such as <a href="https://lucene.apache.org/solr/guide/7_3/faceting.html#combining-stats-component-with-pivots" target="_blank">pivot faceting</a>), check out the <a href="https://lucene.apache.org/solr/guide/7_3/faceting.html" target="_blank">Solr documentation</a>.</p>
+</div>
+</div>
+</section>
+<section id="use-stats" class="level2">
+<h2 class="anchored" data-anchor-id="use-stats">Use stats</h2>
+<p>With stats, we can have <a href="https://lucene.apache.org/solr/guide/7_3/the-stats-component.html#the-stats-component" target="_blank">Solr calculate statistics</a> on numerical values (such as <code>size</code>).</p>
+<ul>
+<li><a href="https://arcticdata.io/metacat/d1/mn/v2/query/solr/?q=formatType:DATA&amp;stats=true&amp;stats.field=size&amp;rows=0" target="_blank">https://arcticdata.io/metacat/d1/mn/v2/query/solr/?q=formatType:DATA&amp;stats=true&amp;stats.field=size&amp;rows=0</a></li>
+</ul>
+<p>This query calculates a set of summary statistics for the <code>size</code> field on data objects that Solr has indexed. In this case, Solr’s <code>size</code> field indexes the <code>size</code> field in the system metadata for each object in Metacat.</p>
+</section>
+<section id="example-solr-queries" class="level2">
+<h2 class="anchored" data-anchor-id="example-solr-queries">Example Solr queries</h2>
+<p>For additional examples and explanations, check out the Apache Lucene <a href="https://lucene.apache.org/core/2_9_4/queryparsersyntax.html" target="_blank">Query Parser Syntax</a> page.</p>
+<div class="cell">
+
+</div>
+<section id="find-everything" class="level3">
+<h3 class="anchored" data-anchor-id="find-everything">Find everything</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">query</span>(adc, <span class="fu">list</span>(<span class="at">q=</span><span class="st">"*:*"</span>,</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                               <span class="at">fl=</span><span class="st">"*"</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">rows=</span><span class="st">"20"</span>),</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">as =</span> <span class="st">"data.frame"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="query-a-wildcard-expression" class="level3">
+<h3 class="anchored" data-anchor-id="query-a-wildcard-expression">Query a wildcard expression</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#find any id that starts with arctic-data.6</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">query</span>(adc, <span class="fu">list</span>(<span class="at">q=</span><span class="st">"id:arctic-data.6*"</span>,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">rows=</span><span class="st">"5000"</span>),</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">as =</span> <span class="st">"data.frame"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="query-multiple-fields" class="level3">
+<h3 class="anchored" data-anchor-id="query-multiple-fields">Query multiple fields</h3>
+<p>Multiple fields can be queried at once by using either the <code>AND</code> or <code>OR</code> arguments. ::: {.cell}</p>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">query</span>(adc, <span class="fu">list</span>(<span class="at">q=</span><span class="st">"title:soil*+AND+origin:Ludwig"</span>,</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>                               <span class="at">rows=</span><span class="st">"5000"</span>),</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">as =</span> <span class="st">"data.frame"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>:::</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">query</span>(adc, <span class="fu">list</span>(<span class="at">q=</span><span class="st">"title:soil* OR origin:Ludwig"</span>,</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>                               <span class="at">rows=</span><span class="st">"5000"</span>),</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">as =</span> <span class="st">"data.frame"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can use either spaces or <code>+</code> to separate query parameters. When typing queries in R, it’s often easier to read if you use spaces. However, when using the browser, you may want to use <code>+</code> to keep the query clean. (The browser will replace spaces with <code>%20</code>.)</p>
+</div>
+</div>
+</section>
+<section id="query-by-formattype" class="level3">
+<h3 class="anchored" data-anchor-id="query-by-formattype">Query by formatType</h3>
+<p>Objects are queryable via their <code>formatType</code> which is one of DATA, METADATA, or RESOURCE.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">query</span>(adc, <span class="fu">list</span>(<span class="at">q =</span> <span class="st">'formatType:RESOURCE AND submitter:"http://orcid.org/0000-0002-2561-5840"'</span>,</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>                          <span class="at">fl =</span> <span class="st">'identifier,submitter,fileName'</span>,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>                          <span class="at">sort =</span> <span class="st">'dateUploaded+desc'</span>,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>                          <span class="at">rows=</span><span class="st">'10'</span>),</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">as =</span> <span class="st">"data.frame"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">query</span>(adc, <span class="fu">list</span>(<span class="at">q =</span> <span class="st">'formatType:METADATA AND title:*Toolik*'</span>,</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>                          <span class="at">fl =</span> <span class="st">'identifier,submitter,fileName'</span>,</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>                          <span class="at">sort =</span> <span class="st">'dateUploaded+desc'</span>,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>                          <span class="at">rows=</span><span class="st">'10'</span>),</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">as =</span> <span class="st">"data.frame"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="query-pids-by-a-specific-submitter" class="level3">
+<h3 class="anchored" data-anchor-id="query-pids-by-a-specific-submitter">Query pids by a specific submitter</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">query</span>(adc, <span class="fu">list</span>(<span class="at">q =</span> <span class="st">'submitter:"http://orcid.org/0000-0003-4703-1974"'</span>,</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>               <span class="at">fl =</span> <span class="st">'identifier,submitter,fileName, size'</span>,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">sort =</span> <span class="st">'dateUploaded+desc'</span>,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">rows=</span><span class="st">'1000'</span>),</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">as =</span> <span class="st">"data.frame"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="query-pids-with-special-characters" class="level3">
+<h3 class="anchored" data-anchor-id="query-pids-with-special-characters">Query pids with special characters</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Wrap the pid with special characters with escaped backslashes</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>dataone<span class="sc">::</span><span class="fu">query</span>(adc, <span class="fu">list</span>(<span class="at">q =</span> <span class="fu">paste0</span>(<span class="st">'id:'</span>, <span class="st">'</span><span class="sc">\"</span><span class="st">'</span>, <span class="st">'doi:10.18739/A20R9M36V'</span>, <span class="st">'</span><span class="sc">\"</span><span class="st">'</span>),</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>                         <span class="at">fl =</span> <span class="st">'dateUploaded AND identifier'</span>,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>                         <span class="at">rows =</span> <span class="dv">5000</span>),</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">as =</span> <span class="st">"data.frame"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="query-multiple-conditions-within-one-field" class="level3">
+<h3 class="anchored" data-anchor-id="query-multiple-conditions-within-one-field">Query multiple conditions within one field</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">query</span>(adc, <span class="fu">list</span>(<span class="at">q=</span><span class="st">"title:(soil* AND carbo*)"</span>,</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>                               <span class="at">rows=</span><span class="st">"5000"</span>),</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">as =</span> <span class="st">"data.frame"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="query-for-latest-versions-only" class="level3">
+<h3 class="anchored" data-anchor-id="query-for-latest-versions-only">Query for latest versions only</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">query</span>(adc, <span class="fu">list</span>(<span class="at">q =</span> <span class="st">"rightsHolder:*orcid.org/0000-000X-XXXX-XXXX* AND (*:* NOT obsoletedBy:*)"</span>,</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>                          <span class="at">fl =</span> <span class="st">"identifier,rightsHolder,formatId"</span>,</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>                          <span class="at">start =</span><span class="st">"0"</span>,</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>                          <span class="at">rows =</span> <span class="st">"1500"</span>),</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>                     <span class="at">as=</span><span class="st">"data.frame"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="use-not-in-a-query" class="level3">
+<h3 class="anchored" data-anchor-id="use-not-in-a-query">Use NOT in a query</h3>
+<p>Just add <code>-</code> before a query parameter!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">query</span>(adc, <span class="fu">list</span>(<span class="at">q=</span><span class="st">"title:(soil AND -carbon)"</span>,</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>                               <span class="at">rows=</span><span class="st">"5000"</span>),</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">as =</span> <span class="st">"data.frame"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="query-a-coordinating-node" class="level3">
+<h3 class="anchored" data-anchor-id="query-a-coordinating-node">Query a coordinating node</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">query</span>(cn, <span class="fu">list</span>(<span class="at">q=</span><span class="st">"title:soil* AND origin:Ludwig"</span>,</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>                              <span class="at">rows=</span><span class="st">"5000"</span>),</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">as =</span> <span class="st">"data.frame"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="query-for-emls-that-document-a-specific-data-pid" class="level3">
+<h3 class="anchored" data-anchor-id="query-for-emls-that-document-a-specific-data-pid">Query for EMLs that document a specific data pid</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Wrap the pid in escaped quotation marks if it contains special characters </span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">query</span>(adc, <span class="fu">list</span>(<span class="at">q =</span> <span class="fu">paste0</span>(<span class="st">'documents:'</span>, <span class="st">'</span><span class="sc">\"</span><span class="st">'</span>, <span class="st">'urn:uuid:f551460b-ce36-4dd3-aaa6-3a6c6e338ec9'</span>, <span class="st">'</span><span class="sc">\"</span><span class="st">'</span>),</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">fl =</span> <span class="st">"identifier"</span>,</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">rows=</span><span class="st">"20"</span>),</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">as =</span> <span class="st">"data.frame"</span>)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Alternatively we can use a wildcard expression in place of "urn:uuid:"</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="co"># This way we don't need to escape the colon special characters </span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="fu">query</span>(adc, <span class="fu">list</span>(<span class="at">q =</span> <span class="fu">paste0</span>(<span class="st">"documents:*f551460b-ce36-4dd3-aaa6-3a6c6e338ec9"</span>),</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>                <span class="at">fl =</span> <span class="st">"identifier"</span>,</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>                <span class="at">rows=</span><span class="st">"20"</span>),</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">as =</span> <span class="st">"data.frame"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="query-for-files-uploaded-during-a-specific-time" class="level3">
+<h3 class="anchored" data-anchor-id="query-for-files-uploaded-during-a-specific-time">Query for files uploaded during a specific time</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">query</span>(adc, <span class="fu">list</span>(<span class="at">q=</span><span class="st">"dateUploaded:[2020-05-06T00:00:00Z TO NOW]"</span>,</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>                <span class="at">fl=</span><span class="st">"title,identifier,resourceMap,dateUploaded,dateModified"</span>,</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">sort =</span> <span class="st">"dateUploaded+desc"</span>,</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">rows=</span><span class="st">"200"</span>), </span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">as =</span> <span class="st">"data.frame"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="use-facets-1" class="level3">
+<h3 class="anchored" data-anchor-id="use-facets-1">Use facets</h3>
+<p>All resource maps with &gt; 100 data objects that are <em>not</em> on the Arctic Data Center:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>https<span class="sc">:</span><span class="er">//</span>cn.dataone.org<span class="sc">/</span>cn<span class="sc">/</span>v2<span class="sc">/</span>query<span class="sc">/</span>solr<span class="sc">/</span>?q<span class="ot">=</span>resourceMap<span class="sc">:</span><span class="er">*</span><span class="sc">+</span>AND<span class="sc">+-</span>datasource<span class="sc">:</span><span class="er">*</span>ARCTIC<span class="sc">*</span><span class="er">&amp;</span>rows<span class="ot">=</span><span class="dv">0</span><span class="sc">&amp;</span>facet<span class="ot">=</span>true<span class="sc">&amp;</span>facet.field<span class="ot">=</span>resourceMap<span class="sc">&amp;</span>facet.mincount<span class="ot">=</span><span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="more-resources" class="level2">
+<h2 class="anchored" data-anchor-id="more-resources">More resources</h2>
+<ul>
+<li>Solr’s <a href="https://cwiki.apache.org/confluence/display/solr/The+Standard+Query+Parser" target="_blank">The Standard Query Parser</a> docs (high level of detail)</li>
+<li>Another quick reference: <a href="https://wiki.apache.org/solr/SolrQuerySyntax" target="_blank">https://wiki.apache.org/solr/SolrQuerySyntax</a></li>
+<li><a href="http://www.solrtutorial.com/" target="_blank">http://www.solrtutorial.com/</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./wrangle_data.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Wrangle Data</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./adc_web_submissions.html" class="pagination-link">
+        <span class="nav-page-text">ADC Web Submissions</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

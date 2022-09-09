@@ -1,0 +1,16 @@
+{
+  "hash": "fbff87852b29e0d74f73e13460676fc4",
+  "result": {
+    "markdown": "---\nfreeze: true\n---\n\n\n\n## Set DataONE nodes \n\nDataONE is a network of data repositories that is structured with coordinating nodes (CN) and member nodes (MN). The network tree looks something like this:\n\n![](/../images/dataone-nodes-tree.png)\n\nAt the top level is DataONE itself. Within DataONE there are several coordinating nodes, including nodes for both production material and testing material. Within these coordinating nodes are many member nodes, including ones for both the Arctic Data Center and the KNB. To set the environment in which you want to publish data, you need to set both the coordinating node and the member node. For example, if you are publishing to the Arctic Data Center test site, you would want to set the coordinating node to STAGING and the member node to mnTestArctic.\n\n:::{.callout-warning}\nA note on nodes - be very careful about what you publish on production nodes (`PROD`, or arcticdata.io). These nodes should NEVER be used to publish test or training data sets.\n:::\n\nThe primary nodes we work on, and how to set them in R, are below:\n\n### Staging (Test) nodes\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# ADC (test.arcticdata.io)\ncn_staging <- CNode('STAGING')\nadc_test <- getMNode(cn_staging,'urn:node:mnTestARCTIC')\n\n# KNB (dev.nceas.ucsb.edu)\ncn_staging2 <- CNode(\"STAGING2\")\nknb_test <- getMNode(cn_staging2, \"urn:node:mnTestKNB\")\n```\n:::\n\n\n\n### Production nodes\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# ADC (arcticdata.io)\ncn <- CNode('PROD')\nadc <- getMNode(cn,'urn:node:ARCTIC')\n\n# KNB (knb.ecoinformatics.org)\nknb <- getMNode(cn, \"urn:node:KNB\")\n\n# GOA \ngoa <- getMNode(cn, \"urn:node:GOA\")\n\n# You can also use the datamgmt::guess_membernode function to set a member node\n# Note: this pid looks like a URL - it's really a unique identifier\ndryad <- datamgmt::guess_member_node('https://doi.org/10.5061/dryad.k6gf1tf/15?ver=2018-09-18T03:54:10.492+00:00')\n```\n:::\n\n\n\nMore DataONE STAGING nodes can be found <a href = 'https://cn-stage.test.dataone.org/cn/v2/node' target='_blank'>here</a>\nMore DataONE PROD nodes can be found <a href = 'https://cn.dataone.org/cn/v2/node' target='_blank'>here</a>\n",
+    "supporting": [
+      "set_dataone_nodes_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": null,
+    "postProcess": false
+  }
+}

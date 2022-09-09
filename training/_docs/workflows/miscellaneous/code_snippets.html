@@ -239,7 +239,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Code snippets help with templating portions of code that you will be using regularly. To add your own, go to the toolbar ribbon at the top of your Rstudio screen and select:</p>
 <pre><code>Tools &gt; Global Options... &gt; Code &gt; Edit Snippets &gt; Add these chunks to the end of the file</code></pre>
 <p>More info can be found in this blog post by Mara Averick on how to add them: https://maraaverick.rbind.io/2017/09/custom-snippets-in-rstudio-faster-tweet-chunks-for-all/</p>
-<p>Usual <code>arcticdatautils</code> ticket workflow</p>
+<p>Usual <code>arcticdatautils</code> ticket workflow:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>snippet ticket</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">library</span>(dataone)</span>
@@ -269,7 +269,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>                                                    </span>
 <span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="co">#datamgmt::categorize_dataset(update\$metadata, c("theme1"), "Your Name")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The <code>datapack</code> ticket workflow</p>
+<p><br> The <code>datapack</code> ticket workflow:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>snippet datapack</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">library</span>(dataone)</span>
@@ -308,7 +308,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    packageId <span class="ot">&lt;-</span> <span class="fu">uploadDataPackage</span>(d1c, dp, <span class="at">public=</span>F, <span class="at">accessRules=</span>myAccessRules, <span class="at">quiet=</span><span class="cn">FALSE</span>)</span>
 <span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    <span class="co">#datamgmt::categorize_dataset("doi", c("theme1"), "Jasmine")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Quick way to give access to submitters to their datasets:</p>
+<p><br> Quick way to give access to submitters to their datasets:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>snippet access</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">library</span>(dataone)</span>
@@ -323,7 +323,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set_access</span>(adc, <span class="fu">unlist</span>(pkg), <span class="st">"orcid here"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Quick access to the usual code for common Solr queries:</p>
+<p><br> Quick access to the usual code for common Solr queries:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>snippet solr</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">library</span>(dataone)</span>

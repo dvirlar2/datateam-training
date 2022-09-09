@@ -284,7 +284,7 @@ Warning
 </section>
 <section id="update-the-metadata" class="level3">
 <h3 class="anchored" data-anchor-id="update-the-metadata">Update the metadata</h3>
-<p>Get the metadata identifier</p>
+<p>Get the metadata identifier:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>metadataId <span class="ot">&lt;-</span> <span class="fu">selectMember</span>(dp, <span class="at">name=</span><span class="st">"sysmeta@formatId"</span>, <span class="at">value=</span><span class="st">"https://eml.ecoinformatics.org/eml-2.2.0"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -301,12 +301,12 @@ Note
 <p>Take note of the EML version. If it is EML 2.1.1 the value needs to be changed to -<code>"eml://ecoinformatics.org/eml-2.1.1"</code></p>
 </div>
 </div>
-<p>Read the EML doc</p>
+<p>Read the EML doc:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>doc <span class="ot">&lt;-</span> <span class="fu">read_eml</span>(<span class="fu">getObject</span>(d1c<span class="sc">@</span>mn, metadataId))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Edit the EML as usual - see the documents in Edit EML for details</p>
-<p>Once you are happy with your changes, you can update your data package to include the new metadata file using <code>replaceMember</code></p>
+<p>Once you are happy with your changes, you can update your data package to include the new metadata file using <code>replaceMember</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>eml_path <span class="ot">&lt;-</span> <span class="st">"path/to/your/saved/eml.xml"</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_eml</span>(doc, eml_path)</span>
@@ -316,12 +316,12 @@ Note
 </section>
 <section id="modify-the-data-files" class="level3">
 <h3 class="anchored" data-anchor-id="modify-the-data-files">Modify the data files</h3>
-<p>remove zip files</p>
+<p>remove zip files:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>zipId <span class="ot">&lt;-</span> <span class="fu">selectMember</span>(dp, <span class="at">name=</span><span class="st">"sysmeta@formatId"</span>, <span class="at">value=</span><span class="st">"application/vnd.shp+zip"</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">removeMember</span>(dp, zipId, <span class="at">removeRelationships =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>add an existing data object</p>
+<p>add an existing data object:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>dataObj <span class="ot">&lt;-</span> <span class="fu">getDataObject</span>(d1c_test, <span class="at">id=</span><span class="st">"urn:uuid: here"</span>, <span class="at">lazyLoad=</span>T, <span class="at">limit=</span><span class="st">"1TB"</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">addMember</span>(dp, dataObj, <span class="at">mo=</span>metadataId)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -357,7 +357,7 @@ Note
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>newPackageId <span class="ot">&lt;-</span> <span class="fu">uploadDataPackage</span>(d1c_test, dp, <span class="at">public=</span><span class="cn">TRUE</span>, <span class="at">quiet=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="2" type="1">
-<li>Updating a package with a pre-issued DOI</li>
+<li>Updating a package with a pre-issued DOI:</li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">replaceMember</span>(dp, metadataId, <span class="at">replacement=</span>eml_path, <span class="at">newId=</span><span class="st">"your pre-issued doi previously generated"</span>)</span>

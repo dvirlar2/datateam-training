@@ -8,8 +8,9 @@ Tools > Global Options... > Code > Edit Snippets > Add these chunks to the end o
 
 More info can be found in this blog post by Mara Averick on how to add them: https://maraaverick.rbind.io/2017/09/custom-snippets-in-rstudio-faster-tweet-chunks-for-all/
 
-Usual `arcticdatautils` ticket workflow
-```{r  , eval=F}
+Usual `arcticdatautils` ticket workflow: 
+
+```{r, eval=F}
 snippet ticket
 	library(dataone)
 	library(arcticdatautils)
@@ -39,8 +40,11 @@ snippet ticket
 	#datamgmt::categorize_dataset(update\$metadata, c("theme1"), "Your Name")
 ```
 
-The `datapack` ticket workflow
-```{r , eval=F}
+
+<br>
+The `datapack` ticket workflow:
+
+```{r, eval=F}
 snippet datapack
 	library(dataone)
 	library(datapack)
@@ -79,8 +83,11 @@ snippet datapack
 	#datamgmt::categorize_dataset("doi", c("theme1"), "Jasmine")
 ```
 
+
+<br>
 Quick way to give access to submitters to their datasets:
-```{r , eval=F}
+
+```{r, eval=F}
 snippet access
 	library(dataone)
 	library(arcticdatautils)
@@ -95,8 +102,11 @@ snippet access
 	set_access(adc, unlist(pkg), "orcid here")
 ```
 
+
+<br>
 Quick access to the usual code for common Solr queries:
-```{r , eval=F}
+
+```{r, eval=F}
 snippet solr
 	library(dataone)
 	library(arcticdatautils)

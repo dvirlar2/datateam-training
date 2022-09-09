@@ -1,8 +1,12 @@
+---
+freeze: true # won't render dataone node image otherwise
+---
+
 ## Set DataONE nodes 
 
 DataONE is a network of data repositories that is structured with coordinating nodes (CN) and member nodes (MN). The network tree looks something like this:
 
-![](../images/dataone-nodes-tree.png)
+![](https://nceas.github.io/datateam-training/images/dataone-nodes-tree.png)
 
 At the top level is DataONE itself. Within DataONE there are several coordinating nodes, including nodes for both production material and testing material. Within these coordinating nodes are many member nodes, including ones for both the Arctic Data Center and the KNB. To set the environment in which you want to publish data, you need to set both the coordinating node and the member node. For example, if you are publishing to the Arctic Data Center test site, you would want to set the coordinating node to STAGING and the member node to mnTestArctic.
 

@@ -8,6 +8,7 @@ If files are in the visitor folder you might need to be complete the following w
 :::
 
 Load the necessary packages
+
 ```{r, eval=F}
 library(magrittr)
 library(readxl)
@@ -15,11 +16,13 @@ library(readr)
 ```
 
 Get a list of files that we want to convert
+
 ```{r, eval=F}
 xlsx <- dir("directory/of/files/here", pattern = "*xls", recursive = T, full.names = T)
 ```
 
 Create a function that iterates through the excel files and saves it as a csv in the same folder the excel file was in
+
 ```{r, eval=F}
 read_then_csv <- function(sheet, path) {
   #remove the file extension
@@ -37,6 +40,7 @@ read_then_csv <- function(sheet, path) {
 ```
 
 Get the sheet name(s)
+
 ```{r, eval=F}
 sheets <- xlsx %>%
   map(excel_sheets) %>%
@@ -44,27 +48,32 @@ sheets <- xlsx %>%
 ```
 
 Iterate over all the xlsx files for each of the sheets
+
 ```{r, eval=F}
 df <- map2(sheets, xlsx, ~read_then_csv(.x, path = .y))
 ```
 
 Check the files afterwards to make sure everything was converted properly
+
 ```{r, eval=F}
 csv <- dir("directory/of/files/here", pattern = "*csv", recursive = T, full.names = T)
 ```
 
 Check to see if there are any empty tables and get a list of files that were empty
+
 ```{r, eval=F}
 files <- map(csv, read_csv)
 n <- which(map(files, nrow) == 0)
 ```
 
 Remove those empty table files
+
 ```{r, eval=F}
 lapply(csv[n], file.remove)
 ```
 
 Remove xlsx files if everything looks in order
+
 ```{r, eval=F}
 lapply(xlsx, file.remove)
 ```
