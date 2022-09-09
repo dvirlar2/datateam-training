@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>NCEAS Data Team Training – construct_a_query</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">(Untitled)</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Data Team <br> Training Manual</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://arcticdata.io" title="Arctic Data Center" class="sidebar-tool px-1"><i class="bi bi-house-door-fill"></i></a>
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">Welcome to NCEAS!</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../01_introduction.html" class="sidebar-item-text sidebar-link">1. Introduction to Open Science</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../02_creating_a_data_package.html" class="sidebar-item-text sidebar-link">2. Creating a Data Package</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03_exploring_eml.html" class="sidebar-item-text sidebar-link">3. Exploring EML</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../04_editing_eml.html" class="sidebar-item-text sidebar-link">4. Editing EML</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../05_updating_a_data_package.html" class="sidebar-item-text sidebar-link">5. Updating a Data Package</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../06_editing_sysmeta.html" class="sidebar-item-text sidebar-link">6. Editing Sysmeta</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../07_building_provenance.html" class="sidebar-item-text sidebar-link">7. Building Provenance</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../08_using_git.html" class="sidebar-item-text sidebar-link">8. Using Git</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../09_first_ticket.html" class="sidebar-item-text sidebar-link">9. First Ticket</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../10_advanced.html" class="sidebar-item-text sidebar-link">10. Beyond Your First Ticket</a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://nceas.github.io/datateam-training/reference" class="sidebar-item-text sidebar-link">Reference Guide</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#construct-a-query" id="toc-construct-a-query" class="nav-link active" data-scroll-target="#construct-a-query">Construct a query</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="construct-a-query" class="level2">
+<h2 class="anchored" data-anchor-id="construct-a-query">Construct a query</h2>
+<p>Each Solr query is comprised of a number of parameters. These are like arguments to a function in R, but they are entered as parts of a URL.</p>
+<p>The most common parameters are:</p>
+<ul>
+<li><code>q</code>: The query. This is like <code>subset()</code> or <code>dplyr::filter()</code> in R.</li>
+<li><code>fl</code>: What fields are returned for the documents that match your query (<code>q</code>). If not set, all fields are returned.</li>
+<li><code>rows</code>: The maximum number of documents to return. Solr will truncate your result if the result size is greater than <code>rows</code>.</li>
+<li><code>sort</code>: Sorts the result by the values in the given Solr field (e.g., sort by date uploaded).</li>
+</ul>
+<p>The query (<code>q</code>) parameter uses a syntax that looks like <code>field:value</code>, where <code>field</code> is one of the Solr fields and <code>value</code> is an expression. The expression can match a specific value exactly, e.g., <code>q=identifier:arctic-data.7747.1</code> or <code>q=identifier:"doi:10.5065/D60P0X4S"</code>, which finds the Solr document for a specific Object by <code>PID</code> (identifier).</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In the second example, the DOI <code>PID</code> is surrounded in double quotes. This is because Solr has <a href="https://lucene.apache.org/core/2_9_4/queryparsersyntax.html" target="_blank">reserved characters</a>, of which <code>:</code> is one, so we have to help Solr by surrounding values with reserved characters in them in quotes or by escaping them.</p>
+</div>
+</div>
+<p>To view the list of query-able parameters on the Arctic Data Center and their descriptions, you can visit <a href="https://arcticdata.io/metacat/d1/mn/v2/query/solr" target="_blank">https://arcticdata.io/metacat/d1/mn/v2/query/solr</a>. The list of parameters is also provided below:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>  [1] "solr"                        "_root_"                     
+  [3] "_text_"                      "_version_"                  
+  [5] "abstract"                    "archived"                   
+  [7] "attribute"                   "attributeDescription"       
+  [9] "attributeLabel"              "attributeName"              
+ [11] "attributeUnit"               "author"                     
+ [13] "authorGivenName"             "authorGivenNameSort"        
+ [15] "authoritativeMN"             "authorLastName"             
+ [17] "authorSurName"               "authorSurNameSort"          
+ [19] "awardNumber"                 "awardTitle"                 
+ [21] "beginDate"                   "blockedReplicationMN"       
+ [23] "changePermission"            "checksum"                   
+ [25] "checksumAlgorithm"           "class"                      
+ [27] "collectionQuery"             "contactOrganization"        
+ [29] "contactOrganizationText"     "datasource"                 
+ [31] "dataUrl"                     "dateModified"               
+ [33] "datePublished"               "dateUploaded"               
+ [35] "decade"                      "documents"                  
+ [37] "eastBoundCoord"              "edition"                    
+ [39] "endDate"                     "family"                     
+ [41] "fileID"                      "fileName"                   
+ [43] "formatId"                    "formatType"                 
+ [45] "funderIdentifier"            "funderName"                 
+ [47] "funding"                     "fundingText"                
+ [49] "gcmdKeyword"                 "genus"                      
+ [51] "geoform"                     "geohash_1"                  
+ [53] "geohash_2"                   "geohash_3"                  
+ [55] "geohash_4"                   "geohash_5"                  
+ [57] "geohash_6"                   "geohash_7"                  
+ [59] "geohash_8"                   "geohash_9"                  
+ [61] "hasPart"                     "id"                         
+ [63] "identifier"                  "investigator"               
+ [65] "investigatorText"            "isDocumentedBy"             
+ [67] "isPartOf"                    "isPublic"                   
+ [69] "isService"                   "isSpatial"                  
+ [71] "keyConcept"                  "keywords"                   
+ [73] "keywordsText"                "kingdom"                    
+ [75] "label"                       "language"                   
+ [77] "logo"                        "LTERSite"                   
+ [79] "mediaType"                   "mediaTypeProperty"          
+ [81] "namedLocation"               "noBoundingBox"              
+ [83] "northBoundCoord"             "numberReplicas"             
+ [85] "obsoletedBy"                 "obsoletes"                  
+ [87] "ogcUrl"                      "order"                      
+ [89] "origin"                      "originator"                 
+ [91] "originatorText"              "originText"                 
+ [93] "parameter"                   "parameterText"              
+ [95] "phylum"                      "placeKey"                   
+ [97] "preferredReplicationMN"      "presentationCat"            
+ [99] "project"                     "projectText"                
+[101] "prov_generated"              "prov_generatedByExecution"  
+[103] "prov_generatedByProgram"     "prov_generatedByUser"       
+[105] "prov_hasDerivations"         "prov_hasSources"            
+[107] "prov_instanceOfClass"        "prov_used"                  
+[109] "prov_usedByExecution"        "prov_usedByProgram"         
+[111] "prov_usedByUser"             "prov_wasDerivedFrom"        
+[113] "prov_wasExecutedByExecution" "prov_wasExecutedByUser"     
+[115] "prov_wasGeneratedBy"         "prov_wasInformedBy"         
+[117] "pubDate"                     "purpose"                    
+[119] "readPermission"              "relatedOrganizations"       
+[121] "replicaMN"                   "replicationAllowed"         
+[123] "replicationStatus"           "replicaVerifiedDate"        
+[125] "resourceMap"                 "rightsHolder"               
+[127] "scientificName"              "sem_annotated_by"           
+[129] "sem_annotates"               "sem_annotation"             
+[131] "sem_comment"                 "sensor"                     
+[133] "sensorText"                  "seriesId"                   
+[135] "serviceCoupling"             "serviceDescription"         
+[137] "serviceEndpoint"             "serviceInput"               
+[139] "serviceOutput"               "serviceTitle"               
+[141] "serviceType"                 "site"                       
+[143] "siteText"                    "size"                       
+[145] "sku"                         "source"                     
+[147] "sourceText"                  "southBoundCoord"            
+[149] "species"                     "submitter"                  
+[151] "term"                        "termText"                   
+[153] "text"                        "title"                      
+[155] "titlestr"                    "topic"                      
+[157] "topicText"                   "updateDate"                 
+[159] "webUrl"                      "westBoundCoord"             
+[161] "writePermission"            </code></pre>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

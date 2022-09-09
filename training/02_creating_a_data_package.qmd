@@ -1,5 +1,6 @@
 ---
 title: "Creating a data package"
+freeze: true
 ---
 
 This chapter will teach you how to create and submit a data package to a DataONE MN via R. But first, please read [this paper](data/eml-principles.pdf) on the value of structured metadata, namely the Ecological Metadata Language (EML).

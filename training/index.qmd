@@ -3,6 +3,7 @@ title: "Welcome to NCEAS!"
 author: "Jesse Goldstein, Dominic Mullen, Jeanette Clark, <br> Irene Steves, Mitchell Maier, Bryce Mecum, Peter Slaughter, Emily O'Dean, Jasmine Lai, Daphne Virlar-Knight"
 date: last-modified
 date-format: MMMM D, YYYY
+freeze: true
 ---
 
 

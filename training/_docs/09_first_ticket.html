@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>NCEAS Data Team Training - First Ticket</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./10_advanced.html" rel="next">
+<link href="./08_using_git.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">First Ticket</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Data Team <br> Training Manual</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://arcticdata.io" title="Arctic Data Center" class="sidebar-tool px-1"><i class="bi bi-house-door-fill"></i></a>
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Welcome to NCEAS!</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_introduction.html" class="sidebar-item-text sidebar-link">1. Introduction to Open Science</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_creating_a_data_package.html" class="sidebar-item-text sidebar-link">2. Creating a Data Package</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_exploring_eml.html" class="sidebar-item-text sidebar-link">3. Exploring EML</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_editing_eml.html" class="sidebar-item-text sidebar-link">4. Editing EML</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_updating_a_data_package.html" class="sidebar-item-text sidebar-link">5. Updating a Data Package</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_editing_sysmeta.html" class="sidebar-item-text sidebar-link">6. Editing Sysmeta</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_building_provenance.html" class="sidebar-item-text sidebar-link">7. Building Provenance</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08_using_git.html" class="sidebar-item-text sidebar-link">8. Using Git</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09_first_ticket.html" class="sidebar-item-text sidebar-link active">9. First Ticket</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_advanced.html" class="sidebar-item-text sidebar-link">10. Beyond Your First Ticket</a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://nceas.github.io/datateam-training/reference" class="sidebar-item-text sidebar-link">Reference Guide</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#navigate-rt" id="toc-navigate-rt" class="nav-link active" data-scroll-target="#navigate-rt">Navigate RT</a>
+  <ul class="collapse">
+  <li><a href="#front-page" id="toc-front-page" class="nav-link" data-scroll-target="#front-page">Front page</a></li>
+  <li><a href="#all-tickets" id="toc-all-tickets" class="nav-link" data-scroll-target="#all-tickets">All tickets</a></li>
+  <li><a href="#example-ticket" id="toc-example-ticket" class="nav-link" data-scroll-target="#example-ticket">Example ticket</a></li>
+  <li><a href="#new-data-submission" id="toc-new-data-submission" class="nav-link" data-scroll-target="#new-data-submission">New data submission</a></li>
+  </ul></li>
+  <li><a href="#initial-review-checklist" id="toc-initial-review-checklist" class="nav-link" data-scroll-target="#initial-review-checklist">Initial review checklist</a></li>
+  <li><a href="#processing-templates" id="toc-processing-templates" class="nav-link" data-scroll-target="#processing-templates">Processing templates</a></li>
+  <li><a href="#final-checklist" id="toc-final-checklist" class="nav-link" data-scroll-target="#final-checklist">Final Checklist</a>
+  <ul class="collapse">
+  <li><a href="#special-datasets" id="toc-special-datasets" class="nav-link" data-scroll-target="#special-datasets">Special Datasets</a></li>
+  <li><a href="#system-metadata" id="toc-system-metadata" class="nav-link" data-scroll-target="#system-metadata">System Metadata</a></li>
+  <li><a href="#general-eml" id="toc-general-eml" class="nav-link" data-scroll-target="#general-eml">General EML</a></li>
+  <li><a href="#title-1" id="toc-title-1" class="nav-link" data-scroll-target="#title-1">Title</a></li>
+  <li><a href="#abstract-1" id="toc-abstract-1" class="nav-link" data-scroll-target="#abstract-1">Abstract</a></li>
+  <li><a href="#datatable-otherentity-spatialvectors" id="toc-datatable-otherentity-spatialvectors" class="nav-link" data-scroll-target="#datatable-otherentity-spatialvectors">DataTable / OtherEntity / SpatialVectors</a></li>
+  <li><a href="#people" id="toc-people" class="nav-link" data-scroll-target="#people">People</a></li>
+  <li><a href="#geographic-region" id="toc-geographic-region" class="nav-link" data-scroll-target="#geographic-region">Geographic region</a></li>
+  <li><a href="#project" id="toc-project" class="nav-link" data-scroll-target="#project">Project</a></li>
+  <li><a href="#methods-1" id="toc-methods-1" class="nav-link" data-scroll-target="#methods-1">Methods</a></li>
+  <li><a href="#check-eml-version" id="toc-check-eml-version" class="nav-link" data-scroll-target="#check-eml-version">Check EML Version</a></li>
+  <li><a href="#access" id="toc-access" class="nav-link" data-scroll-target="#access">Access</a></li>
+  <li><a href="#sftp-files" id="toc-sftp-files" class="nav-link" data-scroll-target="#sftp-files">SFTP Files</a></li>
+  <li><a href="#updated-datasets" id="toc-updated-datasets" class="nav-link" data-scroll-target="#updated-datasets">Updated datasets</a></li>
+  </ul></li>
+  <li><a href="#email-templates" id="toc-email-templates" class="nav-link" data-scroll-target="#email-templates">Email templates</a>
+  <ul class="collapse">
+  <li><a href="#initial-email-template" id="toc-initial-email-template" class="nav-link" data-scroll-target="#initial-email-template">Initial email template</a></li>
+  <li><a href="#comment-templates-based-on-what-is-missing" id="toc-comment-templates-based-on-what-is-missing" class="nav-link" data-scroll-target="#comment-templates-based-on-what-is-missing">Comment templates based on what is missing</a></li>
+  <li><a href="#final-email-templates" id="toc-final-email-templates" class="nav-link" data-scroll-target="#final-email-templates">Final email templates</a></li>
+  <li><a href="#additional-email-templates" id="toc-additional-email-templates" class="nav-link" data-scroll-target="#additional-email-templates">Additional email templates</a></li>
+  </ul></li>
+  <li><a href="#categorize-datasets" id="toc-categorize-datasets" class="nav-link" data-scroll-target="#categorize-datasets">Categorize datasets</a></li>
+  <li><a href="#congrats" id="toc-congrats" class="nav-link" data-scroll-target="#congrats">Congrats!</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">First Ticket</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>After completing the previous chapters, Daphne or Jeanette will assign a ticket from RT. Login using your LDAP credentials got get familiarized with RT.</p>
+<section id="navigate-rt" class="level2">
+<h2 class="anchored" data-anchor-id="navigate-rt">Navigate RT</h2>
+<p>The <a href="https://support.nceas.ucsb.edu/rt/" target="_blank">RT ticketing system</a> is how we communicate with folks interacting with the Arctic Data Center.<br>
+We use it for managing submissions, accessing issues, etc. It consists of three separate interfaces:<br>
+<a href="#front-page">Front Page</a><br>
+<a href="#all-tickets">All Tickets</a><br>
+<a href="#example-ticket">Ticket Page</a></p>
+<section id="front-page" class="level3">
+<h3 class="anchored" data-anchor-id="front-page">Front page</h3>
+<p><img src="../../images/front_page_rt.png" class="img-fluid"></p>
+<p>This is what you see first</p>
+<ol type="1">
+<li>Home - brings you to this homepage<br>
+</li>
+<li>Tickets - to search for tickets (also see number 5)<br>
+</li>
+<li>Tools - not needed<br>
+</li>
+<li>New Ticket - create a new ticket<br>
+</li>
+<li>Search - Type in the ticket number to quickly navigate to a ticket<br>
+</li>
+<li>Queue - Lists all of the tickets currently in a particular queue (such as ‘arcticdata’) and their statuses<br>
+</li>
+</ol>
+<ul>
+<li>New = unopened tickets that require attention<br>
+</li>
+<li>Open = tickets currently open and under investigation and/or being processed by a support team member<br>
+</li>
+<li>Stalled = tickets awaiting responses from the PI/ <code>submitter</code><br>
+</li>
+</ul>
+<ol start="7" type="1">
+<li>Tickets I Own - These are the current open tickets that are claimed by me<br>
+</li>
+<li>Unowned Tickets - Newest tickets awaiting claim<br>
+</li>
+<li>Ticket Status - Status and how long ago it was created<br>
+</li>
+<li>Take - claim the ticket as yours</li>
+</ol>
+</section>
+<section id="all-tickets" class="level3">
+<h3 class="anchored" data-anchor-id="all-tickets">All tickets</h3>
+<p><img src="../../images/all_tickets_rt.png" class="img-fluid"></p>
+<p>This is the queue interface from number 6 of the Front page<br>
+1. Ticket number and title<br>
+2. Ticket status<br>
+3. Owner - who has claimed the ticket</p>
+</section>
+<section id="example-ticket" class="level3">
+<h3 class="anchored" data-anchor-id="example-ticket">Example ticket</h3>
+<p><img src="../../images/example_ticket_rt.png" class="img-fluid"></p>
+<ol type="1">
+<li>Title - Include the PI’s name for reference<br>
+</li>
+<li>Display - homepage of the ticket<br>
+</li>
+<li>History - Comment/Email history, see bottom of Display page<br>
+</li>
+<li>Basics - edit the title, status, and ownership here<br>
+</li>
+<li>People - option to add more people to the watch list for a given ticket conversation. Note that user/ PI/ <code>submitter</code> email addresses should be listed as “Requestors”. Requestors are only emailed on “Replys”, not “Comments”. Ensure your ticket has a Requestor before attempting to contact users/ PIs/ <code>submitter</code>s<br>
+</li>
+<li>Links - option to “Merge into” another ticket number if this is part of a larger conversation. Also option to add a reference to another ticket number</li>
+</ol>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Verify that this is indeed the two tickets you want to merge. It is non-reversible.</p>
+</div>
+</div>
+<ol start="7" type="1">
+<li>Actions<br>
+</li>
+</ol>
+<ul>
+<li>Reply - message the <code>submitter</code>/ PI/ all watchers<br>
+</li>
+<li>Comment - attach internal message (no <code>submitter</code>s, only Data Teamers)<br>
+</li>
+<li>Open It - Open the ticket<br>
+</li>
+<li>Stall - <code>submitter</code> has not responded in greater than 1 month<br>
+</li>
+<li>Resolve - ticket completed<br>
+</li>
+</ul>
+<ol start="8" type="1">
+<li>History - message history and option to reply (to <code>submitter</code> and beyond) or comment (internal message)</li>
+</ol>
+</section>
+<section id="new-data-submission" class="level3">
+<h3 class="anchored" data-anchor-id="new-data-submission">New data submission</h3>
+<p>When notified by Arcticbot about a new data submission, here are the typical steps:</p>
+<ol type="1">
+<li>Update the Requestor under the People section based on the email given in the submission (usually the user/ PI/ <code>submitter</code>). You may have to google for the e-mail address if the PI did not include it in the metadata record.</li>
+<li>Take the ticket (Actions &gt; Take)</li>
+<li>Review the submission based on the <a href="https://nceas.github.io/datateam-training/reference/initial-review-checklist.html" target="_blank">checklist</a></li>
+<li>Draft an email using the <a href="https://nceas.github.io/datateam-training/reference/email-templates.html" target="_blank">template</a> and let others review it via Slack</li>
+<li>Send your reply via Actions</li>
+</ol>
+<p>Before opening a R script first look over the initial checklist first to identify what you will need to update in the metadata.</p>
+</section>
+</section>
+<section id="initial-review-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="initial-review-checklist">Initial review checklist</h2>
+<p>Before responding to a new submission use this checklist to review the submission. When your are ready to respond use the <a href="https://nceas.github.io/datateam-training/reference/email-templates.html" target="_blank">initial email template</a> and insert comments and modify as needed.</p>
+<section id="sensitive-data" class="level4">
+<h4 class="anchored" data-anchor-id="sensitive-data">Sensitive Data</h4>
+<p>If any of the below is in the dataset, please alert the #arctica team know before proceeding.</p>
+<ul>
+<li>Check if there is any sensitive information or personal identifying information in the data (eg. Names)</li>
+<li>Can the data be disaggregated and de-anonymized? (eg. a small sample size and individuals could be easily identified by their answers)</li>
+<li><a href="https://datadryad.org/docs/HumanSubjectsData.pdf">Dryad Human Subject data guidelines</a> can be a good place to start</li>
+</ul>
+<p>Common Cases:</p>
+<ul>
+<li><strong>Social Science:</strong> Any dataset involving human subjects (may include awards awarded by ASSP and topics such as COVID-19)</li>
+<li><strong>Archaeology:</strong> archaeological site location information, which is protected from public access by law</li>
+<li><strong>Biology:</strong> protected species location coordinates</li>
+</ul>
+</section>
+<section id="data-citations" class="level4">
+<h4 class="anchored" data-anchor-id="data-citations">Data citations</h4>
+<ul>
+<li>If the dataset appears to be in a publication please (might be in the abstract) make sure that those citations are registered.</li>
+</ul>
+</section>
+<section id="title" class="level4">
+<h4 class="anchored" data-anchor-id="title">Title</h4>
+<ul>
+<li>WHAT, WHERE, and WHEN:
+<ul>
+<li>Is descriptive of the work (provides enough information to understand the contents at a general scientific level), AND includes temporal coverage</li>
+<li>Provides a location of the work from the local to state or country level</li>
+<li>Provides a time frame of the work</li>
+<li>NO UNDEFINED ACRONYMS, ABBREVIATIONS, nor INITIALISMS unless approved of as being more widely-known in that form than spelled out</li>
+</ul></li>
+</ul>
+</section>
+<section id="abstract" class="level4">
+<h4 class="anchored" data-anchor-id="abstract">Abstract</h4>
+<ul>
+<li>Describes the DATA as well as:
+<ul>
+<li>The motivation (purpose) of the study</li>
+<li>Where and when the research took place</li>
+<li>At least one sentence summarizing general methodologies</li>
+<li>NO UNDEFINED ACRONYMS, ABBREVIATIONS, nor INITIALISMS unless approved of as being more widely-known in that form than spelled out</li>
+<li>At least 100 words total</li>
+<li><ul>
+<li>tags such as <code>&lt;superscript&gt;2&lt;/superscript&gt;</code> and <code>&lt;subscript&gt;2&lt;/subscript&gt;</code> can be used for nicer formatting</li>
+</ul></li>
+<li>Any citations to papers can be registered with us</li>
+</ul></li>
+</ul>
+</section>
+<section id="keywords" class="level4">
+<h4 class="anchored" data-anchor-id="keywords">Keywords</h4>
+<ul>
+<li>Some keywords are included</li>
+</ul>
+</section>
+<section id="data" class="level4">
+<h4 class="anchored" data-anchor-id="data">Data</h4>
+<ul>
+<li>Data is normalized (if not suggest to convert the data if possible)</li>
+<li>At least one data file, or an identifier to the files at another approved archive, unless funded by ASSP (Arctic Social Sciences Program)</li>
+<li>No xls/xlsx files (or other proprietary files)</li>
+<li>File contents and relationships among files are clear</li>
+<li>Each file is well NAMED and DESCRIBED and clearly differentiated from all others</li>
+<li>All attributes in EML match attribute names in respective data files EXACTLY, are clearly defined, have appropriate units, and are in the same order as in the file. <a href="https://nceas.github.io/datateam-training/reference/assess-attributes.html" target="_blank">Quality control all <code>dimensionless</code> units</a>.</li>
+<li>Missing value codes are explained (WHY are the data absent?)</li>
+<li>If it is a <code>.rar</code> file <a href="https://nceas.github.io/datateam-training/reference/scan-rar-files.html" target="_blank"> -&gt; scan the file</a></li>
+<li>If there is the unit tons make sure to ask if it is metric tons or imperical tons if not clarified already</li>
+</ul>
+</section>
+<section id="people-parties" class="level4">
+<h4 class="anchored" data-anchor-id="people-parties">People &amp; Parties</h4>
+<ul>
+<li>At least one contact and one creator with a name, email address, and ORCID iD</li>
+</ul>
+</section>
+<section id="coverages" class="level4">
+<h4 class="anchored" data-anchor-id="coverages">Coverages</h4>
+<ul>
+<li>Includes coverages that make sense
+<ul>
+<li>Temporal coverage - Start date BEFORE end date</li>
+<li>Geologic time scales <a href="https://nceas.github.io/datateam-training/reference/set-coverages.html" target="_blank">are added</a> if mentioned in metadata (e.g.&nbsp;8 Million Years or a name of a time period like Jurassic)</li>
+<li>Spatial coverage matches geographic description (check hemispheres)</li>
+<li>Geographic description is from the local to state or country level, at the least</li>
+<li>Taxonomic coverage if appropriate</li>
+</ul></li>
+</ul>
+</section>
+<section id="project-information" class="level4">
+<h4 class="anchored" data-anchor-id="project-information">Project Information</h4>
+<ul>
+<li>At least one FUNDING number</li>
+<li>Title, personnel, and abstract match information from the AWARD (not from the data package)</li>
+</ul>
+</section>
+<section id="methods" class="level4">
+<h4 class="anchored" data-anchor-id="methods">Methods</h4>
+<ul>
+<li>This section is REQUIRED for ALL NSF-FUNDED data packages</li>
+<li>Enough detail is provided such that a reasonable scientist could interpret the study and data for reuse without needing to consult the researchers, nor any other resources</li>
+</ul>
+</section>
+<section id="portals" class="level4">
+<h4 class="anchored" data-anchor-id="portals">Portals</h4>
+<ul>
+<li>If there are multiple submissions from the same people/project let them know about the portals feature</li>
+<li>If this is part of a portal make sure this dataset can be found there. Additional steps might be needed to get that to work. Please consult Jeanette and see the <a href="https://nceas.github.io/datateam-training/reference/data-portals-1.html">data portals</a> section.</li>
+</ul>
+</section>
+</section>
+<section id="processing-templates" class="level2">
+<h2 class="anchored" data-anchor-id="processing-templates">Processing templates</h2>
+<p>We have developed some partially filled R scripts to get you started on working on your first dataset. They outline common functions used in processing a dataset. However, it will differ depending on the dataset.</p>
+<p>You can use this template where you can <a href="data/dataset_processing_example_blanks.R">fill in the blanks</a> to get familiar with the functions we use and workflow at first. We also have a more minimal example <a href="data/dataset_processing_example_skeleton.R">A filled example</a> as a intermediate step. You can look at the <a href="data/dataset_processing_example_filled.R">filled example</a> if you get stuck or message the #datateam.</p>
+<p>Once you have updated the dataset to your satisfaction and reviewed the Final Checklist, post the link to the dataset on #datateam for peer review.</p>
+</section>
+<section id="final-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="final-checklist">Final Checklist</h2>
+<p>You can click on the <code>assessment report</code> on the website to for a general check. Fix anything you see there.</p>
+<p>Send the link over slack for peer review by your fellow datateam members. Usually we look for the following (the list is not exhaustive):</p>
+<section id="special-datasets" class="level3">
+<h3 class="anchored" data-anchor-id="special-datasets">Special Datasets</h3>
+<p>Please refer to the dedicated pages for instructions to handle these cases:</p>
+<ul>
+<li><a href="https://nceas.github.io/datateam-training/reference/MOSAiC.html">MOSAiC</a></li>
+<li><a href="https://nceas.github.io/datateam-training/reference/distributed-biological-observatory-dbo-submissions.html">DBO</a></li>
+</ul>
+</section>
+<section id="system-metadata" class="level3">
+<h3 class="anchored" data-anchor-id="system-metadata">System Metadata</h3>
+<p>The format ids are correct</p>
+</section>
+<section id="general-eml" class="level3">
+<h3 class="anchored" data-anchor-id="general-eml">General EML</h3>
+<p>Included lines for FAIR:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>doc <span class="ot">&lt;-</span> <span class="fu">eml_add_publisher</span>(doc)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>doc <span class="ot">&lt;-</span> <span class="fu">eml_add_entity_system</span>(doc)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="title-1" class="level3">
+<h3 class="anchored" data-anchor-id="title-1">Title</h3>
+<ul>
+<li>No abbreviations, should include geographic and temporal coverage</li>
+</ul>
+</section>
+<section id="abstract-1" class="level3">
+<h3 class="anchored" data-anchor-id="abstract-1">Abstract</h3>
+<ul>
+<li>longer than 100 words</li>
+<li>no abbreviations or garbled text</li>
+<li>tags such as <code>&lt;superscript&gt;2&lt;/superscript&gt;</code> and <code>&lt;subscript&gt;2&lt;/subscript&gt;</code> can be used for nicer formatting</li>
+</ul>
+</section>
+<section id="datatable-otherentity-spatialvectors" class="level3">
+<h3 class="anchored" data-anchor-id="datatable-otherentity-spatialvectors">DataTable / OtherEntity / SpatialVectors</h3>
+<ul>
+<li>in the correct one: <strong>DataTable / OtherEntity / SpatialVector / SpatialRaster</strong> for the file type</li>
+<li><strong>entityDescription</strong> - longer than 5 words and unique</li>
+<li><strong>physical</strong> present and format correct</li>
+</ul>
+<section id="attribute-table" class="level4">
+<h4 class="anchored" data-anchor-id="attribute-table">Attribute Table</h4>
+<ul>
+<li>complete</li>
+<li>attributeDefinitions longer than 3 words</li>
+<li><strong>Variables</strong> match what is in the file</li>
+<li><strong>Measurement domain</strong> - if appropirate (ie dateTime correct)</li>
+<li><strong>Missing Value Code</strong> - accounted for if applicable</li>
+<li><strong>Semantic Annotation</strong> - appropriate semantic annotations added, especially for spatial and temporal variables: lat, lon, date etc.</li>
+</ul>
+</section>
+</section>
+<section id="people" class="level3">
+<h3 class="anchored" data-anchor-id="people">People</h3>
+<ul>
+<li>complete information for each person in each section
+<ul>
+<li>including ORCID and e-mail address for all contacts</li>
+<li>people repeated across sections should have consistent information</li>
+</ul></li>
+</ul>
+</section>
+<section id="geographic-region" class="level3">
+<h3 class="anchored" data-anchor-id="geographic-region">Geographic region</h3>
+<ul>
+<li>the map looks correctand matches the geographic description</li>
+<li>check if negatives (-) are missing</li>
+</ul>
+</section>
+<section id="project" class="level3">
+<h3 class="anchored" data-anchor-id="project">Project</h3>
+<ul>
+<li>if it is an NSF award you can use the helper function:
+<ul>
+<li><code>doc$dataset$project &lt;- eml_nsf_to_project(awards)</code></li>
+</ul></li>
+<li>for other awards that need to be set manually, see the <a href="https://nceas.github.io/datateam-training/reference/set-the-project-section.html">set project</a> page</li>
+</ul>
+</section>
+<section id="methods-1" class="level3">
+<h3 class="anchored" data-anchor-id="methods-1">Methods</h3>
+<ul>
+<li>present</li>
+<li>no garbled text</li>
+</ul>
+</section>
+<section id="check-eml-version" class="level3">
+<h3 class="anchored" data-anchor-id="check-eml-version">Check EML Version</h3>
+<ul>
+<li>currently using: <code>eml-2.2.0</code> (as of July 30 2020)</li>
+<li>review to see if the EML version is set correctly by reviewing the <code>doc$`@context`</code> that it is indeed 2.2.0 under eml</li>
+<li>Re-run your code again and have the line<code>emld::eml_version("eml-2.2.0")</code> at the top</li>
+<li>Make sure the system metadata is also 2.2.0</li>
+</ul>
+</section>
+<section id="access" class="level3">
+<h3 class="anchored" data-anchor-id="access">Access</h3>
+<ul>
+<li>Granted access to PI using <code>set_rights_and_access()</code>
+<ul>
+<li>make sure it is <code>http://</code> (no s)</li>
+</ul></li>
+<li><strong>note</strong> if it is a part of portals there might be specific access requirements for it to be visible using <code>set_access()</code></li>
+</ul>
+</section>
+<section id="sftp-files" class="level3">
+<h3 class="anchored" data-anchor-id="sftp-files">SFTP Files</h3>
+<ul>
+<li>if there are files transferred to us via SFTP, delete those files when the ticket is resolved</li>
+</ul>
+</section>
+<section id="updated-datasets" class="level3">
+<h3 class="anchored" data-anchor-id="updated-datasets">Updated datasets</h3>
+<p>All the above applies. These are some areas to do a closer check when users update with a new file:</p>
+<ul>
+<li>New data was added
+<ul>
+<li>Temporal Coverage and Title</li>
+<li>and follow usual protocols</li>
+</ul></li>
+<li>Files were replaced
+<ul>
+<li>update physical and entityName</li>
+<li>double-check attributes are the same</li>
+<li>check for any new missing value codes that should be accounted for</li>
+</ul></li>
+<li>Was the dataset published before 2021?
+<ul>
+<li>update project info , annotations</li>
+</ul></li>
+<li>Glance over entire page for any small mistakes (ie. repeated additionalMetadata, any missed &amp;amps, typos)</li>
+</ul>
+<p>After all the revisions send the link to the PI in an email through RT. Send the draft of the email to Daphne or Jeanette on Slack.</p>
+</section>
+</section>
+<section id="email-templates" class="level2">
+<h2 class="anchored" data-anchor-id="email-templates">Email templates</h2>
+<p>This section covers new data packages submitted. For other inquiries see the PI FAQ templates</p>
+<p>Please think critically when using these canned replies rather than just blindly sending them. Typically, content should be adjusted/ customized for each response to be as relevant, complete, and precise as possible.</p>
+<p>In your first few months, please run email drafts by the #datateam Slack and get approval before sending.</p>
+<p>Remember to consult the <a href="https://arcticdata.io/submit/" target="_blank">submission guidelines</a> for details of what is expected.</p>
+<p>Quick reference:</p>
+<ul>
+<li><a href="https://nceas.github.io/datateam-training/reference/email-templates.html#initial-email-template">Initial email template</a></li>
+<li><a href="https://nceas.github.io/datateam-training/reference/email-templates.html#final-email-templates">Final email templates</a></li>
+<li><a href="https://nceas.github.io/datateam-training/reference/email-templates.html#additional-email-templates">Additional email template</a></li>
+</ul>
+<!--
+::: {.cell}
+
+:::
+
+::: {.cell}
+
+:::
+-->
+<!-- {{< include /workflows/pi_correspondence/email_templates/A_initial_email_template.qmd >}}
+-->
+<section id="initial-email-template" class="level3">
+<h3 class="anchored" data-anchor-id="initial-email-template">Initial email template</h3>
+<blockquote class="blockquote">
+<p>Hello [NAME OF REQUESTOR], Thank you for your recent submission to the NSF Arctic Data Center!</p>
+<p>From my preliminary examination of your submission I have noticed a few items that I would like to bring to your attention. We are here to help you publish your submission, but your continued assistance is needed to do so. See comments below:</p>
+<p>[COMMENTS HERE]</p>
+<p>After we receive your responses, we can make the edits on your behalf, or you are welcome to make them yourself using our user interface.</p>
+<p>Best,</p>
+<p>[YOUR NAME]</p>
+</blockquote>
+</section>
+<section id="comment-templates-based-on-what-is-missing" class="level3">
+<h3 class="anchored" data-anchor-id="comment-templates-based-on-what-is-missing">Comment templates based on what is missing</h3>
+<section id="portals-1" class="level4">
+<h4 class="anchored" data-anchor-id="portals-1">Portals</h4>
+<p>Multiple datasets under the same project - suggest data portal feature</p>
+<blockquote class="blockquote">
+<p>I would like to highlight the Data Portals feature that would enhance the ability of your datasets to be discovered together. It also enables some custom branding for the group or project. Here is an example page that we created for the Distributed Biological Observatory: https://arcticdata.io/catalog/portals/DBO. We highly suggest considering creating a portal for your datasets, you can get one started here: https://arcticdata.io/catalog/edit/portals/new/Settings. More information on how to set up can be found here: https://arcticdata.io/data-portals/. Data portals can be set up at any point of your project.</p>
+</blockquote>
+<p>If they ask to nest the dataset</p>
+<blockquote class="blockquote">
+<p>We are no longer supporting new nested datasets. We recommend to create a data portal instead. Portals will allow more control and has the same functionality as a nested dataset. You can get one started here: https://arcticdata.io/catalog/edit/portals/new/Settings. More information on how to set up can be found here: https://arcticdata.io/data-portals/, but as always we are here to help over email.</p>
+</blockquote>
+</section>
+<section id="dataset-citations" class="level4">
+<h4 class="anchored" data-anchor-id="dataset-citations">Dataset citations</h4>
+<blockquote class="blockquote">
+<p>If there is a publication associated with this dataset, we would appreciate it if you could register the DOI of your published paper with us by using the Citations button right below the title at the dataset landing page. We are working to build our catalog of dataset citations in the Arctic Data Center. This can be done at any point.</p>
+</blockquote>
+</section>
+<section id="title-2" class="level4">
+<h4 class="anchored" data-anchor-id="title-2">Title</h4>
+<p>Provides the <em>what, where, and when</em> of the data</p>
+<blockquote class="blockquote">
+<p>We would like to add some more context to your data package title. I would like to suggest: ‘OUR SUGGESTION HERE, WHERE, WHEN’.</p>
+</blockquote>
+<p>Does not use acronyms</p>
+<blockquote class="blockquote">
+<p>We wanted to clarify a couple of abbreviations. Could you help us in defining some of these: [LIST OF ACRONYMS TO DEFINE HERE]</p>
+</blockquote>
+</section>
+<section id="abstract-2" class="level4">
+<h4 class="anchored" data-anchor-id="abstract-2">Abstract</h4>
+<p>Describes DATA in package (ideally &gt; 100 words)</p>
+<blockquote class="blockquote">
+<p>We would like to add some additional context to your abstract. We hope to add the following: [ADJUST THE DEPENDING ON WHAT IS MISSING]</p>
+</blockquote>
+<ul>
+<li>The motivation of the study</li>
+<li>Where and when the research took place</li>
+<li>At least one sentence summarizing general methodologies</li>
+<li>All acronyms are defined</li>
+<li>At least 100 words long</li>
+</ul>
+<p>Offer this if submitter is reluctant to change:</p>
+<blockquote class="blockquote">
+<p>If you prefer and it is appropriate, we could add language from the abstract in the NSF Award found here: [NSF AWARD URL].</p>
+</blockquote>
+</section>
+<section id="keywords-1" class="level4">
+<h4 class="anchored" data-anchor-id="keywords-1">Keywords</h4>
+<blockquote class="blockquote">
+<p>We noticed that there were no keywords for this dataset. Adding keywords will help your dataset be discovered by others.</p>
+</blockquote>
+</section>
+<section id="data-1" class="level4">
+<h4 class="anchored" data-anchor-id="data-1">Data</h4>
+<p>Sensitive Data</p>
+<p>We will need to ask these questions manually until the fields are added to the webform.</p>
+<ol type="1">
+<li>Data sensitivity categories</li>
+</ol>
+<p>Once we have the ontology this question can be asked:</p>
+<blockquote class="blockquote">
+<p>Based on our Data sensitivity categories, which of the 3 does your dataset align with most:</p>
+</blockquote>
+<ul>
+<li><p><strong>Non-sensitive data</strong> - None of the data includes sensitive or protected information.</p></li>
+<li><p><strong>Some or all data is sensitive with minimal risk</strong> - Sensitive data has been de-identified, anonymized, aggregated, or summarized to remove sensitivities and enable safe data distribution. Examples include ensuring that human subjects data, protected species data, archaeological site locations and personally identifiable information have been properly anonymized, aggregated and summarized.</p></li>
+<li><p><strong>Some or all data is sensitive with significant risk</strong> - The data contains human subjects data or other sensitive data. Release of the data could cause harm or violate statutes, and must remain confidential following restrictions from an Institutional Review Board (IRB) or similar body.</p></li>
+</ul>
+<ol start="2" type="1">
+<li>Ethical research proceedures</li>
+</ol>
+<blockquote class="blockquote">
+<p>We were wondering if you could also address this question specifically on Ethical Research Procedures: Describe how and the extent to which data collection procedures followed community standards for ethical research practices (e.g., CARE Principles). Be explicit about Insitutional Review Board approvals, consent waivers, procedures for co-production, data sovreignty, and other issues addressing responsible and ethical research. Include any steps to anonymize, aggregate or de-identify the dataset, or to otherwise create a version for public distribution. We can help add your answers to the question to the metadata.</p>
+</blockquote>
+<p>Adding provenance</p>
+<blockquote class="blockquote">
+<p>Is the [mention the file names here] files related? If so we can add provenance to show the relationship between the files. Here is an example of how that is displayed: https://arcticdata.io/catalog/view/doi%3A10.18739%2FA2WS8HM6C#urn%3Auuid%3Af00c4d71-0242-4e9d-9745-8999776fa2f2</p>
+</blockquote>
+<p>At least one data file</p>
+<blockquote class="blockquote">
+<p>We noticed that no data files were submitted. With the exception of sensitive social science data, we seek to include all data products prior to publication. We wanted to check if additional files will be submitted before we move forward with the submission process.</p>
+</blockquote>
+<p>Open formats</p>
+<p><em>Example using xlsx. Tailor this reponse to the format in question.</em></p>
+<blockquote class="blockquote">
+<p>We noticed that the submitted data files are in xlsx format. Please convert your files to a plain text/csv (or other open format); this helps ensure your data are usable in the long-term.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The data files can be replaced by going to the green Edit button &gt; Click the black triangle by the Describe button for the data file &gt; Select Replace (attached is also a screenshot on how to get there). <img src="../../images/replace_file.png" class="img-fluid"></p>
+</blockquote>
+<p>Zip files</p>
+<blockquote class="blockquote">
+<p>Except for very specific file types, we do not recommend that data are archived in zip format. Data that are zipped together can present a barrier to reuse since it is difficult to accurately document each file within the zip file in a machine readable way.</p>
+</blockquote>
+<p>File contents and relationships among files are clear</p>
+<blockquote class="blockquote">
+<p>Could you provide a short description of the files submitted? Information about how each file was generated (what software, source files, etc.) will help us create more robust metadata for long term use.</p>
+</blockquote>
+<p>Data layout</p>
+<blockquote class="blockquote">
+<p>Would you be able to clarify how the data in your files is laid out? Specifically, what do the rows and columns represent?</p>
+</blockquote>
+<p>We try not to prescribe a way the researchers must format their data as long as reasonable. However, in extreme cases (for example Excel spreadsheets with data and charts all in one sheet) we will want to kindly ask them to reformat.</p>
+<blockquote class="blockquote">
+<p>We would like to suggest a couple of modifications to the structure of your data. This will others to re-use it most effectively. [DESCRIBE WHAT MAY NEED TO BE CHANGED IN THE DATA SET]. Our data submission guidelines page (<a href="https://arcticdata.io/submit/" target="_blank">https://arcticdata.io/submit/</a>) outlines what are best practices for data submissions to the Arctic Data Center. Let us know if you have any questions or if we can be of any help.</p>
+</blockquote>
+</section>
+<section id="attributes" class="level4">
+<h4 class="anchored" data-anchor-id="attributes">Attributes</h4>
+<p>Identify which attributes need additional information. If they are common attributes like date and time we do not need further clarification.</p>
+<p>Checklist for the datateam in reviewing attributes (NetCDF, CSV, shapefiles, or any other tabular datasets):</p>
+<ul>
+<li>A name (often the column or row header in the file).</li>
+<li>A complete definition.</li>
+<li>Any missing value codes along with explanations for those codes.</li>
+<li>For all numeric data, unit information is needed.</li>
+<li>For all date-time data, a date-time format is needed (e.g.&nbsp;“DD-MM-YYYY”).</li>
+<li>For text data, full descriptions for all patterns or code/definition pairs are needed if the text is constrained to a list of patterns or codes.</li>
+</ul>
+<p>Helpful templates: &gt; We would like your help in defining some of the attributes. Could you write a short description or units for the attributes listed? [Provide a the attribute names in list form] &gt; Could you describe ____? &gt; Please define “XYZ”, including the unit of measure. &gt; What are the units of measurement for the columns labeled “ABC” and “XYZ”?</p>
+<p>Missing value codes</p>
+<blockquote class="blockquote">
+<p>What do the missing values in your measurements represent? A short description of the reason why the values are missing (instrument failure, site not found, etc.) will suffice. This section is not yet available on our webform so we will add that information on your behalf.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>We noticed that the data files contain [blank cells - replace with missing values found]. What do these represent?</p>
+</blockquote>
+</section>
+<section id="funding" class="level4">
+<h4 class="anchored" data-anchor-id="funding">Funding</h4>
+<p>All NSF funded datasets need a funding number. Non-NSF funded datasets might not have funding numbers, depending on the funding organization.</p>
+<blockquote class="blockquote">
+<p>We noticed that your dataset does not appear to contain a funding number. The field accepts NSF funding numbers as well as other numbers by different organizations.</p>
+</blockquote>
+</section>
+<section id="methods-2" class="level4">
+<h4 class="anchored" data-anchor-id="methods-2">Methods</h4>
+<p>We noticed that methods were missing from the submission. Submissions should include the following:</p>
+<ul>
+<li>provide instrument names (if applicable)</li>
+<li>specify how sampling locations were chosen</li>
+<li>if citations for sampling methods are used, please provide a brief summary of the methods referenced</li>
+<li>any software used to process the data</li>
+</ul>
+<p><em>Note</em> - this includes software submissions as well (see <a href="https://arcticdata.io/submit/#metadata-guidelines-for-software" target="_blank">https://arcticdata.io/submit/#metadata-guidelines-for-software</a>)</p>
+<blockquote class="blockquote">
+<p>Your methods section appears to be missing some information. [ADJUST THIS DEPENDING ON WHAT IS MISSING - Users should be able to understand how the data were collected, how to interpret the values, and potentially how to use the data in the case of specialized files.]</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Comprehensive methods information should be included directly in the metadata record. Pointers or URLs to other sites are unstable.</p>
+</blockquote>
+<p><em>A full example - New Submission: methods, excel to csv, and attributes</em></p>
+<blockquote class="blockquote">
+<p>Thank you for your recent submission to the NSF Arctic Data Center!</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>From my preliminary examination of your submission I have noticed a few items that I would like to bring to your attention. We are here to help you publish your submission, but your continued assistance is needed to do so. See comments below:</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>If there is a publication associated with this dataset, we would appreciate it if you could register the DOI of your published paper with us by using the Citations button right below the title at the dataset landing page. We are working to build our catalog of dataset citations in the Arctic Data Center. This can be added at any point.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>We would like to add some more context to your data package title. I would like to suggest: Holocene lake-based Arctic glacier and ice cap records.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>We noticed that the submitted data files are in xlsx format. Please convert your files to a plain text/csv (or other open format); this helps ensure your data are usable in the long-term.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>We also would like to suggest a couple of modifications to the structure of your data. This will others to re-use it most effectively. If the data was in a long rather than wide format, it would be easier to us to document. <some example="" here=""></some></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Our data submission guidelines page (https://arcticdata.io/submit/) outlines what are best practices for data submissions to the Arctic Data Center. Let us know if you have any questions or if we can be of any help.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>What do the missing values in your measurements represent? A short description of the reason why the values are missing (instrument failure, site not found, etc.) will suffice.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>We noticed that methods were missing from the submission. Submissions should: - provide instrument names (if applicable) - specify how sampling locations were chosen - provide citations for sampling methods that are not explained in detail - any software used to process the data</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>After we receive your responses, we can make the edits on your behalf, or you are welcome to make them yourself using our user interface.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Best,</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Name</p>
+</blockquote>
+</section>
+</section>
+<section id="final-email-templates" class="level3">
+<h3 class="anchored" data-anchor-id="final-email-templates">Final email templates</h3>
+<section id="asking-for-approval" class="level4">
+<h4 class="anchored" data-anchor-id="asking-for-approval">Asking for approval</h4>
+<blockquote class="blockquote">
+<p>Hi [submitter],</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>I have updated your data package and you can view it here after logging in: [URL]</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Please review and approve it for publishing or let us know if you would like anything else changed. For your convenience, if we do not hear from you within a week we will proceed with publishing with a DOI.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>After publishing with a DOI, any further changes to the dataset will result in a new DOI. However, any previous DOIs will still resolve and point the user to the newest version.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Please let us know if you have any questions.</p>
+</blockquote>
+</section>
+<section id="doi-and-data-package-finalization-comments" class="level4">
+<h4 class="anchored" data-anchor-id="doi-and-data-package-finalization-comments">DOI and data package finalization comments</h4>
+<p><em>Replying to questions about DOIs</em></p>
+<blockquote class="blockquote">
+<p>We attribute DOIs to data packages as one might give a DOI to a citable publication. Thus, a DOI is permanently associated with a unique and immutable version of a data package. If the data package changes, a new DOI will be created and the old DOI will be preserved with the original version.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>DOIs and URLs for previous versions of data packages remain active on the Arctic Data Center (will continue to resolve to the data package landing page for the specific version they are associated with), but a clear message will appear at the top of the page stating that “A newer version of this dataset exists” with a hyperlink to that latest version. With this approach, any past uses of a DOI (such as in a publication) will remain functional and will reference the specific version of the data package that was cited, while pointing users to the newest version if one exists.</p>
+</blockquote>
+<p><em>Clarification of updating with a DOI and version control</em></p>
+<blockquote class="blockquote">
+<p>We definitely support updating a data package that has already been assigned a DOI, but when we do so we mark it as a new revision that replaces the original and give it its own DOI. We do that so that any citations of the original version of the data package remain valid (i.e.: after the update, people still know exactly which data were used in the work citing it).</p>
+</blockquote>
+</section>
+<section id="resolve-the-ticket" class="level4">
+<h4 class="anchored" data-anchor-id="resolve-the-ticket">Resolve the ticket</h4>
+<p>Sending finalized URL and dataset citation before resolving ticket</p>
+<p>[NOTE: the URL format is very specific here, please try to follow it exactly (but substitute in the actual DOI of interest)]</p>
+<blockquote class="blockquote">
+<p>Here is the link and citation to your finalized data package:</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><a href="https://doi.org/10.18739/A20X0X" target="_blank">https://doi.org/10.18739/A20X0X</a></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>First Last, et al.&nbsp;2021. Title. Arctic Data Center. doi:10.18739/A20X0X.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>If in the future there is a publication associated with this dataset, we would appreciate it if you could register the DOI of your published paper with us by using the Citations button right below the title at the dataset landing page. We are working to build our catalog of dataset citations in the Arctic Data Center.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Please let us know if you need any further assistance.</p>
+</blockquote>
+</section>
+</section>
+<section id="additional-email-templates" class="level3">
+<h3 class="anchored" data-anchor-id="additional-email-templates">Additional email templates</h3>
+<section id="deadlines" class="level4">
+<h4 class="anchored" data-anchor-id="deadlines">Deadlines</h4>
+<p>If the PI is checking about dates/timing: &gt; [give rough estimate of time it might take] &gt; Are you facing any deadlines? If so, we may be able to expedite publication of your submission.</p>
+</section>
+<section id="pre-assigned-doi" class="level4">
+<h4 class="anchored" data-anchor-id="pre-assigned-doi">Pre-assigned DOI</h4>
+<p>If the PI needs a DOI right away:</p>
+<blockquote class="blockquote">
+<p>We can provide you with a pre-assigned DOI that you can reference in your paper, as long as your submission is not facing a deadline from NSF for your final report. However, please note that it will not become active until after we have finished processing your submission and the package is published. Once you have your dataset published, we would appreciate it if you could register the DOI of your published paper with us by using the citations button beside the orange lock icon. We are working to build our catalog of dataset citations in the Arctic Data Center.</p>
+</blockquote>
+</section>
+<section id="sensitive-data-1" class="level4">
+<h4 class="anchored" data-anchor-id="sensitive-data-1">Sensitive Data</h4>
+<blockquote class="blockquote">
+<p>Which of the following categories best describes the level of sensitivity of your data?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>A. Non-sensitive data None of the data includes sensitive or protected information. Proceed with uploading data. B. Some or all data is sensitive but has been made safe for open distribution Sensitive data has been de-identified, anonymized, aggregated, or summarized to remove sensitivities and enable safe data distribution. Examples include ensuring that human subjects data, protected species data, archaeological site locations and personally identifiable information have been properly anonymized, aggregated and summarized. Proceed with uploading data, but ensure that only data that are safe for public distribution are uploaded. Address questions about anonymization, aggregation, de-identification, and data embargoes with the data curation support team before uploading data. Describe these approaches in the Methods section. C. Some or all data is sensitive and should not be distributed The data contains human subjects data or other sensitive data. Release of the data could cause harm or violate statutes, and must remain confidential following restrictions from an Institutional Review Board (IRB) or similar body. Do NOT upload sensitive data. You should still upload a metadata description of your dataset that omits all sensitive information to inform the community of the dataset’s existence. Contact the data curation support team about possible alternative approaches to safely preserve sensitive or protected data.</p>
+</blockquote>
+<blockquote class="blockquote">
+<ol start="2" type="1">
+<li>Ethical Research Procedures. Please describe how and the extent to which data collection procedures followed community standards for ethical research practices (e.g., CARE Principles). Be explicit about Institutional Review Board approvals, consent waivers, procedures for co-production, data sovereignty, and other issues addressing responsible and ethical research. Include any steps to anonymize, aggregate or de-identify the dataset, or to otherwise create a version for public distribution.</li>
+</ol>
+</blockquote>
+</section>
+<section id="asking-for-dataset-access" class="level4">
+<h4 class="anchored" data-anchor-id="asking-for-dataset-access">Asking for dataset access</h4>
+<blockquote class="blockquote">
+<p>As a security measure we ask that we get the approval from the original submitter of the dataset prior to granting edit permissions to all datasets.</p>
+</blockquote>
+</section>
+<section id="no-response-from-the-researcher" class="level4">
+<h4 class="anchored" data-anchor-id="no-response-from-the-researcher">No response from the researcher</h4>
+<p>Please email them before resolving a ticket like this:</p>
+<blockquote class="blockquote">
+<p>We are resolving this ticket for bookkeeping purposes, if you would like to follow up please feel free to respond to this email.</p>
+</blockquote>
+</section>
+<section id="recovering-dataset-submissions" class="level4">
+<h4 class="anchored" data-anchor-id="recovering-dataset-submissions">Recovering Dataset submissions</h4>
+<blockquote class="blockquote">
+<p>To recover dataset submissions that were not successful please do the following:</p>
+</blockquote>
+<blockquote class="blockquote">
+<ol type="1">
+<li>Go to https://arcticdata.io/catalog/drafts</li>
+<li>Find your dataset and download the corresponding file</li>
+<li>Send us the file in an email</li>
+</ol>
+</blockquote>
+</section>
+<section id="custom-search-link" class="level4">
+<h4 class="anchored" data-anchor-id="custom-search-link">Custom Search Link</h4>
+<blockquote class="blockquote">
+<p>You could also use a permalink like this to direct users to the datasets: https://arcticdata.io/catalog/data/query=“your search query here” for example: https://arcticdata.io/catalog/data/query=Beaufort%20Lagoon%20Ecosystems%20LTER</p>
+</blockquote>
+</section>
+<section id="adding-metadata-via-r" class="level4">
+<h4 class="anchored" data-anchor-id="adding-metadata-via-r">Adding metadata via R</h4>
+<blockquote class="blockquote">
+<p>KNB does not support direct uploading of EML metadata files through the website (we have a webform that creates metadata), but you can upload your data and metadata through R.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><a href="http://training.arcticdata.io/materials/arctic-data-center-training/programming-metadata-and-data-publishing.html" target="_blank">Here</a> are some training materials we have that use both the <code>EML</code> and <code>datapack</code> packages. It explains how to set your authentication token, build a package from metadata and data files, and publish the package to one of our test sites. I definitely recommend practicing on a test site prior to publishing to the production site your first time through. You can point to the KNB test node (dev.nceas.ucsb.edu) using this command: <code>d1c &lt;- D1Client("STAGING2", "urn:node:mnTestKNB")</code></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>If you prefer, there are Java, Python, MATLAB, and Bash/cURL clients as well.</p>
+</blockquote>
+</section>
+<section id="finding-multiple-data-packages" class="level4">
+<h4 class="anchored" data-anchor-id="finding-multiple-data-packages">Finding multiple data packages</h4>
+<blockquote class="blockquote">
+<p>If linking to multiple data packages, you can send a link to the profile associated with the submitter’s ORCID iD and it will display all their data packages. e.g.: <a href="https://arcticdata.io/catalog/profile/http://orcid.org/0000-0002-2604-4533" target="_blank">https://arcticdata.io/catalog/profile/http://orcid.org/0000-0002-2604-4533</a></p>
+</blockquote>
+</section>
+<section id="nsf-arc-data-submission-policy" class="level4">
+<h4 class="anchored" data-anchor-id="nsf-arc-data-submission-policy">NSF ARC data submission policy</h4>
+<blockquote class="blockquote">
+<p>Please find an overview of our submission guidelines here: <a href="https://arcticdata.io/submit/" target="_blank">https://arcticdata.io/submit/</a>, and NSF Office of Polar Programs policy information here: <a href="https://www.nsf.gov/pubs/2016/nsf16055/nsf16055.jsp" target="_blank">https://www.nsf.gov/pubs/2016/nsf16055/nsf16055.jsp</a>.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Investigators should upload their data to the Arctic Data Center (<a href="https://arcticdata.io" target="_blank">https://arcticdata.io</a>), or, where appropriate, to another community endorsed data archive that ensures the longevity, interpretation, public accessibility, and preservation of the data (e.g., GenBank, NCEI). Local and university web pages generally are not sufficient as an archive. Data preservation should be part of the institutional mission and data must remain accessible even if funding for the archive wanes (i.e., succession plans are in place). We would be happy to discuss the suitability of various archival locations with you further. In order to provide a central location for discovery of ARC-funded data, a metadata record must always be uploaded to the Arctic Data Center even when another community archive is used.</p>
+</blockquote>
+</section>
+<section id="linking-orcid-and-ldap-accounts" class="level4">
+<h4 class="anchored" data-anchor-id="linking-orcid-and-ldap-accounts">Linking ORCiD and LDAP accounts</h4>
+<blockquote class="blockquote">
+<p>First create an account at orcid.org/register if you have not already. After that account registration is complete, login to the KNB with your ORCID iD here: <a href="https://knb.ecoinformatics.org/#share" target="_blank">https://knb.ecoinformatics.org/#share</a>. Next, hover over the icon on the top right and choose “My Profile”. Then, click the “Settings” tab and scroll down to “Add Another Account”. Enter your name or username from your Morpho account and select yourself (your name should populate as an option). Click the “+”. You will then need to log out of knb.ecoinformatics.org and then log back in with your old LDAP account (click “have an existing account”, and enter your Morpho credentials with the organization set to “unaffiliated”) to finalize the linkage between the two accounts. Navigate to “My Profile” and “Settings” to confirm the linkage.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>After completing this, all of your previously submitted data pacakges should show up on your KNB “My Profile” page, whether you are logged in using your ORCiD or Morpho account, and you will be able to submit data either using Morpho or our web interface.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Or, try reversing my instructions - log in first using your Morpho account (by clicking the “existing account” button and selecting organization “unaffiliated”), look for your ORCiD account, then log out and back in with ORCiD to confirm the linkage.</p>
+</blockquote>
+<p>Once the dataset is approved by the PI and there are no further changes, publish the dataset with a doi.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>doi <span class="ot">&lt;-</span> dataone<span class="sc">::</span><span class="fu">generateIdentifier</span>(d1c_test<span class="sc">@</span>mn, <span class="st">"DOI"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>dp <span class="ot">&lt;-</span> <span class="fu">replaceMember</span>(dp, metadataId, <span class="at">replacement =</span> eml_path, <span class="at">newId =</span> doi)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>newPackageId <span class="ot">&lt;-</span> <span class="fu">uploadDataPackage</span>(d1c_test, dp, <span class="at">public =</span> <span class="cn">TRUE</span>, <span class="at">quiet =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="categorize-datasets" class="level2">
+<h2 class="anchored" data-anchor-id="categorize-datasets">Categorize datasets</h2>
+<p>As a final step we will categorize the dataset you processed. We are trying to categorize datasets so we can have a rough idea of what kinds of datasets we have at the Arctic Data Center. We will grant you access to the google sheet that has all of the <a href="https://docs.google.com/spreadsheets/d/1S_7iW0UBZLZoJBrHXTW5fbHH-NOuOb6xLghraPA4Kf4/edit#gid=1479370118">categorized datasets</a></p>
+<p>We will categorize each dataset into one of the predefined themes (ie. biology, ecology etc.). Definition of the themes can be found in the <a href="https://docs.google.com/document/d/1rqHk9SCH9JvdSnIJovYVE1YF4IF4_yNxFfCOJMI8xjk/edit">google sheet</a></p>
+<p>Run the following line with your doi and themes as a list.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>datamgmt<span class="sc">::</span><span class="fu">categorize_dataset</span>(<span class="st">"your_doi"</span>, <span class="fu">c</span>(<span class="st">"list"</span>, <span class="st">"of"</span>, <span class="st">"themes"</span>), <span class="st">"your name"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="congrats" class="level2">
+<h2 class="anchored" data-anchor-id="congrats">Congrats!</h2>
+<p>Congratulations on finishing your first ticket! You can head over to the the repository, <a href="https://github.com/NCEAS/data-processing">data-processing</a> to get your ticket processing code reviewed by the team so we can learn from each other!</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./08_using_git.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">8. Using Git</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./10_advanced.html" class="pagination-link">
+        <span class="nav-page-text">10. Beyond Your First Ticket</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

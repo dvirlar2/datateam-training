@@ -1,5 +1,6 @@
 ---
 title: "Editing system metadata"
+freeze: true
 ---
 
 Every object on the ADC (or the KNB) has "system metadata". An object's system metadata have information about the file itself, such as the name of the file (`fileName`), the format (`formatId`), who the `rightsHolder` is, what the `accessPolicy` is, and more. Sometimes we will need to edit system metadata in order to make sure that things on the webpage display correctly, or to ensure a file downloads from the website with the correct file name and extension.

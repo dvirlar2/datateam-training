@@ -1,5 +1,6 @@
 ---
 title: "Using Git"
+freeze: true
 ---
 
 ## Usage in the datateam

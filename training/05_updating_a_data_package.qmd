@@ -1,5 +1,6 @@
 ---
 title: "Updating a data package"
+freeze: true
 ---
 
 This chapter will teach you how to edit and update an existing data package in R. Earlier, we updated metadata. In this section we will learn how to update a data file, and how to update a package by adding an additional data file.

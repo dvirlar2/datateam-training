@@ -1,5 +1,7 @@
 ---
 title: "First Ticket"
+output-dir: docs # wasn't rendering properly w/o this
+# freeze: true
 ---
 
 After completing the previous chapters, Daphne or Jeanette will assign a ticket from RT. Login using your LDAP credentials got get familiarized with RT.

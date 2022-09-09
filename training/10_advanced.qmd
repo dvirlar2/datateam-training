@@ -1,5 +1,6 @@
 ---
 title: "Beyond your first ticket"
+freeze: true
 ---
 
 This section is meant to be read after you have processed a couple of tickets and you are comfortable with the workflow with a relatively simple dataset with 1-2 files and want to expand your skills and workflows further.

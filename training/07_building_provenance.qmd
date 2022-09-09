@@ -1,5 +1,6 @@
 ---
 title: "Building provenance"
+freeze: true
 ---
 
 **Note** - It is rare for a dataset to have provenance - though we would like to see that change by encouraging researchers to submit scripts whenever it is reasonable. When processing datasets if you notice that provenance is needed let Daphne or Jeanette know.

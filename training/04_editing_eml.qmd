@@ -1,5 +1,7 @@
 ---
 title: "Editing EML"
+# output-dir: docs 
+# freeze: true # causes issues when freeze is called, but output-dir not set? Not sure if you can set output-dir though with freeze also in yaml
 ---
 
 This chapter is a practical tutorial for using R to read, edit, write, and validate EML documents. Much of the information here can also be found in the vignettes for the R packages used in this section (e.g. the <a href = 'https://github.com/ropensci/EML/blob/master/vignettes/creating-EML.qmd' target='_blank'>EML package</a>). 
