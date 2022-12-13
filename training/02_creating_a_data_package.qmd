@@ -101,14 +101,14 @@ If you are curious how everything magically works, here is a handy diagram:
 
 ![From the DataOne Community Meeting (Session 7)](images/data-submission-workflow1.png)
 
-```{r, child = '../workflows/edit_data_packages/01_datapack_background.Rmd'}
+```{r, child = '../workflows/edit_data_packages/01_datapack_background.qmd'}
 ```
 
 ## Exercise 2a {.exercise}
 
 Select a dataset from the [catalog](http://arcticdata.io/catalog) on the Arctic Data Center. Observe the number of data files in the dataset. Try to find identifiers for the metadata file and resource map on the landing page for the dataset based on the screenshot shown above.
 
-```{r, child = '../workflows/edit_data_packages/02_create_package_data_pack.Rmd'}
+```{r, child = '../workflows/edit_data_packages/02_create_package_data_pack.qmd'}
 ```
 
 ## Exercise 2b {.exercise}
