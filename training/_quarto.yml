@@ -1,7 +1,72 @@
-book_filename: "datateam-training"
-language:
-  ui:
-    chapter_name: "Chapter "
-delete_merged_file: true
-output_dir: "../docs/training"
-new_session: no
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+
+website:
+  title: "NCEAS Data Team Training"
+  # author: "Jesse Goldstein, Dominic Mullen, Jeanette Clark, Irene Steves, Mitchell Maier, Bryce Mecum, Peter Slaughter, Emily O'Dean, Jasmine Lai, Daphne Virlar-Knight"
+  # date: last-modified
+  # date-format: MMMM D, YYYY
+
+  site-url: https://nceas.github.io/datateam-training/training/
+  repo-url: https://github.com/NCEAS/datateam-training
+
+  repo-branch: main
+
+  page-navigation: true
+
+  sidebar:
+    title: "Data Team <br> Training Manual"
+    style: "docked"
+    search: true
+    align: center
+    tools:
+      - icon: house-door-fill
+        href: https://arcticdata.io
+        text: "Arctic Data Center"
+    collapse-level: 1
+
+    contents:
+      - index.qmd
+      - href: 01_introduction.qmd
+        text: "1. Introduction to Open Science"
+      - href: 02_creating_a_data_package.qmd
+        text: "2. Creating a Data Package"
+      - href: 03_exploring_eml.qmd
+        text: "3. Exploring EML"
+      - href: 04_editing_eml.qmd
+        text: "4. Editing EML"
+      - href: 05_updating_a_data_package.qmd
+        text: "5. Updating a Data Package"
+      - href: 06_editing_sysmeta.qmd
+        text: "6. Editing Sysmeta"
+      - href: 07_building_provenance.qmd
+        text: "7. Building Provenance"
+      - href: 08_using_git.qmd
+        text: "8. Using Git"
+      - href: 09_first_ticket.qmd
+        text: "9. First Ticket"
+      - href: 10_advanced.qmd
+        text: "10. Beyond Your First Ticket"
+      - text: "---"
+      - href: "https://nceas.github.io/datateam-training/reference"
+        text: "Reference Guide"
+
+
+format:
+  html:
+    theme:
+      light:
+        - cosmo
+      #   - ../light-styles.css
+      # dark:
+      #   - superhero
+      #   - ../dark-styles.css
+    code-copy: true
+    code-overflow: wrap
+    toc: true
+
+  pdf:
+    documentclass: scrreprt
