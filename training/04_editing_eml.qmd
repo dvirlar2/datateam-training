@@ -8,7 +8,7 @@ Most of the functions you will see in this chapter will use the `arcticdatautils
 This chapter will be longest of all the sections! This is a reminder to take frequent breaks when completing this section.
 ```
 
-```{r, child = '../workflows/edit_eml/edit_an_eml_element.Rmd'}
+```{r, child = '../workflows/edit_eml/edit_an_eml_element.qmd'}
 ```
 
 ## FAIR data practices
@@ -26,7 +26,7 @@ Add these function calls to all of your EML processing scripts.
   doc <- eml_add_entity_system(doc)
 ```
 
-```{r, child = '../workflows/edit_eml/edit_attributelists.Rmd'}
+```{r, child = '../workflows/edit_eml/edit_attributelists.qmd'}
 ```
 
 ```{block, type = "note"}
@@ -35,16 +35,16 @@ Remember to use:
 `d1c_test@mn` 
 ```
 
-```{r, child = '../workflows/edit_eml/set_physical.Rmd'}
+```{r, child = '../workflows/edit_eml/set_physical.qmd'}
 ```
 
-```{r, child = '../workflows/edit_eml/edit_datatables.Rmd'}
+```{r, child = '../workflows/edit_eml/edit_datatables.qmd'}
 ```
 
-```{r, child = '../workflows/edit_eml/edit_otherentities.Rmd'}
+```{r, child = '../workflows/edit_eml/edit_otherentities.qmd'}
 ```
 
-```{r, child = '../workflows/edit_eml/edit_semantic_annotation.Rmd'}
+```{r, child = '../workflows/edit_eml/edit_semantic_annotation.qmd'}
 ```
 
 ## Exercise 3a {.exercise}

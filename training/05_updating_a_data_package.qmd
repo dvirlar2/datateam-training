@@ -2,10 +2,10 @@
 
 This chapter will teach you how to edit and update an existing data package in R. Earlier, we updated metadata. In this section we will learn how to update a data file, and how to update a package by adding an additional data file.
 
-```{r, child = '../workflows/edit_data_packages/update_an_object.Rmd'}
+```{r, child = '../workflows/edit_data_packages/update_an_object.qmd'}
 ```
 
-```{r, child = '../workflows/edit_data_packages/update_a_package.Rmd'}
+```{r, child = '../workflows/edit_data_packages/update_a_package.qmd'}
 ```
 
 ## Exercise 4 {.exercise}

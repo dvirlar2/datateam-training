@@ -4,7 +4,7 @@ Every object on the ADC (or the KNB) has "system metadata". An object's system m
 
 Although the majority of system metadata changes that need to be made are done automatically, sometimes we need to change aspects of the system metadata (or 'sysmeta' for short) manually.
 
-```{r, child = '../workflows/edit_data_packages/edit_sysmeta.Rmd'}
+```{r, child = '../workflows/edit_data_packages/edit_sysmeta.qmd'}
 ```
 
 

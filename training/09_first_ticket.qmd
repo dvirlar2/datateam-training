@@ -2,12 +2,12 @@
 
 After completing the previous chapters, Daphne or Jeanette will assign a ticket from RT. Login using your LDAP credentials got get familiarized with RT.
 
-```{r, child = '../workflows/pi_correspondence/navigate_rt.Rmd'}
+```{r, child = '../workflows/pi_correspondence/navigate_rt.qmd'}
 ```
 
 Before opening a R script first look over the initial checklist first to identify what you will need to update in the metadata.
 
-```{r, child = '../workflows/pi_correspondence/initial_review_checklist.Rmd'}
+```{r, child = '../workflows/pi_correspondence/initial_review_checklist.qmd'}
 ```
 
 ## Processing templates
@@ -18,11 +18,11 @@ You can use this template where you can [fill in the blanks](data/dataset_proces
 
 Once you have updated the dataset to your satisfaction and reviewed the Final Checklist, post the link to the dataset on #datateam for peer review.
 
-```{r, child = '../workflows/pi_correspondence/final_review_checklist.Rmd'}
+```{r, child = '../workflows/pi_correspondence/final_review_checklist.qmd'}
 ```
 
 After all the revisions send the link to the PI in an email through RT. Send the draft of the email to Daphne or Jeanette on Slack.
-```{r, child = '../workflows/pi_correspondence/A_email_templates.Rmd'}
+```{r, child = '../workflows/pi_correspondence/A_email_templates.qmd'}
 ```
 
 Once the dataset is approved by the PI and there are no further changes, publish the dataset with a doi.
