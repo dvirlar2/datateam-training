@@ -8,11 +8,11 @@ For additional background on EML and principles for metadata creation, check out
 
 If you aren't too familiar with lists and how to navigate them yet take a look at the relevant sections in the <a href = 'https://stat545.com/r-objects.html#lists-hold-just-about-anything' target='_blank'>Stat 545 class.</a> 
 
-```{r, child = '../workflows/explore_eml/navigate_through_eml.Rmd'}
+```{r, child = '../workflows/explore_eml/navigate_through_eml.qmd'}
 ```
 
-```{r, child = '../workflows/explore_eml/understand_eml_schema.Rmd'}
+```{r, child = '../workflows/explore_eml/understand_eml_schema.qmd'}
 ```
 
-```{r, child = '../workflows/explore_eml/access_specific_elements.Rmd'}
+```{r, child = '../workflows/explore_eml/access_specific_elements.qmd'}
 ```
