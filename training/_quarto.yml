@@ -18,7 +18,7 @@ website:
   page-navigation: true
 
   sidebar:
-    title: "Data Team <br> Training Manual"
+    title: "Data Team <br> Training Manual <br>"
     style: "docked"
     search: true
     align: center
@@ -26,6 +26,9 @@ website:
       - icon: house-door-fill
         href: https://arcticdata.io
         text: "Arctic Data Center"
+      - icon: github
+        href: https://github.com/NCEAS/datateam-training
+        text: "Repository"
     collapse-level: 1
 
     contents:
