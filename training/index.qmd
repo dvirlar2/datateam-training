@@ -1,16 +1,14 @@
 --- 
 title: "NCEAS Data Team Training"
 author: "Jesse Goldstein, Dominic Mullen, Jeanette Clark, Irene Steves, Mitchell Maier, Bryce Mecum, Peter Slaughter, Emily O'Dean, Jasmine Lai, Daphne Virlar-Knight"
-date: "`r Sys.Date()`"
-site: bookdown::bookdown_site
-output: 
-  bookdown::gitbook:
-    highlight: tango
-    css: ../styles.css
-documentclass: book
-github-repo: NCEAS/datateam-training
-description: "This is a training guide and reference resource for NCEAS data team members working on the SASAP and Arctic Data Center projects"
-favicon: "favicon.ico"
+
+date: last-modified
+date-format: MMMM D, YYYY
+#freeze: true
+
+# github-repo: NCEAS/datateam-training
+# description: "This is a training guide and reference resource for NCEAS data team members working on the SASAP and Arctic Data Center projects"
+# favicon: "favicon.ico"
 ---
 
 
