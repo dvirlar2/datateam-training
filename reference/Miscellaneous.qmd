@@ -1,0 +1,11 @@
+# Miscellaneous
+
+
+```{r, echo = FALSE}
+chapter <- "../workflows/miscellaneous/"
+sections <- dir(path = chapter, pattern = ".qmd$")
+children <- paste0(chapter, sections)
+```
+
+```{r, child = children}
+```

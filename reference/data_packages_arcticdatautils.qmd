@@ -1,0 +1,12 @@
+# Using arcticdatautils
+
+Please use `datapack` and `dataone` for regular data processing. This information is kept for troubleshooting and legacy purposes.
+
+```{r, echo = FALSE}
+chapter <- "../workflows/data_packages_arcticdatautils/"
+sections <- dir(path = chapter, pattern = ".qmd$")
+children <- paste0(chapter, sections)
+```
+
+```{r, child = children}
+```

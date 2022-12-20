@@ -1,0 +1,10 @@
+# ADC web submissions
+
+```{r, echo = FALSE}
+chapter <- "../workflows/adc_web_submissions/"
+sections <- dir(path = chapter, pattern = ".qmd$")
+children <- paste0(chapter, sections)
+```
+
+```{r, child = children}
+```

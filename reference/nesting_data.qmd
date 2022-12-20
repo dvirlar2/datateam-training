@@ -1,0 +1,10 @@
+# Nesting Data
+
+```{r, echo = FALSE}
+chapter <- "../workflows/nesting_data/"
+sections <- dir(path = chapter, pattern = ".qmd$")
+children <- paste0(chapter, sections)
+```
+
+```{r, child = children}
+```
